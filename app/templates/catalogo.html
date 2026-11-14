@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block titulo %}Entrevistas{% endblock %}
+
+{% block contenido %}
+<header class="encabezado-pagina">
+  <h1>Entrevistas</h1>
+  <p class="contador" role="status">
+    {% if hay_filtros %}{{ filas | length }} de {{ total }} entrevistas{% else %}{{ total }} entrevistas{% endif %}
+  </p>
+</header>
+
+<form class="filtros" action="/catalogo" method="get" role="search" aria-label="Filtrar entrevistas">
+  <div class="campo">
+    <label for="f-persona">Persona</label>
+    <input id="f-persona" name="persona" type="search" value="{{ persona }}" autocomplete="off">
+  </div>
+  {% if temas %}
+  <div class="campo">
+    <label for="f-tema">Tema</label>
+    <select id="f-tema" name="tema">
+      <option value="">Todos</option>
+      {% for t in temas %}<option value="{{ t }}" {% if t == tema %}selected{% endif %}>{{ t }}</option>{% endfor %}
+    </select>
+  </div>
+  {% endif %}
+  {% if lugares %}
+  <div class="campo">
+    <label for="f-lugar">Lugar</label>
+    <select id="f-lugar" name="lugar">
+      <option value="">Todos</option>
+      {% for l in lugares %}<option value="{{ l }}" {% if l == lugar %}selected{% endif %}>{{ l }}</option>{% endfor %}
+    </select>
+  </div>
+  {% endif %}
+  <button type="submit">Filtrar</button>
+  {% if hay_filtros %}<a class="enlace-quitar" href="/catalogo">Quitar filtros</a>{% endif %}
+</form>
+
+{% if filas %}
+<ul class="catalogo">
+  {% for f in filas %}
+  {% set e = f.e %}
+  <li class="ficha">
+    <span class="retrato" aria-hidden="true">{{ e.iniciales }}</span>
+    <div class="ficha-cuerpo">
+      <h2><a href="/entrevista/{{ e.interview_id }}">{{ e.encabezado }}</a></h2>
+      <p class="ficha-meta">
+        {% if e.titulo %}{{ e.persona }}{% endif %}
+        {% if e.lugar %}{{ ' · ' if e.titulo else '' }}{{ e.lugar }}{% endif %}
+        {% if e.duracion %}{{ ' · ' if (e.titulo or e.lugar) else '' }}{{ e.duracion | duracion }}{% endif %}
+      </p>
+      {% if e.temas %}<p class="ficha-temas">{{ e.temas | join(', ') }}</p>{% endif %}
+      <p class="ficha-estado">
+        {% if f.n_cortes %}
+          {{ f.n_cortes }} {{ 'corte' if f.n_cortes == 1 else 'cortes' }} en la búsqueda de demostración
+        {% else %}
+          Sin cortes en la búsqueda de demostración
+        {% endif %}
+        {% if not f.video.disponible %}
+          <span class="etiqueta etiqueta-aviso">Vídeo no disponible</span>
+        {% endif %}
+      </p>
+    </div>
+    <a class="ficha-abrir" href="/entrevista/{{ e.interview_id }}">Abrir entrevista</a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<div class="vacio" role="status">
+  <h2>Ninguna entrevista coincide con estos filtros</h2>
+  <p>Prueba con otro nombre o quita los filtros para ver las {{ total }} entrevistas.</p>
+  <p><a class="boton-secundario" href="/catalogo">Quitar filtros</a></p>
+</div>
+{% endif %}
+{% endblock %}

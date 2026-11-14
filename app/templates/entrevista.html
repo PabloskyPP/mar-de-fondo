@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block titulo %}{{ e.encabezado }}{% endblock %}
+
+{% block contenido %}
+<nav class="migas" aria-label="Migas de pan">
+  <a href="{{ volver }}">‹ {{ volver_etiqueta }}</a>
+  <span aria-hidden="true">/</span>
+  <span>{{ e.persona }}</span>
+</nav>
+
+<header class="encabezado-pagina">
+  <h1>{{ e.encabezado }}</h1>
+  {% if e.titulo or e.lugar or e.duracion %}
+  <p class="ficha-meta">
+    {% if e.titulo %}{{ e.persona }}{% endif %}
+    {% if e.lugar %}{{ ' · ' if e.titulo else '' }}{{ e.lugar }}{% endif %}
+    {% if e.duracion %}{{ ' · ' if (e.titulo or e.lugar) else '' }}Duración {{ e.duracion | duracion }}{% endif %}
+  </p>
+  {% endif %}
+</header>
+
+{% for aviso in avisos %}
+<div class="aviso-datos" role="status">{{ aviso }}</div>
+{% endfor %}
+
+<div class="entrevista-rejilla">
+  <section class="player" aria-label="Vídeo de la entrevista"
+           id="reproductor"
+           data-url-video="{{ url_video or '' }}"
+           data-inicio="{{ seleccion.inicio if seleccion else '' }}"
+           data-fin="{{ seleccion.fin if seleccion and seleccion.fin else '' }}"
+           data-clip="{{ seleccion.clip_id if seleccion and seleccion.clip_id else '' }}"
+           data-titulo="{{ seleccion.titulo if seleccion else '' }}">
+    {% if url_video %}
+      <div class="player-marco">
+        <video id="video-entrevista" controls playsinline preload="metadata" src="{{ url_video }}"></video>
+      </div>
+
+      <div class="player-modo" id="modo" data-modo="{{ 'corte' if seleccion and seleccion.fin else 'completa' }}">
+        <p class="modo-linea">
+          <span class="etiqueta" id="modo-etiqueta">{{ 'Corte' if seleccion and seleccion.fin else 'Entrevista completa' }}</span>
+          <span id="modo-texto">
+            {% if seleccion and seleccion.fin %}
+              «{{ seleccion.titulo }}», de {{ seleccion.inicio | tiempo }} a {{ seleccion.fin | tiempo }}. La reproducción se detiene al final del corte.
+            {% elif seleccion %}
+              Desde {{ seleccion.inicio | tiempo }}, sin límite de final.
+            {% else %}
+              Sin límite de final.
+            {% endif %}
+          </span>
+        </p>
+        <p class="modo-acciones">
+          <button type="button" class="boton" id="btn-completa" hidden>Seguir viendo la entrevista completa</button>
+          <button type="button" class="boton-secundario" id="btn-repetir" hidden>Repetir el corte</button>
+          <button type="button" class="boton-secundario" id="btn-volver-corte" hidden>Volver al corte</button>
+        </p>
+        <p class="mensaje-player" id="mensaje" role="status" aria-live="polite"></p>
+      </div>
+    {% else %}
+      <div class="video-falta" role="alert">
+        <h2>Vídeo no disponible</h2>
+        <p>No se encuentra el archivo «{{ video.esperado }}» ({{ video.motivo }}).</p>
+        <p>Colócalo en la carpeta que indica <code>MDF_VIDEOS_DIR</code> y recarga la página. Mientras tanto puedes leer los capítulos y la transcripción.</p>
+      </div>
+    {% endif %}
+  </section>
+
+  <aside class="indice" aria-labelledby="h-indice">
+    <h2 id="h-indice">{% if origen_capitulos == 'catalogo' %}En esta entrevista{% else %}Cortes de la búsqueda{% endif %}</h2>
+    {% if capitulos %}
+    <ol class="lista-tiempos" id="lista-capitulos">
+      {% for c in capitulos %}
+      <li>
+        <button type="button" class="item-tiempo"
+                data-accion="{{ 'corte' if c.clip_id else 'ir' }}"
+                data-inicio="{{ c.inicio }}" data-fin="{{ c.fin if c.fin else '' }}"
+                data-clip="{{ c.clip_id or '' }}" {% if not url_video %}disabled{% endif %}>
+          <span class="t">{{ c.inicio | tiempo }}</span>
+          <span class="titulo" lang="gl">{{ c.titulo }}</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ol>
+    {% if origen_capitulos == 'busqueda' %}
+    <p class="nota">Esta entrevista aún no tiene capítulos propios. Se listan solo los cortes que aparecen en la búsqueda guardada; pulsar uno reproduce ese corte.</p>
+    {% endif %}
+    {% else %}
+    <p class="nota">Esta entrevista no tiene capítulos ni cortes en la búsqueda guardada.</p>
+    {% endif %}
+  </aside>
+</div>
+
+<section class="bloque" aria-labelledby="h-transcripcion">
+  <h2 id="h-transcripcion">Transcripción</h2>
+  {% if origen_transcripcion == 'busqueda' %}
+  <p class="nota">Todavía no hay transcripción completa cargada. Se muestra el texto de los cortes de la búsqueda guardada: no es la entrevista entera.</p>
+  {% endif %}
+  {% if turnos %}
+  <ol class="transcripcion" id="transcripcion">
+    {% for t in turnos %}
+    <li class="turno" data-inicio="{{ t.inicio }}" data-fin="{{ t.fin if t.fin else '' }}" data-clip="{{ t.clip_id or '' }}">
+      <button type="button" class="turno-tiempo" {% if not url_video %}disabled{% endif %}
+              aria-label="Ir a {{ t.inicio | tiempo }}">{{ t.inicio | tiempo }}</button>
+      <div class="turno-cuerpo">
+        {% if t.hablante %}<p class="turno-hablante" {% if origen_transcripcion == 'busqueda' %}lang="gl"{% endif %}>{{ t.hablante }}</p>{% endif %}
+        <p class="turno-texto" lang="gl">{{ t.texto }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p class="nota">No hay transcripción disponible para esta entrevista.</p>
+  {% endif %}
+</section>
+
+<section class="bloque" aria-labelledby="h-contexto">
+  <h2 id="h-contexto">Contexto y uso</h2>
+  <dl class="datos-fuente">
+    <dt>Persona</dt><dd>{{ e.persona }}</dd>
+    <dt>Identificador</dt><dd><code>{{ e.interview_id }}</code></dd>
+    {% if e.coleccion %}<dt>Colección</dt><dd>{{ e.coleccion }}</dd>{% endif %}
+    <dt>Créditos, fecha y condiciones de uso</dt><dd>Pendientes de incorporar a los datos del portal.</dd>
+  </dl>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/reproductor.js" defer></script>
+{% endblock %}

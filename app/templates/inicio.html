@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block titulo %}Inicio{% endblock %}
+
+{% block contenido %}
+<section class="portada">
+  <p class="sobretitulo">Voces para escuchar el territorio</p>
+  <h1>Cada recuerdo abre otra historia.</h1>
+  <p class="entradilla">Explora entrevistas, encuentra relatos y escucha a las personas que los cuentan.</p>
+
+  <form class="buscador" action="/resultados" method="get" role="search">
+    <label class="solo-lectores" for="q">Buscar en el archivo</label>
+    <input id="q" name="q" type="search" autocomplete="off"
+           placeholder="Busca un tema, un lugar o una pregunta, en gallego o castellano">
+    <button type="submit">Buscar en el archivo</button>
+  </form>
+
+  <p class="nota-buscador">
+    El buscador en directo está pendiente. De momento, la caja abre una
+    <a href="/resultados">búsqueda guardada de demostración</a>
+    ({{ busqueda.cortes | length }} cortes de {{ busqueda.n_entrevistas }} entrevistas).
+  </p>
+</section>
+
+{% if temas %}
+<section class="bloque" aria-labelledby="h-temas">
+  <h2 id="h-temas">¿Por dónde quieres empezar?</h2>
+  <ul class="fichas-tema">
+    {% for tema in temas %}
+    <li><a href="/resultados?q={{ tema | urlencode }}">{{ tema }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="bloque" aria-labelledby="h-voces">
+  <div class="bloque-cabecera">
+    <h2 id="h-voces">Conoce las voces</h2>
+    <a href="/catalogo">Ver todas las entrevistas</a>
+  </div>
+  <ul class="voces">
+    {% for e in entrevistas %}
+    <li>
+      <a class="voz" href="/entrevista/{{ e.interview_id }}">
+        <span class="retrato" aria-hidden="true">{{ e.iniciales }}</span>
+        <span class="voz-nombre">{{ e.persona }}</span>
+        {% if e.lugar %}<span class="voz-meta">{{ e.lugar }}</span>{% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

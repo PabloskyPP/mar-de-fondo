@@ -1,0 +1,28 @@
+[project]
+name = "mar-de-fondo"
+version = "0.1.0"
+description = "Portal del archivo audiovisual de memoria oral Mar de Fondo (aAntena)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115",           # trae Starlette: FileResponse con soporte de «Range»
+    "uvicorn[standard]>=0.30",
+    "jinja2>=3.1",
+    "pydantic-settings>=2.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "httpx>=0.27",              # lo usa el cliente de pruebas de FastAPI
+]
+
+[tool.setuptools]
+packages = ["app"]
+
+[tool.setuptools.package-data]
+app = ["templates/*.html", "static/css/*.css", "static/js/*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

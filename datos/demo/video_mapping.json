@@ -1,0 +1,35 @@
+{
+  "description": "Vídeos de Carriza enlazados con los 6 JSON. Sin duplicar originales.",
+  "interviews": {
+    "Pilar_Barrientos_Conde_02_2": {
+      "speaker": "Pilar Barrientos Conde",
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Pilar Barrientos Conde.mp4",
+      "drive_url": "https://drive.google.com/file/d/17KCjI1WRQ02ND8WEPr29UMfCvhx1kR3p/view"
+    },
+    "Maria_Antelo_Lema": {
+      "speaker": "María Antelo Lema",
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Maria Antelo Lema.mp4",
+      "drive_url": "https://drive.google.com/file/d/1z-dBSumDtfQcG9L1WVNyjwOUKCGahX2U/view"
+    },
+    "MariaJoseLiresMartinez": {
+      "speaker": "María José Lires Martínez",
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseLiresMartinez.mp4",
+      "drive_url": "https://drive.google.com/file/d/1Je2gB3hlLw25VEkHJjvUcVXJU454YO7K/view"
+    },
+    "Carmen_Vileda_Rey": {
+      "speaker": "Carmen Vileda Rey",
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Carmen Vileda Rey.mp4",
+      "drive_url": "https://drive.google.com/file/d/1ce4qL52Y52nEmlPl6h3ooGe9qGNTu82X/view"
+    },
+    "MariaJesusPensadoPerez": {
+      "speaker": "María Jesús Pensado Pérez",
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJesusPensadoPerez.mp4",
+      "drive_url": "https://drive.google.com/file/d/1H3tP8iCVJJi72MWMTsKXdV3XVAFbi-fn/view"
+    },
+    "MariaJoseRoa": {
+      "speaker": "María José Roa",
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view"
+    }
+  }
+}

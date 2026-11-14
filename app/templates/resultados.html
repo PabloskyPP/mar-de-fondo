@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block titulo %}Resultados{% endblock %}
+
+{% block contenido %}
+<header class="encabezado-pagina">
+  <h1>Resultados</h1>
+</header>
+
+<form class="buscador buscador-compacto" action="/resultados" method="get" role="search">
+  <label class="solo-lectores" for="q">Buscar en el archivo</label>
+  <input id="q" name="q" type="search" value="{{ q or busqueda.consulta }}" autocomplete="off"
+         placeholder="Busca un tema, un lugar o una pregunta">
+  <button type="submit">Buscar</button>
+</form>
+
+{% include "_aviso_demo.html" %}
+
+{% if busqueda.avisos %}
+<div class="aviso-datos" role="alert">
+  <strong>Se han omitido datos no válidos de la lista exportada:</strong>
+  <ul>{% for a in busqueda.avisos %}<li>{{ a }}</li>{% endfor %}</ul>
+</div>
+{% endif %}
+
+{% if sin_video %}
+<div class="aviso-datos" role="status">
+  <strong>Faltan los vídeos de {{ sin_video | length }} {{ 'entrevista' if sin_video | length == 1 else 'entrevistas' }}:</strong>
+  {{ sin_video | map(attribute='persona') | join(', ') }}.
+  Sus cortes siguen listados, pero no se pueden reproducir y se omiten en «Reproducir fragmentos».
+</div>
+{% endif %}
+
+{% if busqueda.cortes %}
+<div class="barra-lista">
+  <p class="contador" role="status">{{ busqueda.cortes | length }} cortes de ejemplo en {{ busqueda.n_entrevistas }} entrevistas</p>
+  <button id="btn-reproducir" class="boton" type="button" {% if not n_reproducibles %}disabled{% endif %}>
+    Reproducir fragmentos
+  </button>
+</div>
+
+<div class="nota-plan">
+<p>
+  Reproduce {{ plan.resumen.n_tramos }} {{ 'tramo' if plan.resumen.n_tramos == 1 else 'tramos' }}
+  ({{ plan.resumen.duracion_total | duracion }}), pasando de una entrevista a otra.
+  {% if plan.resumen.repetido_evitado >= 1 %}
+    Se evitan {{ plan.resumen.repetido_evitado | duracion }} que se repetirían por cortes solapados de la misma entrevista.
+  {% endif %}
+  </p>
+  <details class="detalle-plan">
+    <summary>Ver cómo se encadenan</summary>
+    <div class="tabla-envoltura">
+      <table>
+        <caption class="solo-lectores">Tramos de la reproducción encadenada</caption>
+        <thead><tr><th scope="col">Orden</th><th scope="col">Persona</th><th scope="col">Intervalo</th><th scope="col">Cortes que cubre</th></tr></thead>
+        <tbody>
+        {% for t in tabla_plan %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ t.persona }}{% if not t.url_video %} <span class="etiqueta etiqueta-aviso">sin vídeo</span>{% endif %}</td>
+            <td>{{ t.inicio | tiempo }}–{{ t.fin | tiempo }}</td>
+            <td>{% for c in t.cortes %}<a href="#{{ ancla_corte(c.clip_id) }}">{{ c.titulo }}</a>{{ ', ' if not loop.last }}{% endfor %}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% if omitidos %}
+      <p>Cortes omitidos por estar ya incluidos en otros: {{ omitidos | map(attribute='titulo') | join(', ') }}.</p>
+    {% endif %}
+  </details>
+</div>
+
+<section id="recopilacion" class="recopilacion" hidden aria-label="Reproductor de fragmentos">
+  <div class="recopilacion-video">
+    <video id="video-lista" controls playsinline preload="metadata"></video>
+  </div>
+  <div class="recopilacion-info">
+    <p class="rec-posicion" id="lista-posicion" aria-live="polite"></p>
+    <h2 class="rec-titulo" id="lista-titulo" lang="gl"></h2>
+    <p class="rec-persona" id="lista-persona"></p>
+    <p class="rec-intervalo" id="lista-intervalo"></p>
+    <div class="rec-controles">
+      <button id="lista-anterior" class="boton-secundario" type="button">Corte anterior</button>
+      <button id="lista-siguiente" class="boton-secundario" type="button">Corte siguiente</button>
+      <button id="lista-cerrar" class="boton-secundario" type="button">Cerrar reproductor</button>
+    </div>
+    <p><a id="lista-abrir" href="#">Abrir esta entrevista en el corte</a></p>
+    <p id="lista-mensaje" class="mensaje-player" role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+<ol class="cortes">
+  {% for c in busqueda.cortes %}
+  {% set ancla = ancla_corte(c.clip_id) %}
+  {% set retorno = url_resultados(q, ancla) %}
+  <li class="corte" id="{{ ancla }}" data-clip="{{ c.clip_id }}">
+    <p class="corte-cabecera">
+      <span class="corte-n">Corte {{ loop.index }}</span>
+      <span class="etiqueta">{{ c.etiqueta_tipo }}</span>
+      {% if c.partes > 1 %}<span class="etiqueta">Parte {{ c.parte }} de {{ c.partes }}</span>{% endif %}
+      {% for b in c.banderas %}<span class="etiqueta etiqueta-aviso">Revisar: {{ b }}</span>{% endfor %}
+      <span class="etiqueta etiqueta-activo" hidden>Reproduciendo</span>
+    </p>
+    <h2 lang="gl">{{ c.titulo }}</h2>
+    <p class="corte-meta">
+      <span>{{ c.persona }}</span>
+      <span>{{ c.inicio | tiempo }}–{{ c.fin | tiempo }} ({{ c.duracion | duracion }})</span>
+    </p>
+    <p class="corte-extracto" lang="gl">{{ c.texto | extracto }}</p>
+    {% if c.texto | length > 290 %}
+    <details class="corte-completo">
+      <summary>Ver el texto completo del corte</summary>
+      <p lang="gl">{{ c.texto }}</p>
+    </details>
+    {% endif %}
+    <p class="corte-acciones">
+      <a class="boton" href="{{ url_entrevista(c.interview_id, c.clip_id, retorno) }}">Ver corte desde {{ c.inicio | tiempo }}</a>
+      <a class="boton-secundario" href="{{ url_entrevista(c.interview_id, None, retorno) }}">Entrevista completa</a>
+    </p>
+  </li>
+  {% endfor %}
+</ol>
+
+<script type="application/json" id="plan-datos">{{ plan | tojson }}</script>
+{% else %}
+<div class="vacio" role="status">
+  <h2>No hay cortes cargados</h2>
+  <p>No se ha podido leer la búsqueda guardada. Comprueba <code>MDF_DATOS_DIR</code> y <code>MDF_PLAYLIST_ARCHIVO</code>.</p>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if busqueda.cortes %}<script src="/static/js/reproductor.js" defer></script>{% endif %}
+{% endblock %}

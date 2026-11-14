@@ -1,0 +1,6 @@
+{
+  "name": "mar-de-fondo-pruebas-js",
+  "private": true,
+  "scripts": { "test": "node --test --test-force-exit" },
+  "devDependencies": { "jsdom": "^26.0.0" }
+}

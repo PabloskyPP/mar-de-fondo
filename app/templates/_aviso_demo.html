@@ -1,0 +1,17 @@
+<aside class="aviso-demo" role="note" aria-label="Aviso de demostración">
+  <strong class="aviso-demo-sello">Demostración</strong>
+  <p>
+    {% if q is defined and q %}
+      Has escrito «{{ q }}», pero el buscador en directo todavía no está conectado.
+      Se muestra la búsqueda guardada
+    {% else %}
+      Estos resultados son de una búsqueda guardada
+    {% endif %}
+    {%- if busqueda.consulta %} sobre «{{ busqueda.consulta }}»
+    {%- else %} (el archivo exportado no registra el texto de la consulta)
+    {%- endif %}
+    {%- if busqueda.fecha %}, exportada el {{ busqueda.fecha | fecha }}{% endif %}:
+    {{ busqueda.cortes | length }} cortes de {{ busqueda.n_entrevistas }} entrevistas.
+    Lo que escribas en la caja no cambia estos resultados.
+  </p>
+</aside>

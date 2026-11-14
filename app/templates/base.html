@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Mar de Fondo{% endblock %} · Mar de Fondo</title>
+  <link rel="stylesheet" href="/static/css/estilos.css">
+</head>
+<body class="{% block clase_body %}{% endblock %}">
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <a class="marca" href="/" aria-label="Mar de Fondo, inicio">
+      <span class="marca-nombre">Mar de Fondo.</span>
+      <span class="marca-sub">Archivo de memoria oral · aAntena</span>
+    </a>
+    <nav class="navegacion" aria-label="Principal">
+      <a href="/" {% if seccion == 'inicio' %}aria-current="page"{% endif %}>Explorar</a>
+      <a href="/catalogo" {% if seccion == 'catalogo' %}aria-current="page"{% endif %}>Entrevistas</a>
+      <a href="/resultados" {% if seccion == 'resultados' %}aria-current="page"{% endif %}>Búsqueda de demostración</a>
+    </nav>
+  </header>
+
+  <main id="contenido" class="contenido">
+    {% block contenido %}{% endblock %}
+  </main>
+
+  <footer class="pie">
+    <p>Prototipo de desarrollo. Los resultados proceden de una búsqueda guardada, no de una consulta en directo.</p>
+  </footer>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>
