@@ -16,6 +16,8 @@
   var INTERVALO_MS = 40; // frecuencia de la comprobación del final
   var TOLERANCIA_SALTO = 1.5; // diferencia máxima (s) tras saltar para darlo por bueno
   var ESPERA_SALTO_MS = 8000;
+  var TOLERANCIA_DEPURACION = 0.25; // s: diferencia aceptable entre salto pedido y real
+  var TOLERANCIA_DURACION = 2; // s: diferencia aceptable entre vídeo y transcripción
 
   // ------------------------------------------------------------------ utilidades
 
@@ -57,7 +59,8 @@
 
   /**
    * Carga `url` si no es ya la fuente, espera los metadatos y salta a `inicio`.
-   * Resuelve {saltoOk, sinRangos, fueraDeRango}; rechaza si el vídeo no carga.
+   * Resuelve {saltoOk, sinRangos, fueraDeRango, objetivo, real}: `objetivo` es el instante
+   * pedido y `real` la posición del vídeo al terminar el salto. Rechaza si el vídeo no carga.
    * `alSaltar(t)` avisa de un salto hecho por el programa, no por la persona.
    */
   function prepararVideo(video, url, inicio, alSaltar) {
@@ -89,7 +92,8 @@
         var sinRangos = !puedeSaltar(video, objetivo);
 
         if (Math.abs(video.currentTime - objetivo) < 0.05) {
-          fin({ saltoOk: true, sinRangos: sinRangos, fueraDeRango: fueraDeRango });
+          fin({ saltoOk: true, sinRangos: sinRangos, fueraDeRango: fueraDeRango,
+                objetivo: objetivo, real: video.currentTime });
           return;
         }
         var temporizador;
@@ -100,11 +104,14 @@
             saltoOk: Math.abs(video.currentTime - objetivo) <= TOLERANCIA_SALTO,
             sinRangos: sinRangos,
             fueraDeRango: fueraDeRango,
+            objetivo: objetivo,
+            real: video.currentTime,
           });
         }
         temporizador = setTimeout(function () {
           video.removeEventListener("seeked", alTerminar);
-          fin({ saltoOk: false, sinRangos: sinRangos, fueraDeRango: fueraDeRango });
+          fin({ saltoOk: false, sinRangos: sinRangos, fueraDeRango: fueraDeRango,
+                objetivo: objetivo, real: video.currentTime });
         }, ESPERA_SALTO_MS);
         video.addEventListener("seeked", alTerminar);
         if (alSaltar) alSaltar(objetivo);
@@ -171,7 +178,14 @@
       repetir: $("btn-repetir"),
       volver: $("btn-volver-corte"),
       mensaje: $("mensaje"),
+      duracion: $("aviso-duracion"),
+      depuracion: $("depuracion"),
     };
+    var depurar = false;
+    try { depurar = new URL(global.location.href).searchParams.get("depurar") === "1"; } catch (e) { /* sin URL */ }
+    if (depurar && ui.depuracion) ui.depuracion.hidden = false;
+    var ultimaPeticion = null; // qué ha pedido la persona: {etiqueta, t}
+    var duracionEsperada = numero(raiz.getAttribute("data-duracion"));
 
     var inicioSel = numero(raiz.getAttribute("data-inicio"));
     var finSel = numero(raiz.getAttribute("data-fin"));
@@ -214,7 +228,30 @@
       }
     }
 
+    function depuracion(r) {
+      if (!depurar || !ui.depuracion || !r || r.real === undefined) return;
+      var dif = Math.abs(r.real - r.objetivo);
+      var peticion = ultimaPeticion ? ultimaPeticion.etiqueta + " · " : "";
+      ui.depuracion.textContent = "Depuración · " + peticion + "pedido " + r.objetivo.toFixed(2) + " s (" +
+        formatear(r.objetivo) + ") · posición real " + r.real.toFixed(2) + " s · diferencia " +
+        dif.toFixed(2) + " s " + (dif <= TOLERANCIA_DEPURACION ? "✓" : "✗ (el salto no ha caído en el instante pedido)");
+    }
+
+    function comprobarDuracion() {
+      if (duracionEsperada === null || !ui.duracion || !isFinite(video.duration)) return;
+      var dif = Math.abs(video.duration - duracionEsperada);
+      if (dif > TOLERANCIA_DURACION) {
+        ui.duracion.hidden = false;
+        ui.duracion.textContent = "Atención: el vídeo dura " + formatear(video.duration) +
+          " y la transcripción corresponde a un audio de " + formatear(duracionEsperada) +
+          ". Si no son el mismo material, los capítulos y la transcripción pueden no caer en el instante correcto.";
+      } else {
+        ui.duracion.hidden = true;
+      }
+    }
+
     function avisoSalto(r) {
+      depuracion(r);
       if (r.fueraDeRango) mensaje("El corte empieza después del final del vídeo; se ha ido al último instante disponible.");
       else if (!r.saltoOk || r.sinRangos)
         mensaje("Este navegador no ha podido saltar a ese segundo. El servidor de vídeo debe admitir peticiones por rangos.");
@@ -262,6 +299,11 @@
         // Dentro del corte: se mantiene el límite de final.
         generacion++;
         saltoInterno = t;
+        var alTerminarSalto = function () {
+          video.removeEventListener("seeked", alTerminarSalto);
+          depuracion({ objetivo: t, real: video.currentTime });
+        };
+        video.addEventListener("seeked", alTerminarSalto);
         video.currentTime = t;
         if (modo === "fin-corte") { modo = "corte"; pintarModo(); }
         vigilante.armar(corte.fin);
@@ -291,6 +333,8 @@
       var fin = numero(el.getAttribute("data-fin"));
       var clip = el.getAttribute("data-clip");
       if (inicio === null) return;
+      var rotulo = el.querySelector(".titulo") || el.querySelector(".turno-texto");
+      ultimaPeticion = { etiqueta: (rotulo ? rotulo.textContent : "").trim().slice(0, 48), t: inicio };
       if (clip && fin !== null && fin > inicio) {
         var t = el.querySelector(".titulo") || el.querySelector(".turno-hablante");
         corte = { inicio: inicio, fin: fin, clipId: clip, titulo: t ? t.textContent : "Corte" };
@@ -337,6 +381,8 @@
     video.addEventListener("seeked", function () { saltoInterno = null; });
 
     video.addEventListener("error", function () { mensaje(textoErrorVideo(video)); });
+    video.addEventListener("loadedmetadata", comprobarDuracion);
+    if (video.readyState >= 1) comprobarDuracion();
 
     // --- Elemento activo en capítulos y transcripción
 

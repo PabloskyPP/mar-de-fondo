@@ -15,6 +15,10 @@ source .venv/bin/activate            # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"              # sin pruebas: pip install -e .
 cp .env.example .env                 # y edita MDF_VIDEOS_DIR
 ```
+Para instalar todas las dependencias necesarias ejecutar en la terminal: 
+py --version
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e .
 
 ## Datos
 
@@ -22,7 +26,9 @@ cp .env.example .env                 # y edita MDF_VIDEOS_DIR
 |---|---|
 | `datos/demo/playlist.json` | Búsqueda exportada: 32 cortes (copia del `playlist_20261022T190150790698Z.json`). |
 | `datos/demo/video_mapping.json` | Entrevistas y nombre del MP4 de cada una. Sus `video_path` apuntan a Colab y **no se usan como ruta**: solo se toma el nombre del archivo. |
-| `datos/demo/entrevistas.json` | **Opcional.** Capítulos y transcripción completa. Formato más abajo. |
+| `datos/demo/temas_preparados.json` | **Capítulos** reales: 70 segmentos de las 6 entrevistas (`id`, `title`, `summary`, `start`/`end`, historias, avisos de calidad, notas). |
+| `datos/demo/transcripciones/*.json` | **Transcripción** con marcas temporales, una por entrevista. Hoy solo está la de Pilar Barrientos Conde. |
+| `datos/demo/entrevistas.json` | **Opcional.** Título, lugar y temas; y capítulos/transcripción solo si no hay otra fuente. |
 | `MDF_VIDEOS_DIR` | Carpeta local con los MP4 (`Pilar Barrientos Conde.mp4`, `MariaJoseRoa.mp4`…). No se versionan. |
 
 El portal busca en `MDF_VIDEOS_DIR` el nombre de archivo del mapa (tolerando
@@ -49,6 +55,8 @@ buscan en cada petición: puedes copiarlos con el portal en marcha.
 Rutas útiles: `/api/videos` (qué vídeos hay), `/api/busqueda`, `/api/plan`,
 `/api/entrevistas`, `/api/docs`.
 
+Para ejecutar programa ejecuta en la terminal:
+.\.venv\Scripts\python.exe -m uvicorn app.main:app
 ## Prueba manual (criterio de «entrega lista»)
 
 1. Abre `/api/videos`: las 6 entrevistas deben salir con `"disponible": true`.
@@ -73,11 +81,35 @@ Rutas útiles: `/api/videos` (qué vídeos hay), `/api/busqueda`, `/api/plan`,
     disponible» con el nombre de archivo esperado y la variable a configurar; capítulos y
     texto siguen visibles. En «Reproducir fragmentos», esos tramos se omiten con aviso.
 
+## Comprobar que capítulos e intervenciones saltan al instante correcto
+
+Con la entrevista de Pilar (`/entrevista/Pilar_Barrientos_Conde_02_2?depurar=1`). El
+parámetro `depurar=1` muestra bajo el vídeo una línea con el instante **pedido** y la
+posición **real** del vídeo tras saltar.
+
+1. Pulsa el capítulo **«Como era a escola de palillo»** (03:34, `Pilar_Barrientos_Conde_02_2_seg05`).
+   La línea de depuración debe decir `pedido 214.38 s (03:34) · posición real 214.38 s ·
+   diferencia 0.00 s ✓` (se admite hasta 0,25 s) y el vídeo debe seguir sin pararse.
+2. Pulsa una intervención de la transcripción, por ejemplo la de **00:23**
+   («Tamén había escuela para as… Tiñamos a escuela de palillo, que era na Falanxe.»).
+   Debe decir `pedido 23.28 s`, y **lo que oyes debe ser esa frase**.
+3. Ese segundo paso es la comprobación que importa: el salto puede ser exacto y aun así
+   la transcripción estar desplazada si el vídeo no es el mismo material que el audio
+   transcrito. Si lo que oyes no coincide con el texto, no es un fallo del portal sino de
+   los tiempos o del archivo de vídeo.
+4. La duración se comprueba sola: si el MP4 dura más de 2 s de diferencia respecto al audio
+   transcrito (7:27), aparece un aviso amarillo bajo el vídeo. El MP4 de Pilar debe durar
+   unos 07:27.
+5. Con el vídeo en marcha, el capítulo y la intervención actuales se resaltan; la
+   transcripción se desplaza sola.
+6. Pulsa el capítulo y luego, en «Cortes de esta búsqueda», un corte: el capítulo salta y
+   sigue sin límite; el corte se detiene en su final.
+
 ## Pruebas automáticas
 
 ```bash
-pytest                               # 40 pruebas: datos, plan, rutas, rangos, vídeo ausente
-cd tests/js && npm install && npm test   # 10 pruebas del reproductor con un <video> simulado (jsdom)
+pytest                               # 59 pruebas: datos reales, plan, rutas, rangos, vídeo ausente
+cd tests/js && npm install && npm test   # 17 pruebas del reproductor con un <video> simulado (jsdom)
 ```
 
 Las pruebas JS simulan el vídeo: comprueban la lógica (parada en `end`, seguir con la
@@ -117,10 +149,53 @@ comprueba que el navegador puede saltar y, si no, muestra un aviso. Consejo: los
 el índice (`moov`) al principio empiezan antes; se consigue con
 `ffmpeg -i entrada.mp4 -c copy -movflags +faststart salida.mp4`.
 
+## Capítulos y transcripción reales
+
+**Capítulos** (`temas_preparados.json`). Una lista de segmentos con `id` (el mismo
+`record_id` que usa la búsqueda guardada: los 11 cortes de tipo «tema» tienen los mismos
+tiempos), `interview_id`, `title`, `summary`, `start`/`end`, `story_ids`,
+`quality_flags` y `transcription_notes`. Se muestran con su resumen (en el capítulo activo)
+y los tramos de «transcripción casi ininteligible» quedan marcados como poco fiables.
+No se usan `from_sentence`/`to_sentence`: no se pueden reproducir desde la transcripción
+cargada (otra segmentación en frases), así que todo se apoya en los tiempos, que sí
+coinciden con las palabras (comprobado en `tests/test_datos_reales.py`).
+
+**Transcripción** (`datos/demo/transcripciones/`). Admite dos formatos:
+
+1. *Palabra a palabra* (el de `Pilar_Barrientos_Conde_transcripcion_corregida.json`):
+   `words` con `text`, `start`, `end`, `type` (`word`/`spacing`/`audio_event`) y, si hay,
+   `speaker_id`; más `transcription_id`, `language_code`, `language_probability` y
+   `audio_duration_secs`. No trae hablantes ni frases, así que las intervenciones se forman
+   aquí: terminan en `.` `?` `!` (no en «...», que ahí marca una duda), tras 2 s de pausa o
+   al cambiar de hablante. Los eventos como `[ríe]` se quedan dentro de su frase; los
+   que están solos (`[música de fondo]`) son su propia fila. Las pausas de 3 s o más se
+   marcan con una línea. Pulsar una intervención salta al `start` real de su primera palabra.
+2. *Por turnos* (el de la guía técnica): una lista, o un objeto con `turns`/`turnos`/
+   `segments`/`transcripcion`, de `{start, end, speaker, text}`.
+
+En todo lo que lleve tiempos (capítulos, turnos, palabras, cortes) se admiten
+`start_time`/`end_time` como alternativa a `start`/`end`.
+
+**Nombre del archivo.** Se busca `<interview_id>.json`, `<interview_id>_transcripcion_corregida.json`
+y, si no, un archivo cuyo nombre sea un prefijo del identificador (por eso
+`Pilar_Barrientos_Conde_transcripcion_corregida.json` sirve para `Pilar_Barrientos_Conde_02_2`),
+siempre que haya uno solo. Si hay varios, no se usa ninguno y se avisa en el registro.
+Excepciones: `MDF_TRANSCRIPCIONES_EXTRA='{"MariaJoseRoa": "roa.json"}'`.
+
+**Procedencia.** «Contexto y uso» muestra lo que traen los archivos: archivo e
+identificador de la transcripción, idioma detectado y su probabilidad, duración del audio,
+archivo de origen y número de capítulos, y las notas de transcripción (p. ej. «Muxía aparece
+transcrito ás veces como “Musía”»). Los archivos **no** traen modelo, versión del
+procesador ni fecha de generación; el portal lo dice en pantalla en vez de inventarlo.
+
+Si falta la transcripción de una entrevista, su pantalla muestra los capítulos y usa el
+texto de los cortes de la búsqueda, rotulado como «no es la entrevista entera».
+
 ## Formato opcional de `entrevistas.json`
 
-Todo salvo `interview_id` es opcional; tiempos en segundos. Un archivo ausente o con
-otro formato se ignora con un aviso en el registro.
+Fuente de último recurso para título, lugar, temas y, solo si no hay capítulos ni
+transcripción reales, para estos. Todo salvo `interview_id` es opcional; tiempos en
+segundos. Un archivo ausente o con otro formato se ignora con un aviso en el registro.
 
 ```json
 {"entrevistas": [{
@@ -132,8 +207,7 @@ otro formato se ignora con un aviso en el registro.
 ```
 
 Con `lugar` y `temas` aparecen los filtros de Catálogo y las entradas por tema de Inicio.
-Sin ellos no se muestra nada inventado. Sin `capitulos` ni `transcripcion`, la pantalla
-Entrevista usa los cortes de la búsqueda y lo indica («no es la entrevista entera»).
+Sin ellos no se muestra nada inventado.
 
 ## Pendiente o fuera de esta fase
 

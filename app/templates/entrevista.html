@@ -30,7 +30,8 @@
            data-inicio="{{ seleccion.inicio if seleccion else '' }}"
            data-fin="{{ seleccion.fin if seleccion and seleccion.fin else '' }}"
            data-clip="{{ seleccion.clip_id if seleccion and seleccion.clip_id else '' }}"
-           data-titulo="{{ seleccion.titulo if seleccion else '' }}">
+           data-titulo="{{ seleccion.titulo if seleccion else '' }}"
+           data-duracion="{{ procedencia.duracion_audio if procedencia.duracion_audio else '' }}">
     {% if url_video %}
       <div class="player-marco">
         <video id="video-entrevista" controls playsinline preload="metadata" src="{{ url_video }}"></video>
@@ -55,7 +56,9 @@
           <button type="button" class="boton-secundario" id="btn-volver-corte" hidden>Volver al corte</button>
         </p>
         <p class="mensaje-player" id="mensaje" role="status" aria-live="polite"></p>
+        <p class="aviso-duracion" id="aviso-duracion" role="status" hidden></p>
       </div>
+      <p class="depuracion" id="depuracion" hidden></p>
     {% else %}
       <div class="video-falta" role="alert">
         <h2>Vídeo no disponible</h2>
@@ -73,10 +76,15 @@
       <li>
         <button type="button" class="item-tiempo"
                 data-accion="{{ 'corte' if c.clip_id else 'ir' }}"
+                {% if c.id %}data-capitulo="{{ c.id }}"{% endif %}
                 data-inicio="{{ c.inicio }}" data-fin="{{ c.fin if c.fin else '' }}"
                 data-clip="{{ c.clip_id or '' }}" {% if not url_video %}disabled{% endif %}>
           <span class="t">{{ c.inicio | tiempo }}</span>
-          <span class="titulo" lang="gl">{{ c.titulo }}</span>
+          <span class="cuerpo-item">
+            <span class="titulo" lang="gl">{{ c.titulo }}</span>
+            {% if c.resumen %}<span class="resumen" lang="gl">{{ c.resumen }}</span>{% endif %}
+            {% for aviso in c.avisos %}<span class="etiqueta etiqueta-aviso">Transcripción poco fiable</span>{% endfor %}
+          </span>
         </button>
       </li>
       {% endfor %}
@@ -87,6 +95,23 @@
     {% else %}
     <p class="nota">Esta entrevista no tiene capítulos ni cortes en la búsqueda guardada.</p>
     {% endif %}
+
+    {% if cortes and origen_capitulos == 'catalogo' %}
+    <h3 class="subindice">Cortes de esta búsqueda</h3>
+    <ol class="lista-tiempos" id="lista-cortes">
+      {% for c in cortes %}
+      <li>
+        <button type="button" class="item-tiempo" data-accion="corte"
+                data-inicio="{{ c.inicio }}" data-fin="{{ c.fin }}" data-clip="{{ c.clip_id }}"
+                {% if not url_video %}disabled{% endif %}>
+          <span class="t">{{ c.inicio | tiempo }}</span>
+          <span class="cuerpo-item"><span class="titulo" lang="gl">{{ c.titulo }}</span></span>
+        </button>
+      </li>
+      {% endfor %}
+    </ol>
+    <p class="nota">Pulsar un corte lo reproduce hasta su final; pulsar un capítulo salta a su inicio y sigue sin límite.</p>
+    {% endif %}
   </aside>
 </div>
 
@@ -94,16 +119,22 @@
   <h2 id="h-transcripcion">Transcripción</h2>
   {% if origen_transcripcion == 'busqueda' %}
   <p class="nota">Todavía no hay transcripción completa cargada. Se muestra el texto de los cortes de la búsqueda guardada: no es la entrevista entera.</p>
+  {% elif tramos_dudosos %}
+  <p class="nota">Los tramos marcados como «transcripción poco fiable» están tal como la entregó el modelo y conviene revisarlos con el audio.</p>
   {% endif %}
   {% if turnos %}
   <ol class="transcripcion" id="transcripcion">
     {% for t in turnos %}
-    <li class="turno" data-inicio="{{ t.inicio }}" data-fin="{{ t.fin if t.fin else '' }}" data-clip="{{ t.clip_id or '' }}">
+    <li class="turno{% if t.tipo == 'evento' %} evento{% endif %}{% if t.tras_pausa %} tras-pausa{% endif %}{% if t.dudoso %} dudoso{% endif %}"
+        id="turno-{{ loop.index }}"
+        data-inicio="{{ t.inicio }}" data-fin="{{ t.fin if t.fin else '' }}" data-clip="{{ t.clip_id or '' }}">
       <button type="button" class="turno-tiempo" {% if not url_video %}disabled{% endif %}
               aria-label="Ir a {{ t.inicio | tiempo }}">{{ t.inicio | tiempo }}</button>
       <div class="turno-cuerpo">
         {% if t.hablante %}<p class="turno-hablante" {% if origen_transcripcion == 'busqueda' %}lang="gl"{% endif %}>{{ t.hablante }}</p>{% endif %}
-        <p class="turno-texto" lang="gl">{{ t.texto }}</p>
+        <p class="turno-texto"{% if t.tipo != 'evento' %} lang="gl"{% endif %}>{{ t.texto }}</p>
+        {% if t.dudoso %}<p class="turno-aviso"><span class="etiqueta etiqueta-aviso">Transcripción poco fiable</span> {{ t.dudoso }}</p>{% endif %}
+        {% if t.tras_pausa and origen_transcripcion == 'catalogo' %}<p class="turno-pausa">{{ t.pausa | round | int }} s de silencio antes</p>{% endif %}
       </div>
     </li>
     {% endfor %}
@@ -121,6 +152,37 @@
     {% if e.coleccion %}<dt>Colección</dt><dd>{{ e.coleccion }}</dd>{% endif %}
     <dt>Créditos, fecha y condiciones de uso</dt><dd>Pendientes de incorporar a los datos del portal.</dd>
   </dl>
+
+  <h3 class="subindice">Procedencia de los datos</h3>
+  {% if procedencia.vacia %}
+  <p class="nota">Los archivos cargados no traen datos de procedencia para esta entrevista.</p>
+  {% else %}
+  <dl class="datos-fuente procedencia">
+    {% if procedencia.archivo_transcripcion %}
+    <dt>Transcripción</dt>
+    <dd>archivo <code>{{ procedencia.archivo_transcripcion }}</code>{% if procedencia.transcripcion_id %}, identificador <code>{{ procedencia.transcripcion_id }}</code>{% endif %}</dd>
+    {% endif %}
+    {% if procedencia.idioma_transcripcion %}
+    <dt>Idioma detectado</dt>
+    <dd><code>{{ procedencia.idioma_transcripcion }}</code>{% if procedencia.prob_idioma is not none %} (probabilidad {{ (procedencia.prob_idioma * 100) | round | int }} %){% endif %}</dd>
+    {% endif %}
+    {% if procedencia.duracion_audio %}
+    <dt>Duración del audio transcrito</dt><dd>{{ procedencia.duracion_audio | tiempo }} ({{ procedencia.duracion_audio }} s)</dd>
+    {% endif %}
+    {% if procedencia.archivo_origen_temas or procedencia.n_capitulos %}
+    <dt>Capítulos</dt>
+    <dd>{{ procedencia.n_capitulos }} {{ 'capítulo' if procedencia.n_capitulos == 1 else 'capítulos' }}{% if procedencia.archivo_origen_temas %}, origen <code>{{ procedencia.archivo_origen_temas }}</code>{% endif %}{% if procedencia.idioma_temas %}, idioma <code>{{ procedencia.idioma_temas }}</code>{% endif %}</dd>
+    {% endif %}
+  </dl>
+  {% endif %}
+  <p class="nota">Los archivos cargados no indican el modelo, la versión del procesador ni la fecha de generación de capítulos y transcripción.</p>
+
+  {% if notas_transcripcion %}
+  <h3 class="subindice">Notas sobre la transcripción</h3>
+  <ul class="notas-transcripcion">
+    {% for n in notas_transcripcion %}<li lang="gl">{{ n }}</li>{% endfor %}
+  </ul>
+  {% endif %}
 </section>
 {% endblock %}
 

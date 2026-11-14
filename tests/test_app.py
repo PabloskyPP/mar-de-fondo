@@ -90,11 +90,21 @@ def test_corte_inexistente_o_de_otra_entrevista_avisa(cliente):
     assert "pertenece a otra entrevista" in r.text
 
 
-def test_entrevista_sin_capitulos_ni_transcripcion_usa_los_cortes_y_lo_dice(cliente):
+def test_entrevista_con_capitulos_pero_sin_transcripcion_usa_los_cortes_para_el_texto(cliente):
     html = cliente.get("/entrevista/MariaJoseRoa").text
+    assert "En esta entrevista" in html and html.count('data-capitulo="') == 20
+    assert "Cortes de esta búsqueda" in html and html.count('data-accion="corte"') == 12
+    assert "no es la entrevista entera" in html
+    assert len(re.findall(r'<li class="turno', html)) == 12
+
+
+def test_entrevista_sin_ningun_dato_extra_usa_los_cortes_y_lo_dice(carpeta_videos, datos_copia):
+    from tests.conftest import hacer_cliente
+    (datos_copia / "temas_preparados.json").unlink()
+    with hacer_cliente(videos_dir=carpeta_videos, datos_dir=datos_copia) as c:
+        html = c.get("/entrevista/MariaJoseRoa").text
     assert "Cortes de la búsqueda" in html and "aún no tiene capítulos propios" in html
     assert "no es la entrevista entera" in html
-    assert html.count('class="turno"') == 12
 
 
 def test_entrevista_desconocida_404(cliente):

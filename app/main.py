@@ -139,40 +139,58 @@ def _capitulos_y_texto(
 ) -> dict[str, Any]:
     """Capítulos y transcripción de la entrevista.
 
-    Usa ``entrevistas.json`` cuando lo trae; si no, los cortes de la búsqueda
-    (que son solo una parte de la entrevista y se etiquetan como tal).
+    Usa los capítulos y la transcripción cargados cuando existen; si no, los
+    cortes de la búsqueda (que son solo una parte de la entrevista y se
+    etiquetan como tal).
     """
     ordenados = sorted(cortes, key=lambda c: c.inicio)
+    dudosos = entrevista.tramos_dudosos
+
+    def motivo_dudoso(inicio: float, fin: float | None) -> str | None:
+        fin = inicio if fin is None else fin
+        for a, b, motivo in dudosos:
+            if inicio < b and (fin > a or a <= inicio <= b):
+                return motivo
+        return None
+
     if entrevista.capitulos:
         capitulos = [
-            {"titulo": c.titulo, "inicio": c.inicio, "fin": c.fin, "clip_id": None}
+            {"id": c.id, "titulo": c.titulo, "inicio": c.inicio, "fin": c.fin,
+             "resumen": c.resumen, "historias": list(c.historias),
+             "avisos": [a.motivo for a in c.avisos], "clip_id": None}
             for c in entrevista.capitulos
         ]
         origen_cap = "catalogo"
     else:
         capitulos = [
-            {"titulo": c.titulo, "inicio": c.inicio, "fin": c.fin, "clip_id": c.clip_id}
+            {"id": "", "titulo": c.titulo, "inicio": c.inicio, "fin": c.fin,
+             "resumen": "", "historias": [], "avisos": [], "clip_id": c.clip_id}
             for c in ordenados
         ]
         origen_cap = "busqueda"
 
     if entrevista.transcripcion:
         turnos = [
-            {"inicio": t.inicio, "fin": t.fin, "texto": t.texto,
-             "hablante": t.hablante, "clip_id": None}
+            {"inicio": t.inicio, "fin": t.fin, "texto": t.texto, "hablante": t.hablante,
+             "tipo": t.tipo, "pausa": t.pausa, "tras_pausa": t.tras_pausa,
+             "dudoso": motivo_dudoso(t.inicio, t.fin), "clip_id": None}
             for t in entrevista.transcripcion
         ]
         origen_txt = "catalogo"
     else:
         turnos = [
-            {"inicio": c.inicio, "fin": c.fin, "texto": c.texto,
-             "hablante": c.titulo, "clip_id": c.clip_id}
+            {"inicio": c.inicio, "fin": c.fin, "texto": c.texto, "hablante": c.titulo,
+             "tipo": "habla", "pausa": 0.0, "tras_pausa": False,
+             "dudoso": None, "clip_id": c.clip_id}
             for c in ordenados if c.texto
         ]
         origen_txt = "busqueda"
     return {
         "capitulos": capitulos, "origen_capitulos": origen_cap,
         "turnos": turnos, "origen_transcripcion": origen_txt,
+        "procedencia": entrevista.procedencia,
+        "notas_transcripcion": entrevista.notas_transcripcion,
+        "tramos_dudosos": dudosos,
     }
 
 

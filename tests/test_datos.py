@@ -83,7 +83,7 @@ def test_entrevistas_json_opcional(datos_copia: Path):
         "transcripcion": [{"start": 3.1, "end": 9, "text": "Hola", "speaker": "Carmen"},
                           {"start": "mal", "text": "x"}],
     }]}), encoding="utf-8")
-    aj = Ajustes(_env_file=None, datos_dir=datos_copia)
+    aj = Ajustes(_env_file=None, datos_dir=datos_copia, temas_archivo="no_existe.json")
     cat = cargar_catalogo(aj, cargar_busqueda(aj).cortes)
     e = cat.obtener("Carmen_Vileda_Rey")
     assert e.encabezado == "El palillado" and e.lugar == "Camariñas"
@@ -97,3 +97,13 @@ def test_entrevistas_json_roto_se_ignora(datos_copia: Path):
     (datos_copia / "entrevistas.json").write_text("{no es json", encoding="utf-8")
     aj = Ajustes(_env_file=None, datos_dir=datos_copia)
     assert len(cargar_catalogo(aj, cargar_busqueda(aj).cortes)) == 6
+
+
+def test_temas_reales_tienen_prioridad_sobre_entrevistas_json(datos_copia: Path):
+    (datos_copia / "entrevistas.json").write_text(json.dumps({"entrevistas": [{
+        "interview_id": "Carmen_Vileda_Rey", "title": "El palillado",
+        "capitulos": [{"title": "Otro", "start": 0}]}]}), encoding="utf-8")
+    aj = Ajustes(_env_file=None, datos_dir=datos_copia)
+    e = cargar_catalogo(aj, cargar_busqueda(aj).cortes).obtener("Carmen_Vileda_Rey")
+    assert e.encabezado == "El palillado"            # metadatos de entrevistas.json
+    assert len(e.capitulos) == 10 and e.capitulos[0].id == "Carmen_Vileda_Rey_seg01"

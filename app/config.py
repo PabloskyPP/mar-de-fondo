@@ -35,7 +35,16 @@ class Ajustes(BaseSettings):
     datos_dir: Path = Path("datos/demo")
     playlist_archivo: str = "playlist.json"
     mapa_videos_archivo: str = "video_mapping.json"
-    # Opcional: capítulos y transcripción completa por entrevista.
+    # Capítulos (segmentos temáticos) de todas las entrevistas.
+    temas_archivo: str = "temas_preparados.json"
+    # Carpeta con una transcripción con marcas temporales por entrevista. Por
+    # defecto, «transcripciones» dentro de la carpeta de datos.
+    transcripciones_dir: Path | None = None
+    # Excepciones: {"interview_id": "archivo.json"} (relativo a la carpeta de
+    # transcripciones, o ruta absoluta). En .env va como JSON en una línea.
+    transcripciones_extra: dict[str, str] = Field(default_factory=dict)
+    # Opcional: metadatos (título, lugar, temas) y, si no hay otra fuente,
+    # capítulos y transcripción en el formato propio del portal.
     entrevistas_archivo: str = "entrevistas.json"
 
     # Carpeta local con los MP4. Sin ella el portal arranca igualmente, pero
@@ -58,6 +67,12 @@ class Ajustes(BaseSettings):
     @property
     def datos_ruta(self) -> Path:
         return self._absoluta(self.datos_dir)
+
+    @property
+    def transcripciones_ruta(self) -> Path:
+        if self.transcripciones_dir is not None:
+            return self._absoluta(self.transcripciones_dir)
+        return self.datos_ruta / "transcripciones"
 
     @property
     def videos_ruta(self) -> Path | None:

@@ -214,6 +214,11 @@ th { font-weight: 600; color: var(--tinta-suave); }
 .item-tiempo { display: grid; grid-template-columns: 3.4rem 1fr; gap: 0.6rem; width: 100%; text-align: left; font: inherit; color: var(--tinta); background: transparent; border: 0; border-left: 4px solid transparent; padding: 0.5rem 0.5rem; cursor: pointer; border-radius: 3px; }
 .item-tiempo:hover:not(:disabled) { background: #f0ece0; }
 .item-tiempo .t { color: var(--tinta-suave); font-variant-numeric: tabular-nums; }
+.cuerpo-item { display: flex; flex-direction: column; gap: 0.25rem; align-items: flex-start; min-width: 0; }
+/* El resumen de un capítulo solo se despliega en el capítulo activo o con foco */
+.item-tiempo .resumen { display: none; font-size: 0.88rem; color: var(--tinta-suave); line-height: 1.4; }
+.item-tiempo.activo .resumen, .item-tiempo:focus-visible .resumen { display: block; }
+.subindice { font-size: 1.05rem; margin: 1.1rem 0 0.5rem; }
 .item-tiempo.activo { background: var(--activo-fondo); border-left-color: var(--ladrillo); }
 .nota { color: var(--tinta-suave); font-size: 0.9rem; margin-top: 0.7rem; }
 
@@ -229,6 +234,19 @@ th { font-weight: 600; color: var(--tinta-suave); }
 .datos-fuente dt { color: var(--tinta-suave); }
 .datos-fuente dd { margin: 0; }
 @media (max-width: 40rem) { .datos-fuente { grid-template-columns: 1fr; } .datos-fuente dd { margin-bottom: 0.6rem; } }
+
+/* Transcripción con datos reales */
+.turno.evento .turno-texto { font-style: italic; color: var(--tinta-suave); }
+.turno.tras-pausa { border-top: 2px solid #b9b29e; }
+.turno.dudoso { background: #fdf6e3; }
+.turno.dudoso.activo { background: var(--activo-fondo); }
+.turno-pausa, .turno-aviso { margin: 0.3rem 0 0; font-size: 0.85rem; color: var(--tinta-suave); }
+.notas-transcripcion { margin: 0.4rem 0 0; padding-left: 1.2rem; max-width: 72ch; }
+.notas-transcripcion li { margin-bottom: 0.3rem; }
+
+/* Avisos del reproductor */
+.aviso-duracion { margin: 0.6rem 0 0; padding: 0.6rem 0.8rem; background: var(--aviso-fondo); border: 1px solid var(--aviso-borde); border-radius: var(--radio); font-size: 0.92rem; }
+.depuracion { margin: 0.6rem 0 0; padding: 0.5rem 0.8rem; font: 0.85rem/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: #1c2a27; color: #e8f1ec; border-radius: var(--radio); overflow-wrap: anywhere; }
 
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }

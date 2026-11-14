@@ -3,7 +3,7 @@
 //
 //   cd tests/js && npm install && npm test
 "use strict";
-const test = require("node:test");
+const { test, afterEach } = require("node:test");
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
@@ -11,6 +11,14 @@ const { JSDOM } = require("jsdom");
 
 const CODIGO = fs.readFileSync(
   path.join(__dirname, "..", "..", "app", "static", "js", "reproductor.js"), "utf8");
+
+// Cada prueba crea una ventana jsdom y un reloj simulado: se liberan al terminar para
+// que los temporizadores de unas pruebas no ralenticen a las siguientes.
+const recursos = { ventanas: [], relojes: [] };
+afterEach(() => {
+  recursos.relojes.splice(0).forEach(clearInterval);
+  recursos.ventanas.splice(0).forEach((w) => w.close());
+});
 
 const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
 async function hasta(cond, ms = 4000) {
@@ -62,15 +70,16 @@ function simularVideo(doc, { duracion = 2100, sinRangos = false } = {}) {
     cerrarRep(); listo = 0; t = 0; pausado = true;
     setTimeout(() => { listo = 1; v.dispatchEvent(new doc.defaultView.Event("loadedmetadata")); }, 5);
   };
-  setInterval(() => {
+  recursos.relojes.push(setInterval(() => {
     if (!pausado) { t += 0.1; v.dispatchEvent(new doc.defaultView.Event("timeupdate")); }
-  }, 10);
+  }, 10));
   return v;
 }
 
 function montar(html, opciones) {
-  const dom = new JSDOM(html, { runScripts: "outside-only", url: "http://localhost/resultados?q=x" });
+  const dom = new JSDOM(html, { runScripts: "outside-only", url: (opciones && opciones.url) || "http://localhost/resultados?q=x" });
   const w = dom.window;
+  recursos.ventanas.push(w);
   w.eval(CODIGO);
   const video = simularVideo(w.document, opciones);
   const marcador = w.document.querySelector("video");
@@ -229,4 +238,104 @@ test("cerrar el reproductor detiene todo", async () => {
   doc.getElementById("lista-cerrar").click();
   assert.equal(doc.getElementById("recopilacion").hidden, true);
   assert.ok(video.paused);
+});
+
+
+// ---------------------------------------------------------------- capítulos e intervenciones reales
+
+const HTML_REAL = (duracion = "447.04") => `
+<section id="reproductor" data-url-video="/videos/P" data-inicio="" data-fin="" data-clip="" data-titulo=""
+         data-duracion="${duracion}">
+  <video src="/videos/P"></video>
+  <span id="modo-etiqueta"></span><span id="modo-texto"></span>
+  <button id="btn-completa" hidden></button><button id="btn-repetir" hidden></button>
+  <button id="btn-volver-corte" hidden></button><p id="mensaje"></p>
+  <p id="aviso-duracion" hidden></p><p id="depuracion" hidden></p>
+</section>
+<ol id="lista-capitulos">
+  <li><button class="item-tiempo" data-accion="ir" data-capitulo="P_seg01" data-inicio="15.48" data-fin="76.14" data-clip="">
+    <span class="t">00:15</span><span class="cuerpo-item"><span class="titulo">A escola de palillo da Falaxe</span></span></button></li>
+  <li><button class="item-tiempo" data-accion="ir" data-capitulo="P_seg05" data-inicio="214.38" data-fin="245.84" data-clip="">
+    <span class="t">03:34</span><span class="cuerpo-item"><span class="titulo">Como era a escola de palillo</span></span></button></li>
+</ol>
+<ol id="transcripcion">
+  <li class="turno" id="turno-2" data-inicio="15.48" data-fin="19.24" data-clip=""><button class="turno-tiempo">00:15</button>
+    <div><p class="turno-texto">Pola mañá, levantarse, desayuno, pa escuela.</p></div></li>
+  <li class="turno" id="turno-4" data-inicio="23.28" data-fin="28.5" data-clip=""><button class="turno-tiempo">00:23</button>
+    <div><p class="turno-texto">Tamén había escuela para as... Tiñamos a escuela de palillo, que era na Falanxe.</p></div></li>
+  <li class="turno" id="turno-30" data-inicio="214.38" data-fin="220.1" data-clip=""><button class="turno-tiempo">03:34</button>
+    <div><p class="turno-texto">Dábanos...</p></div></li>
+</ol>`;
+
+const ultimoSalto = (video) => video.visitado[video.visitado.length - 1];
+
+test("pulsar un capítulo salta a su inicio real y sigue sin límite de final", async () => {
+  const { doc, video, api } = montar(HTML_REAL());
+  const ctrl = api.iniciarEntrevista(doc.getElementById("reproductor"), doc);
+  doc.querySelector('[data-capitulo="P_seg05"]').click();
+  await hasta(() => !video.paused);
+  assert.equal(ultimoSalto(video).t, 214.38);
+  assert.equal(ctrl.estado().modo, "completa");
+  await hasta(() => video.currentTime > 246);          // pasa del fin del capítulo (245.84)
+  assert.equal(video.paused, false);
+  assert.equal(doc.getElementById("lista-capitulos").children[1].querySelector("button").classList.contains("activo"), true);
+});
+
+test("pulsar una intervención (fila o botón de tiempo) salta a su inicio real", async () => {
+  const { doc, video, api } = montar(HTML_REAL());
+  api.iniciarEntrevista(doc.getElementById("reproductor"), doc);
+  doc.querySelector("#turno-4 .turno-tiempo").click();       // el botón: el clic sube a la fila
+  await hasta(() => !video.paused);
+  assert.equal(ultimoSalto(video).t, 23.28);
+  await hasta(() => video.currentTime > 24);
+  assert.ok(doc.getElementById("turno-4").classList.contains("activo"));
+  assert.equal(doc.getElementById("turno-2").classList.contains("activo"), false);
+
+  doc.querySelector("#turno-30 .turno-texto").click();       // el texto de otra fila
+  await hasta(() => ultimoSalto(video).t === 214.38);
+  await hasta(() => doc.getElementById("turno-30").classList.contains("activo"));
+  assert.ok(video.currentTime >= 214.38 && video.currentTime < 216);
+  assert.equal(doc.getElementById("turno-4").classList.contains("activo"), false);
+});
+
+test("con ?depurar=1 se muestra el instante pedido y la posición real tras el salto", async () => {
+  const { doc, video, api } = montar(HTML_REAL(), { url: "http://localhost/entrevista/P?depurar=1" });
+  api.iniciarEntrevista(doc.getElementById("reproductor"), doc);
+  const panel = doc.getElementById("depuracion");
+  assert.equal(panel.hidden, false);
+  doc.querySelector('[data-capitulo="P_seg05"]').click();
+  await hasta(() => /pedido 214\.38 s/.test(panel.textContent));
+  assert.match(panel.textContent, /03:34/);
+  assert.match(panel.textContent, /Como era a escola de palillo/);
+  assert.match(panel.textContent, /diferencia 0\.00 s ✓/);
+  assert.ok(video);
+});
+
+test("sin ?depurar=1 el panel de depuración permanece oculto", async () => {
+  const { doc, api } = montar(HTML_REAL());
+  api.iniciarEntrevista(doc.getElementById("reproductor"), doc);
+  assert.equal(doc.getElementById("depuracion").hidden, true);
+});
+
+test("avisa si la duración del vídeo no coincide con la del audio transcrito", async () => {
+  const { doc, api } = montar(HTML_REAL("447.04"), { duracion: 2100 });
+  api.iniciarEntrevista(doc.getElementById("reproductor"), doc);
+  const aviso = doc.getElementById("aviso-duracion");
+  await hasta(() => !aviso.hidden);
+  assert.match(aviso.textContent, /el vídeo dura 35:00/);
+  assert.match(aviso.textContent, /audio de 07:27/);
+});
+
+test("no avisa si la duración coincide (diferencia menor de 2 s)", async () => {
+  const { doc, api } = montar(HTML_REAL("447.04"), { duracion: 447.9 });
+  api.iniciarEntrevista(doc.getElementById("reproductor"), doc);
+  await esperar(150);
+  assert.equal(doc.getElementById("aviso-duracion").hidden, true);
+});
+
+test("sin duración de referencia no se comprueba nada", async () => {
+  const { doc, api } = montar(HTML_REAL(""), { duracion: 2100 });
+  api.iniciarEntrevista(doc.getElementById("reproductor"), doc);
+  await esperar(150);
+  assert.equal(doc.getElementById("aviso-duracion").hidden, true);
 });

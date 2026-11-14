@@ -6,6 +6,8 @@ Un mismo ``record_id`` (historia o tema) puede tener varios cortes no
 contiguos; el orden de reproducción es ``selection_order`` y después
 ``source_number``.
 
+Los tiempos pueden llamarse ``start``/``end`` o ``start_time``/``end_time``.
+
 El archivo exportado **no incluye el texto de la consulta ni la fecha**. Se
 pueden indicar con ``MDF_DEMO_CONSULTA`` y ``MDF_DEMO_FECHA``; si no, se intenta
 leer la fecha del nombre del archivo (``playlist_YYYYMMDDTHHMMSS…Z.json``).
@@ -22,6 +24,7 @@ from datetime import datetime
 from typing import Any
 
 from .config import Ajustes, fecha_desde_nombre
+from .tiempos import leer_fin, leer_inicio
 
 log = logging.getLogger("mardefondo.resultados")
 
@@ -146,17 +149,26 @@ def _entero(valor: Any, defecto: int) -> int:
     return int(valor) if isinstance(valor, (int, float)) and not isinstance(valor, bool) else defecto
 
 
+def _bandera(valor: Any) -> str:
+    """Texto de un aviso de calidad, que puede ser una cadena o un objeto."""
+    if isinstance(valor, str):
+        return valor.strip()
+    if isinstance(valor, dict):
+        return _cadena(valor.get("reason")) or _cadena(valor.get("kind"))
+    return ""
+
+
 def _interpretar(bruto: Any, posicion: int) -> tuple[Corte | None, str | None]:
     if not isinstance(bruto, dict):
         return None, f"El elemento {posicion} no es un objeto."
     clip_id = _cadena(bruto.get("clip_id"))
     interview_id = _cadena(bruto.get("interview_id"))
-    inicio, fin = _num(bruto.get("start")), _num(bruto.get("end"))
+    inicio, fin = leer_inicio(bruto), leer_fin(bruto)
     if not clip_id or not interview_id:
         return None, f"El elemento {posicion} no tiene clip_id o interview_id."
     if inicio is None or fin is None or inicio < 0 or fin <= inicio:
-        return None, f"El corte {clip_id} tiene un intervalo no válido ({bruto.get('start')}–{bruto.get('end')})."
-    banderas = bruto.get("quality_flags")
+        return None, f"El corte {clip_id} tiene un intervalo no válido ({inicio}–{fin})."
+    banderas = [_bandera(b) for b in bruto.get("quality_flags") or [] if _bandera(b)]
     corte = Corte(
         clip_id=clip_id,
         record_id=_cadena(bruto.get("record_id")) or clip_id,
@@ -172,7 +184,7 @@ def _interpretar(bruto: Any, posicion: int) -> tuple[Corte | None, str | None]:
         n_fuente=_entero(bruto.get("source_number"), 1),
         rank=_entero(bruto.get("rank_in_index"), 0) or None,
         similitud=_num(bruto.get("cosine_similarity")),
-        banderas=tuple(str(b) for b in banderas) if isinstance(banderas, list) else (),
+        banderas=tuple(banderas),
     )
     return corte, None
 
