@@ -1,0 +1,36 @@
+{# Aviso sobre el origen de los resultados: búsqueda guardada (demostración) o en directo. #}
+{% if busqueda.es_demo %}
+<aside class="aviso-demo" role="note" aria-label="Aviso de demostración">
+  <strong class="aviso-demo-sello">Demostración</strong>
+  <p>
+    {% if aviso_buscador %}
+      {{ aviso_buscador }} Se muestra la búsqueda guardada
+    {% elif q %}
+      Se muestra la búsqueda guardada
+    {% else %}
+      Estos resultados son de una búsqueda guardada
+    {% endif %}
+    {%- if busqueda.consulta %} sobre «{{ busqueda.consulta }}»
+    {%- else %} (el archivo exportado no registra el texto de la consulta)
+    {%- endif %}
+    {%- if busqueda.fecha %}, exportada el {{ busqueda.fecha | fecha }}{% endif %}:
+    {{ busqueda.cortes | length }} cortes de {{ busqueda.n_entrevistas }} entrevistas.
+    {% if not q and buscador_listo %}Escribe una consulta para buscar en directo.
+    {% elif not q and motivo_buscador %}El buscador en directo no está disponible: {{ motivo_buscador }}.
+    {% endif %}
+  </p>
+</aside>
+{% else %}
+<aside class="aviso-vivo" role="note" aria-label="Búsqueda en directo">
+  <strong class="aviso-vivo-sello">Búsqueda en directo</strong>
+  <p>
+    «{{ busqueda.consulta }}»
+    {%- if busqueda.terminos %}, con las palabras literales {{ busqueda.terminos | join(', ') }}{% endif %}
+    {%- if busqueda.tipo != 'ambos' %}, solo en {{ busqueda.tipo }}{% endif %}:
+    {{ busqueda.cortes | length }} cortes de {{ busqueda.n_entrevistas }} entrevistas.
+    Son los fragmentos más próximos en significado; no hay umbral de similitud, así que
+    <strong>no garantizan que respondan a la pregunta</strong>, y que no salga nada no
+    demuestra que nadie hable del asunto.
+  </p>
+</aside>
+{% endif %}

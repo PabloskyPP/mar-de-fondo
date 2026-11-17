@@ -8,12 +8,34 @@
 
 <form class="buscador buscador-compacto" action="/resultados" method="get" role="search">
   <label class="solo-lectores" for="q">Buscar en el archivo</label>
-  <input id="q" name="q" type="search" value="{{ q or busqueda.consulta }}" autocomplete="off"
-         placeholder="Busca un tema, un lugar o una pregunta">
+  <input id="q" name="q" type="search" value="{{ q or (busqueda.consulta if busqueda.es_demo else '') }}" autocomplete="off"
+         placeholder="Busca un tema, un lugar o una pregunta, en gallego o castellano">
   <button type="submit">Buscar</button>
+  <details class="opciones-busqueda" {% if tipo != 'ambos' or terminos %}open{% endif %}>
+    <summary>Opciones de búsqueda</summary>
+    <div class="opciones-rejilla">
+      <div class="campo">
+        <label for="f-tipo">Buscar en</label>
+        <select id="f-tipo" name="tipo">
+          <option value="ambos" {% if tipo == 'ambos' %}selected{% endif %}>Temas e historias</option>
+          <option value="temas" {% if tipo == 'temas' %}selected{% endif %}>Solo temas (segmentos continuos)</option>
+          <option value="historias" {% if tipo == 'historias' %}selected{% endif %}>Solo historias (pueden tener varios tramos)</option>
+        </select>
+      </div>
+      <div class="campo campo-ancho">
+        <label for="f-terminos">Palabras que deben aparecer literalmente</label>
+        <input id="f-terminos" name="terminos" type="text" value="{{ terminos }}" autocomplete="off"
+               placeholder="p. ej. carburo, Venezuela (separadas por comas)">
+      </div>
+    </div>
+    <p class="nota">Las palabras literales filtran por texto exacto (sin distinguir mayúsculas ni acentos) en el título, el resumen y la transcripción. No sustituyen a la búsqueda por significado: la restringen.</p>
+  </details>
 </form>
+{% if buscador_listo and not modelo_cargado %}
+<p class="nota-buscador">La primera consulta en directo tarda unos segundos: se carga el modelo.</p>
+{% endif %}
 
-{% include "_aviso_demo.html" %}
+{% include "_aviso_busqueda.html" %}
 
 {% if busqueda.avisos %}
 <div class="aviso-datos" role="alert">
@@ -31,6 +53,24 @@
 {% endif %}
 
 {% if busqueda.cortes %}
+{% if not busqueda.es_demo and busqueda.n_candidatos %}
+<details class="detalle-plan detalle-seleccion">
+  <summary>Cómo se ha construido esta lista</summary>
+  <p>El índice devolvió {{ busqueda.n_candidatos[0] }} temas y {{ busqueda.n_candidatos[1] }} historias
+     candidatos{% if busqueda.terminos %} que contienen las palabras indicadas{% endif %}. Se intercalan por posición (primero la historia)
+     y se omite cada candidato cubierto en un 60 % o más por lo ya incluido de la misma entrevista.
+     Se prefieren como mucho dos fragmentos por persona al principio; el resto no se descarta, pasa al final de la lista.</p>
+  {% if busqueda.descartados %}
+  <p>Omitidos por solapamiento con lo ya incluido:</p>
+  <ul>
+    {% for titulo, fraccion in busqueda.descartados %}
+    <li lang="gl">{{ titulo }}{% if fraccion is not none %} <span class="etiqueta">{{ (fraccion * 100) | round | int }} % ya cubierto</span>{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</details>
+{% endif %}
+
 <div class="barra-lista">
   <p class="contador" role="status">{{ busqueda.cortes | length }} cortes de ejemplo en {{ busqueda.n_entrevistas }} entrevistas</p>
   <button id="btn-reproducir" class="boton" type="button" {% if not n_reproducibles %}disabled{% endif %}>
@@ -92,7 +132,7 @@
 <ol class="cortes">
   {% for c in busqueda.cortes %}
   {% set ancla = ancla_corte(c.clip_id) %}
-  {% set retorno = url_resultados(q, ancla) %}
+  {% set retorno = url_resultados(q, ancla, tipo, terminos) %}
   <li class="corte" id="{{ ancla }}" data-clip="{{ c.clip_id }}">
     <p class="corte-cabecera">
       <span class="corte-n">Corte {{ loop.index }}</span>
@@ -122,6 +162,12 @@
 </ol>
 
 <script type="application/json" id="plan-datos">{{ plan | tojson }}</script>
+{% elif not busqueda.es_demo %}
+<div class="vacio" role="status">
+  <h2>Ningún candidato cumple los filtros</h2>
+  <p>No se ha recuperado ningún fragmento{% if busqueda.terminos %} que contenga {{ busqueda.terminos | join(' y ') }}{% endif %}.
+     Eso no demuestra que nadie hable del asunto: prueba con otras palabras o quita las palabras literales.</p>
+</div>
 {% else %}
 <div class="vacio" role="status">
   <h2>No hay cortes cargados</h2>

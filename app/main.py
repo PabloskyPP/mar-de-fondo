@@ -14,21 +14,25 @@ import re
 from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlencode, urlsplit
+from urllib.parse import parse_qs, urlencode, urlsplit
 
 from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+from fastapi.concurrency import run_in_threadpool
 from fastapi.templating import Jinja2Templates
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
+from .busqueda import TIPOS, Buscador, Corpus, ErrorBusqueda
 from .catalogo import Catalogo, Entrevista, cargar_catalogo
 from .config import Ajustes, obtener_ajustes
 from .reproduccion import Plan, construir_plan
 from .resultados import (
     Busqueda,
     Corte,
+    busqueda_en_directo,
     cargar_busqueda,
+    corte_desde_playlist,
     extracto,
     formatear_duracion,
     formatear_fecha,
@@ -49,9 +53,34 @@ def ancla_corte(clip_id: str) -> str:
     return "corte-" + re.sub(r"[^A-Za-z0-9_-]", "-", clip_id)
 
 
-def url_resultados(q: str = "", ancla: str = "") -> str:
-    url = "/resultados" + (f"?{urlencode({'q': q})}" if q else "")
+def url_resultados(q: str = "", ancla: str = "", tipo: str = "", terminos: str = "") -> str:
+    params: dict[str, str] = {}
+    if q:
+        params["q"] = q
+        if tipo and tipo != "ambos":
+            params["tipo"] = tipo
+        if terminos:
+            params["terminos"] = terminos
+    url = "/resultados" + (f"?{urlencode(params)}" if params else "")
     return f"{url}#{ancla}" if ancla else url
+
+
+def terminos_de(texto: str) -> list[str]:
+    """Palabras que deben aparecer literalmente: separadas por comas, punto y coma o saltos de línea."""
+    vistos: dict[str, None] = {}
+    for t in re.split(r"[,;\n]", texto or ""):
+        t = t.strip()[:80]
+        if t:
+            vistos.setdefault(t, None)
+    return list(vistos)[:10]
+
+
+def consulta_de(url: str) -> tuple[str, str, str]:
+    """(q, tipo, términos) de una URL de resultados, como la que llega en ``volver``."""
+    params = parse_qs(urlsplit(url).query)
+    q = (params.get("q") or [""])[0].strip()
+    tipo = (params.get("tipo") or ["ambos"])[0]
+    return q, tipo if tipo in TIPOS else "ambos", (params.get("terminos") or [""])[0]
 
 
 def url_entrevista(
@@ -194,11 +223,25 @@ def _capitulos_y_texto(
     }
 
 
+def _cortes_json(busqueda: Busqueda) -> list[dict[str, Any]]:
+    return [
+        {
+            "clip_id": c.clip_id, "record_id": c.record_id, "tipo": c.tipo,
+            "interview_id": c.interview_id, "persona": c.persona,
+            "titulo": c.titulo, "inicio": c.inicio, "fin": c.fin,
+            "similitud": c.similitud, "texto": c.texto,
+            "url_entrevista": url_entrevista(c.interview_id, c.clip_id),
+            "url_video": f"/videos/{c.interview_id}",
+        }
+        for c in busqueda.cortes
+    ]
+
+
 # ---------------------------------------------------------------------------
 # Aplicación
 # ---------------------------------------------------------------------------
 
-def crear_app(ajustes: Ajustes | None = None) -> FastAPI:
+def crear_app(ajustes: Ajustes | None = None, buscador: Buscador | None = None) -> FastAPI:
     ajustes = ajustes or obtener_ajustes()
 
     @asynccontextmanager
@@ -209,6 +252,20 @@ def crear_app(ajustes: Ajustes | None = None) -> FastAPI:
         app.state.busqueda = busqueda
         app.state.catalogo = catalogo
         app.state.plan = construir_plan(busqueda.cortes)
+        app.state.corpus = buscador.corpus if buscador is not None else Corpus.cargar(ajustes)
+        app.state.buscador = buscador or Buscador(ajustes, app.state.corpus)
+
+        motivo = app.state.buscador.motivo_no_disponible()
+        if motivo:
+            log.warning("Buscador en directo NO disponible: %s. Se usa la búsqueda guardada.", motivo)
+        else:
+            log.info("Buscador en directo disponible (el modelo %s se carga %s).", ajustes.modelo_consultas,
+                     "ahora" if ajustes.buscador_precarga else "en la primera consulta")
+            if ajustes.buscador_precarga:
+                try:
+                    await run_in_threadpool(app.state.buscador.precargar)
+                except ErrorBusqueda as exc:
+                    log.warning("No se pudo precargar el buscador: %s", exc)
 
         carpeta = ajustes.videos_ruta
         log.info("Búsqueda guardada: %d cortes, %d entrevistas.",
@@ -243,6 +300,24 @@ def crear_app(ajustes: Ajustes | None = None) -> FastAPI:
         s = request.app.state
         return s.busqueda, s.catalogo, s.plan
 
+    async def resolver_busqueda(request: Request, q: str, tipo: str, terminos: str):
+        """(búsqueda, plan, aviso): en directo si se puede; si no, la guardada y por qué."""
+        s = request.app.state
+        if not q:
+            return s.busqueda, s.plan, None
+        motivo = s.buscador.motivo_no_disponible()
+        if motivo:
+            return s.busqueda, s.plan, f"El buscador en directo no está disponible: {motivo}."
+        try:
+            resultado = await run_in_threadpool(s.buscador.buscar, q, tipo, terminos_de(terminos))
+        except ErrorBusqueda as exc:
+            return s.busqueda, s.plan, f"No se ha podido buscar: {exc}."
+        except Exception:  # un fallo inesperado no debe tumbar la página
+            log.exception("Error inesperado en la búsqueda en directo")
+            return s.busqueda, s.plan, "Se produjo un error inesperado al buscar."
+        en_directo = busqueda_en_directo(resultado)
+        return en_directo, construir_plan(en_directo.cortes), None
+
     def responder(request: Request, plantilla: str, contexto: dict[str, Any], status: int = 200):
         return plantillas.TemplateResponse(request, plantilla, contexto, status_code=status)
 
@@ -251,9 +326,11 @@ def crear_app(ajustes: Ajustes | None = None) -> FastAPI:
     @app.get("/", response_class=HTMLResponse)
     async def inicio(request: Request):
         busqueda, catalogo, _ = estado(request)
+        motivo = request.app.state.buscador.motivo_no_disponible()
         return responder(request, "inicio.html", {
             "seccion": "inicio", "busqueda": busqueda,
             "entrevistas": catalogo.todas(), "temas": catalogo.temas,
+            "buscador_listo": motivo is None, "motivo_buscador": motivo,
         })
 
     @app.get("/catalogo", response_class=HTMLResponse)
@@ -276,9 +353,12 @@ def crear_app(ajustes: Ajustes | None = None) -> FastAPI:
         })
 
     @app.get("/resultados", response_class=HTMLResponse)
-    async def pagina_resultados(request: Request, q: str = ""):
-        busqueda, catalogo, plan = estado(request)
+    async def pagina_resultados(request: Request, q: str = "", tipo: str = "ambos", terminos: str = ""):
+        catalogo = request.app.state.catalogo
         q = q.strip()
+        tipo = tipo if tipo in TIPOS else "ambos"
+        terminos = ", ".join(terminos_de(terminos))
+        busqueda, plan, aviso_buscador = await resolver_busqueda(request, q, tipo, terminos)
         sin_video = [
             e for e in catalogo.todas()
             if busqueda.de_entrevista(e.interview_id)
@@ -290,10 +370,14 @@ def crear_app(ajustes: Ajustes | None = None) -> FastAPI:
             {**t, "cortes": [cortes_por_id[c] for c in t["clip_ids"]]}
             for t in datos_plan["tramos"]
         ]
-        volver = url_resultados(q)
+        motivo = request.app.state.buscador.motivo_no_disponible()
         return responder(request, "resultados.html", {
             "seccion": "resultados", "busqueda": busqueda, "q": q,
-            "volver": volver, "plan": datos_plan, "tabla_plan": tabla,
+            "tipo": tipo, "terminos": terminos, "aviso_buscador": aviso_buscador,
+            "buscador_listo": motivo is None, "motivo_buscador": motivo,
+            "modelo_cargado": request.app.state.buscador.modelo_cargado,
+            "volver": url_resultados(q, "", tipo, terminos),
+            "plan": datos_plan, "tabla_plan": tabla,
             "sin_video": sin_video,
             "n_reproducibles": sum(1 for t in datos_plan["tramos"] if t["url_video"]),
             "omitidos": [cortes_por_id[c] for c in plan.omitidos],
@@ -305,15 +389,24 @@ def crear_app(ajustes: Ajustes | None = None) -> FastAPI:
         clip: str | None = None, t: str | None = None,
         fin: str | None = None, volver: str | None = None,
     ):
-        busqueda, catalogo, _ = estado(request)
+        demo, catalogo, _ = estado(request)
         entrevista = catalogo.obtener(interview_id)
         if entrevista is None:
             raise StarletteHTTPException(404, f"No existe la entrevista «{interview_id}».")
 
+        # La búsqueda de la que se viene (la consulta va en «volver»): se vuelve a
+        # resolver, casi siempre desde la caché, para listar sus cortes de esta entrevista.
+        volver_url = volver_seguro(volver, url_resultados())
+        q, tipo, terminos = consulta_de(volver_url) if volver_url.startswith("/resultados") else ("", "ambos", "")
+        busqueda, _plan, _aviso = await resolver_busqueda(request, q, tipo, terminos)
+
         avisos: list[str] = []
         seleccion: dict[str, Any] | None = None
         if clip:
-            corte = busqueda.por_id(clip)
+            corte = busqueda.por_id(clip) or demo.por_id(clip)
+            if corte is None and request.app.state.corpus is not None:
+                # Cualquier clip existe en el corpus, aunque no esté en esta búsqueda.
+                corte = corte_desde_playlist(request.app.state.corpus.clip(clip))
             if corte is None:
                 avisos.append(f"El corte «{clip}» no está en la búsqueda cargada; se abre la entrevista completa.")
             elif corte.interview_id != interview_id:
@@ -328,7 +421,6 @@ def crear_app(ajustes: Ajustes | None = None) -> FastAPI:
 
         cortes = busqueda.de_entrevista(interview_id)
         video = catalogo.estado_video(interview_id)
-        volver_url = volver_seguro(volver, url_resultados())
         return responder(request, "entrevista.html", {
             "seccion": "catalogo", "e": entrevista, "video": video,
             "url_video": f"/videos/{interview_id}" if video.disponible else None,
@@ -361,6 +453,7 @@ def crear_app(ajustes: Ajustes | None = None) -> FastAPI:
 
     @app.get("/api/busqueda")
     async def api_busqueda(request: Request):
+        """La búsqueda guardada de demostración."""
         busqueda, _, _ = estado(request)
         return {
             "es_demo": busqueda.es_demo,
@@ -369,18 +462,42 @@ def crear_app(ajustes: Ajustes | None = None) -> FastAPI:
             "archivo": busqueda.archivo,
             "n_cortes": len(busqueda.cortes),
             "avisos": list(busqueda.avisos),
-            "cortes": [
-                {
-                    "clip_id": c.clip_id, "record_id": c.record_id, "tipo": c.tipo,
-                    "interview_id": c.interview_id, "persona": c.persona,
-                    "titulo": c.titulo, "inicio": c.inicio, "fin": c.fin,
-                    "similitud": c.similitud, "texto": c.texto,
-                    "url_entrevista": url_entrevista(c.interview_id, c.clip_id),
-                    "url_video": f"/videos/{c.interview_id}",
-                }
-                for c in busqueda.cortes
-            ],
+            "cortes": _cortes_json(busqueda),
         }
+
+    @app.get("/api/buscar")
+    async def api_buscar(request: Request, q: str = "", tipo: str = "ambos", terminos: str = ""):
+        """Búsqueda en directo. Responde 503 si el buscador no está disponible."""
+        q = q.strip()
+        if not q:
+            return JSONResponse({"detail": "Falta el parámetro q."}, status_code=400)
+        if tipo not in TIPOS:
+            return JSONResponse({"detail": "tipo debe ser ambos, temas o historias."}, status_code=400)
+        buscador = request.app.state.buscador
+        motivo = buscador.motivo_no_disponible()
+        if motivo:
+            return JSONResponse({"detail": f"El buscador en directo no está disponible: {motivo}."}, status_code=503)
+        try:
+            resultado = await run_in_threadpool(buscador.buscar, q, tipo, terminos_de(terminos))
+        except ErrorBusqueda as exc:
+            return JSONResponse({"detail": str(exc)}, status_code=422)
+        busqueda = busqueda_en_directo(resultado)
+        return {
+            "es_demo": False, "consulta": resultado["consulta"],
+            "terminos_obligatorios": resultado["terminos_obligatorios"],
+            "parametros": resultado["parametros"],
+            "n_candidatos": {k: len(v) for k, v in resultado["candidatos"].items()},
+            "descartados": resultado["descartados"],
+            "n_cortes": len(busqueda.cortes), "cortes": _cortes_json(busqueda),
+        }
+
+    @app.get("/api/buscador")
+    async def api_buscador(request: Request):
+        """Estado del buscador: si puede usarse y si el modelo ya está en memoria."""
+        buscador = request.app.state.buscador
+        motivo = buscador.motivo_no_disponible()
+        return {"disponible": motivo is None, "motivo": motivo,
+                "modelo": ajustes.modelo_consultas, "modelo_cargado": buscador.modelo_cargado}
 
     @app.get("/api/plan")
     async def api_plan(request: Request):

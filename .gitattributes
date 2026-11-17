@@ -1,0 +1,5 @@
+# Los datos del índice se verifican por hash: git no debe tocar sus bytes.
+datos/** -text
+*.faiss binary
+*.npy binary
+*.mp4 binary

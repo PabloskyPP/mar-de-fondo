@@ -1,0 +1,2454 @@
+{
+  "consulta": "Que lembran as mulleres das palilladas e das xuntanzas pola noite?",
+  "terminos_obligatorios": [],
+  "parametros": {
+    "k_por_indice": 15,
+    "max_fragmentos": null,
+    "tipo": "ambos",
+    "max_por_entrevistada": 2,
+    "max_fraccion_cubierta": 0.6,
+    "prioridad_en_empate": "historia"
+  },
+  "candidatos": {
+    "tema": [
+      {
+        "id": "Carmen_Vileda_Rey_seg06",
+        "tipo": "tema",
+        "interview_id": "Carmen_Vileda_Rey",
+        "speaker": "Carmen Vileda Rey",
+        "title": "Palillar soa ou nas palilladas",
+        "summary": "Ás veces palillábase soa, coma agora; todo o tempo libre ía para a almofada. Nas palilladas seguíase ata a unha da madrugada, aínda que ela vivíunas pouco porque a súa nai levaba a casa. Alí contábanse contos, criticábase a xente do pobo e ás veces escoitábase a radio. Xornadas das sete ou oito da mañá á unha; os puntos aprendíanse de memoria.",
+        "score_coseno": 0.6228839755058289,
+        "rank_en_su_indice": 1,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 357.86,
+            "end": 469.63,
+            "from_sentence": 58,
+            "to_sentence": 74,
+            "transcript_text": "Bueno, nese momento que estás na casa, ao mellor tócache traballar sola. Como agora. Agora de máñan traballamos solas en momentos. Todo o que tiñamos baldeiro, todo o que tiñamos vacío de, das outras cousas, dedicabámoslle á almoada. [música suave de fondo] Ainda se penillaba hasta a unha da mañana nas, nas penilladas. Claro, bueno, eu aí non, non vivín porque eu familia non, non tiña en ese momento. Tiña miña nai, pero miña nai era a que se ocupaba da casa, de, de, de todo. Entonces eu aí non, non podo explicar porque non, non teño conocimiento. Contaban cuentos, sacabanlle a conduta a algunhas personas do pueblo [ri] . Ou sea, era, era máis ben para traballar, pero ao mismo tiempo distraíanse falando, escoitando a radio a veces. Desde que te levantabas ás oito, depende, a veces ás sete da mañana xa me tiña que levantar, hasta-- se íamos á xuntanza, hasta a unha da mañana. Bueno, eramos jóvenes e non nos dábamos de conta. Sabíamos todo de memoria, claro. Aprendíamos todo de memoria, non..."
+          }
+        ],
+        "related_topic_ids": [
+          "Carmen_Vileda_Rey_seg06"
+        ],
+        "story_ids": [
+          "Carmen_Vileda_Rey_hist02"
+        ]
+      },
+      {
+        "id": "Carmen_Vileda_Rey_seg02",
+        "tipo": "tema",
+        "interview_id": "Carmen_Vileda_Rey",
+        "speaker": "Carmen Vileda Rey",
+        "title": "Xuntanzas de noite e días duros",
+        "summary": "Facíanse xuntanzas de noite para palillar con luz de carburo: eran ocupación e entretemento, e alí comentábase todo, «era o periódico». Os días de chuvia e vento eran moi duros, cos pés mollados e sen a roupa de agora, pero eran felices porque para elas era o normal. Contaban contos de pantasmas nas silveiras e críano todo.",
+        "score_coseno": 0.5887182354927063,
+        "rank_en_su_indice": 2,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 100.18,
+            "end": 190.08,
+            "from_sentence": 13,
+            "to_sentence": 31,
+            "transcript_text": "Sí, eh, entón si, tamén se facían xuntanzas de noite. Panillaban con luz de carburo. Pois era un, unha ocupación, un entretenimento. E aí facían un montón de comentarios das cousas. Era o periódico. [risinho] Uns días máis duros ca outros, si, porque, por exemplo, cando chovía e había que facer o mesmo trabalho, era moi duro. Era moito vento, moita chuvia, des-- eh, os, os pés mollados. Eh, bueno, todo eso era bastante, bastante duro. E non habían a roupa que hai agora. Nós éramos felices. Estábamos acostumbradas a ese... que non veñan eses momentos pa xente de agora. Pero daquela estabamos-- era normal, pa nós era normal. Claro, contaban un montón de contos, de, de fantasmas que aparecían po-polas silveiras e cousas así. A nós eso facíanos muito rir, claro. Tampouco non buscabamos se era verdade ou mentira. Creíamos todo. [risinho]"
+          }
+        ],
+        "related_topic_ids": [
+          "Carmen_Vileda_Rey_seg02"
+        ],
+        "story_ids": [
+          "Carmen_Vileda_Rey_hist01",
+          "Carmen_Vileda_Rey_hist02",
+          "Carmen_Vileda_Rey_hist03"
+        ]
+      },
+      {
+        "id": "MariaJoseLiresMartinez_seg06",
+        "tipo": "tema",
+        "interview_id": "MariaJoseLiresMartinez",
+        "speaker": "María José Lires Martínez",
+        "title": "As palilleiras de antes",
+        "summary": "Lembra as palilladas da súa nai: cando chegaban os mozos, deixaban de palillar e marchaban con eles. Estaban todas xuntas no chan, coas pernas cruzadas, sen cadeiras. Ademais coidaban dos maiores, coma a bisavoa encamada. As maiores ensinaban ás pequenas o pouco que sabían.",
+        "score_coseno": 0.5791431069374084,
+        "rank_en_su_indice": 3,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 309.44,
+            "end": 384.42,
+            "from_sentence": 58,
+            "to_sentence": 70,
+            "transcript_text": "A ver, eu acórdome de sentir tamén a miña nai a todo cando ían, que palillaban. Ian máis ben que conto para, por culpa dos mozos, non? Que estaban palillando, pero en vez de estar palillando, atendían os mozos cando viñan xunta delas. Entón, en vez de palillar, xa collían e marchaban [ri] con eles. Eso mesmo, sí. Estaban todas xuntas, pasaban o coche e daquela tamén, non é como agora, porque agora inda estamos aquí, ao mellor imos tomar un café, pero antes non había nada. Estaban a ese punto. Sí, no chan, así coas pernas cruzadas e non había silla de nada, no suelo. Inda agora nos queixamos, antes tiña que ser peor, porque ao estar no suelo... Eu daquela non, pero miña nai, por exemplo, tiña a miña bisavoa, que estaba encamada, e claro, tamén a tiñan que atender. Claro, ivas á que non sería, ensiñábanche o pouco que sabían elas, ensiñábanche a ti."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseLiresMartinez_seg06"
+        ],
+        "story_ids": [
+          "MariaJoseLiresMartinez_hist05"
+        ]
+      },
+      {
+        "id": "MariaJoseLiresMartinez_seg01",
+        "tipo": "tema",
+        "interview_id": "MariaJoseLiresMartinez",
+        "speaker": "María José Lires Martínez",
+        "title": "Infancia e escola de palillo da Falange",
+        "summary": "Ao saír da escola pasaba pola casa a coller o bocadillo e ía á «Falange», á beira da praia, onde unha señora lles ensinaba a palillar. Sentábanse tres ou catro por mesa e a profesora pasaba por elas. Dábanlles merenda, vían cine nunha pantalla e xogaban un pouco. Despois seguían xogando na rúa. Lémbrao coma unha boa época: eran nenas.",
+        "score_coseno": 0.5476933121681213,
+        "rank_en_su_indice": 4,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 15.3,
+            "end": 100.36,
+            "from_sentence": 2,
+            "to_sentence": 20,
+            "transcript_text": "Pues mira, eu ía á escola. Cando saía da escola, ía á casa a buscar o bocadllo e daquela despois íamos para a Falange, para palillar, que nos ensinaban a palillar unha señora. Aquí abaixo na praia. Tres ou catro en cada mesa. Entonces ela ía por mesa e íamos así. E cando non sabías, ao mellor chamábaslle para que viñera. E así. E para o de merenda, inda que leváramos o bocadllo de a casa, dábanos tamén un-- cando se había como unha fariña, e tamén nos daba, tamén a comíamos alí. Viamos como cine, nunha pantalla que metía tamén. E despois tamén xogabamos un pouco porque eramos nenas. E pouco máis. Despois o de sempre, para a casa outra vez a xogar na calle, porque antes non había outra cousa. Xogabas na porta e todo eso. Moi ben. Si, porque tiñamos tempo. Total, eramos nenas, outra cousa non facíamos. Si tiña, porque a ver, daquela tamén era o que había, que non tiñamos máis. Despois de ser máis grandes, máis maiores, xa, claro, é distinta. Pero daquela eramos nenas, entón..."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseLiresMartinez_seg01"
+        ],
+        "story_ids": [
+          "MariaJoseLiresMartinez_hist01"
+        ]
+      },
+      {
+        "id": "MariaJoseRoa_seg11",
+        "tipo": "tema",
+        "interview_id": "MariaJoseRoa",
+        "speaker": "María José Roa",
+        "title": "Gancho, punto de cruz e a volta ao palillo",
+        "summary": "Deixou o gancho despois dun tapete de mesa camilla interminable, e o punto de cruz «sempre se me cruzou». Viviu moito tempo fóra, mercando Labores de Hogar e imaxinando a bolillos o que vía en gancho. Ao volver a Muxía apuntouse á asociación recén creada, facendo gardas pola súa nai. Palillar non se esquece, coma a bicicleta: empezou cun xogo de cama cun cartón de Marina Antelo, que se asombrou de que soubese palillar de verdade.",
+        "score_coseno": 0.527058482170105,
+        "rank_en_su_indice": 5,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 1011.32,
+            "end": 1171.8,
+            "from_sentence": 177,
+            "to_sentence": 207,
+            "transcript_text": "Pouco, como, pois non sei, porque eu ganchillaba a través das revistas. Iba mirando, eh, que me cansei e dixen, dixen que non volvía a coller un ganchillo nin, nin de coña, porque fixen un tapete pa unha mesa camilla de noventa e aquelas últimas voltas, que me levaban unha tarde enteira facer a volta e non e, non iba pa diante, nin-- dixen que non quería saber nada máis do ganchillo nin de nada. O punto de cruz sempre se me cruzou. Seino facer, eh. Pero sempre se me cruzou. Non... En cambio, o palillo, mira. Eu, por exemplo, vivín moito tempo fora. Fora, en España, pero... Eu, por exemplo, sempre me gustaron moito as revistas de labores. Eh, e sempre comprei Labores de Hogar. E ao mellor vía unha obra que era de ganchillo e eu estaba facéndoa a bolillos na mente. Entonces, eu fui cando empecei a vir de volta pa Muxía, sen vivir en Muxía, pero empecei a vir. Xa estaba a asociación montada, estaba recén montada. Apunteime. As primeiras veces facía má guardia cando eu non estaba miña nai. E bueno, cando viñen pa Muxía, xa de golpe. E a agilidade, porque aprender isto non se olvida, é como, é como andar en bicicleta, vale? Eu cando vin de volta e empecei, empecei cun xogo de cama. O sea, cun, cun encaixe... que hoxe ando facendo merdiñas que é o que se vende. E bueno, xa che digo, eh, cando me viron coller a almoada e empezar, a xente pensaba que eu non sabía. Porque, por exemplo, a min quen me, quen me deixou o cartón pa empezar ese xogo de cama foi Marina Antelo. E Marina Antelo non tiña nin idea de que eu soubera palillar de verdade. Vale, alucinou. Alucinou Marina e moita xente. Claro, a xente que foi comigo a Falange sabían que eu sabía porque sabía coma elas. Pero moita xente asombrouse de que eu empezara a palillar e, segundín, palillo bastante ben. [tose] O que pasa é que, como día a miña amiga, son unha perxeira. [ri]"
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseRoa_seg11"
+        ],
+        "story_ids": [
+          "MariaJoseRoa_hist09"
+        ]
+      },
+      {
+        "id": "Maria_Antelo_Lema_seg09",
+        "tipo": "tema",
+        "interview_id": "Maria_Antelo_Lema",
+        "speaker": "María Antelo Lema",
+        "title": "O encaixe: alegría, coidados e recoñecemento",
+        "summary": "Palillar é para ela unha alegría e unha felicidade. Brinca coa rivalidade entre Camariñas e Muxía. Coidou de moitos maiores. Ninguén ve as horas que leva: ante «que caro é esta mantelería» responde «pois faga usted, señora». Sen as palilleiras non habería encaixe. É feliz coas súas compañeiras.",
+        "score_coseno": 0.5257524847984314,
+        "rank_en_su_indice": 6,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 492.72,
+            "end": 629.66,
+            "from_sentence": 134,
+            "to_sentence": 161,
+            "transcript_text": "Para min, alegría, o encaixo. Palillar para min é unha alegría. Que bonito é ser, é isto. Sí, a mellor, claro que sí. Sí. Eu colo. [risas] Camariñas, digo, non falas de Camariñas, nin de Muxía tampouco. [risas] Pois eu creo que sí, eh. Sí. Moito, moito, mais é moito, eh. Unha felicidade. De antes, a conservera. Palillar. Maiores, moi ben. Eu moi ben, cuidei a moitos. Isto nada é as horas que leva. E dinche: Que caro é este mantelería. Pois faga usted, señora. E sí, eh. Nadie. Se isto morrerse, pois non había nada encaixe. O traballo non o reconocen. Aí ves que cando entreguei moita xente aquí, ai que caro é. Que son feliz cas miñas compañeiras. Elas comigo non son, pero eu con elas son. [risas]"
+          }
+        ],
+        "related_topic_ids": [
+          "Maria_Antelo_Lema_seg09"
+        ],
+        "story_ids": [
+          "Maria_Antelo_Lema_hist06"
+        ]
+      },
+      {
+        "id": "MariaJoseRoa_seg08",
+        "tipo": "tema",
+        "interview_id": "MariaJoseRoa",
+        "speaker": "María José Roa",
+        "title": "Como se aprendía e a lembranza da avoa",
+        "summary": "Poñíanlle diante o cartón cun anaco de mostra e íanlle explicando como pasar os palillos, sentada ao lado da mestra ata que se soltaba. Empezou arredor dos seis anos, aínda que cando chegou á Falange xa sabía pasar os pares porque llo ensinara a súa avoa. As avoas picábanche a man cun alfinete se te equivocabas. Era algo natural: lembra a súa avoa, que morreu con 90 anos, palillando no inverno sentada na cama con tres almofadóns detrás.",
+        "score_coseno": 0.5195829272270203,
+        "rank_en_su_indice": 7,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 649.15,
+            "end": 742.9,
+            "from_sentence": 117,
+            "to_sentence": 136,
+            "transcript_text": "Como se aprendía? Pois mira, a min poñíanme o cartón diante cun cachiño dunha mostra. Íbame explicando como pasan os palillos. Mentres nos enseñaba, sentábannos ao lado dela e íbannos dirigindo ata que xa nos soltabamos un pouco. Entonces... Pois eu creo que a partir dos seis anos. [tos] Mais que nada creo cando empezabamos a escuela. A ver, despois na casa, eh, por exemplo, miña avoa facía má almoada. Sí, enseñábame, porque eu cando fun para a Falange creo que xa sabía pasar os, os paves. Pero nas casas donde había aboas que sabían. E cando te equivocabas, collían un alfiler e pinchábanche a man. No, e-era natural. A ver, é que xa o tiñamos asumido case desde que nacíamos, porque o estabamos vendo... Eu acórdome de miña avoa. Miña avoa morreu con noventa anos. Eu acórdome de miña avoa sentada na cama con tres almoadóns detrás, as pernas cruzadas e a almoada adiante, palillando no inverno. Non, entonces, pois non sei, xa o tiñamos na casa. Non, non era nada que nos fora a estrañar nin que... Xa o tiñámolo dentro."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseRoa_seg08"
+        ],
+        "story_ids": [
+          "MariaJoseRoa_hist06"
+        ]
+      },
+      {
+        "id": "Pilar_Barrientos_Conde_02_2_seg01",
+        "tipo": "tema",
+        "interview_id": "Pilar_Barrientos_Conde_02_2",
+        "speaker": "Pilar Barrientos Conde",
+        "title": "A escola de palillo da Falaxe",
+        "summary": "Pola mañá ía á escola e comía na casa. Ademais acudía a unha escola de palillo «na Falaxe», con moitas nenas sentadas arredor duns cabaletes. Unha profesora ensinaba e dáballes alfinetes, fíos, palillos e a merenda. Tamén lles ensinaban baile e a cantar.",
+        "score_coseno": 0.5147608518600464,
+        "rank_en_su_indice": 8,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 15.48,
+            "end": 76.14,
+            "from_sentence": 2,
+            "to_sentence": 13,
+            "transcript_text": "Pola mañán, a levantarse, desayuno, pa escuela. E despois viñas a casa, comer. Tamén había escuela para as-- tiñamos a escuela de palillo, que era na Falaxe. Había moitas nenas, e así nuns caballetes, tiñan, eh, uns caballetes sentadas nunha silla. E tiñamos unha profesora que nos ensiñaba. E dábame los alfileres, os fíos, palillos. Ademais, ainda nos daba a merenda. Había unha profesora que che ensiñaba, ou a chamabas ou xa viña ela pola, por alí polas mesas, e así. Tamén, eh, baile. Xa lle ogo, acórdome tamén de ir pa, pa praia. Así, ensiñábanos a, a baile, xa lle ogo, algo. E a cantar."
+          }
+        ],
+        "related_topic_ids": [
+          "Pilar_Barrientos_Conde_02_2_seg01"
+        ],
+        "story_ids": [
+          "Pilar_Barrientos_Conde_02_2_hist01"
+        ]
+      },
+      {
+        "id": "MariaJesusPensadoPerez_seg06",
+        "tipo": "tema",
+        "interview_id": "MariaJesusPensadoPerez",
+        "speaker": "María Jesús Pensado Pérez",
+        "title": "Labores, xornadas longas e espazos de encontro",
+        "summary": "A labor feita na Falange quedaba alí e non sabían para que era. A súa nai e outras facían panos e vendíanos no Bran antes de que abrise o Piticlín. Ás veces palillaban soas e ás veces xuntas. Un marcapáxinas pode levar seis horas ou tres, segundo a axilidade. Asaban sardiñas ata a medianoite e limpaban a graxa con lixivia. Todo era unión: paraban a tomar café e falaban; era un espazo de encontro de dúas horas pola tarde.",
+        "score_coseno": 0.5133688449859619,
+        "rank_en_su_indice": 9,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 487.07,
+            "end": 634.49,
+            "from_sentence": 78,
+            "to_sentence": 98,
+            "transcript_text": "Pois nós, cando estaba eu na Falange, alí. Ese labor quedaba alí. Non sabíamos pa que era. E poi miña nai, na casa, que despois inda tamén, eh, antes de abrir o, o Piticlín, xa, eh, facían elas os pañuelos con labor, aí no Bran, xuntaba ela e varias, eh, e vendíanos, que tiñan, eh, sabes que... A, eh, a veces solas na casa, e a veces tamén nos xuntabamos todas. Hai xente que ao mellor pa facer un marcapáxinas levelle seis horas e a outra tenga máis, [inspira] eh, máis axilidade e ao mellor en tres horas faio. Pois, eh, asar as cerdiñas ca miña nai, limpar a casa os sabedos a fondo, senón xa non se masabe. Eh, ir aos berberechos, ir ás caramuxas, ir ao Aljazo, a, a poñer as patacas, coller as patacas e agardalas no faiado. De todo. Pois desde que nos levantabamos hasta que nos deitabamos. Porque, por exemplo, de asar as cerdiñas ao mellor acabamos ás doce da noite. E despois inda había que limpar todo o que quedaba alí de grasa, con lixía, con tal. E poi recoller e ir pa casa. Todo era unión. Pois parábamos a tomar o café, a seguir falando, e a pasalo... Pasabámoste ben. No, no, no, no. Era un, un espazo de encontro. Esas tardes eran pequenas, de, de cinco e media a sete e media, dúas horas."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJesusPensadoPerez_seg06"
+        ],
+        "story_ids": []
+      },
+      {
+        "id": "MariaJoseRoa_seg05",
+        "tipo": "tema",
+        "interview_id": "MariaJoseRoa",
+        "speaker": "María José Roa",
+        "title": "Unha infancia privilexiada e os premios de baile",
+        "summary": "Non pode falar de días duros: o seu pai era municipal e non pasou as necesidades doutras casas. Lembra unha viaxe a Muros, onde gañaron premios de xota. A danza das espadas bailábana daquela as mulleres maiores da Sección Feminina da Falange, e gañaban.",
+        "score_coseno": 0.5048467516899109,
+        "rank_en_su_indice": 10,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 346.3,
+            "end": 435.57,
+            "from_sentence": 55,
+            "to_sentence": 70,
+            "transcript_text": "Mira, eh, en ese sentido, eu, mmm, falar dos días duros, digamos que eu fun unha persona privilexiada, vale? Eh, noutras casas sí que o teñen pasado moi mal Eu muitas cousas que oía eu non as vivía. Meu pai era municipal. Eee non, non pasei, digamos, os traballos e as necesidades que había en outras casas. Por eso eu falarche de días duros. Se eu falo de días duros, estou mentindo. Home, facernos rir. Fomos a, a Muros, creo que fora Muros. Ganamos os premios de baile de, de xota, era xota. Como rir, pois pasabámolo bomba. Sempre cando tiñamos ás maiores que bailaban a danza das espadas naquele entonces, que o bai-bailaban a-as mulleres. Antes non había danza das espadas como hai agora, non. Eran, a, era a sección feminina da Falange a que bailaba a danza das espadas. E bueno, iban coa danza das espadas e ganaban [ri] ."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseRoa_seg05"
+        ],
+        "story_ids": [
+          "MariaJoseRoa_hist04"
+        ]
+      },
+      {
+        "id": "MariaJoseRoa_seg01",
+        "tipo": "tema",
+        "interview_id": "MariaJoseRoa",
+        "speaker": "María José Roa",
+        "title": "Comezar no palillo na Falange",
+        "summary": "Empezou arredor dos seis anos e conserva un carné da Sección Feminina desa época. A Falange daba os cursiños: as nenas escollían coser ou palillar e a ela a costura nunca lle gustou. Tiñan unha profesora que as tiña engaioladas contándolles películas coma a de Alfonso XII, e interpretaban os personaxes arredor da mesa. Dábanlles merenda: un bolliño con chocolatiñas.",
+        "score_coseno": 0.5013512372970581,
+        "rank_en_su_indice": 11,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 19.0,
+            "end": 125.52,
+            "from_sentence": 2,
+            "to_sentence": 19,
+            "transcript_text": "Empecei no palillo por sobre os seis anos. Non sei se antes ou despois, pero en esa fecha teño un carné de, da sección feminina. Naquele entonces era a Falange, a que daba os cursillos de, de eso. Entonces, queda-- as nenas quedábanos ou ir a coser ou ir a palillar. A miña costura como que nunca me gustou. Entonces, pois, saía da escuela e iba para o palillo. Tiñamos unha profesora que nos tiña a todas encameladas, porque nos contaba as películas todas. Que si, pois imaxínate, a de Alfonso XII, eh, sí, sí. Eh, e tiñanos a todas as rapazas coa boca aberta, porque, vamos, contábanos as historias dunha maneira que parecía que as estaba vivindo. E nós vivíamola tamén. Ao mismo tempo, tiñamos como unha especie de, [chasquido de lengua] eh, teatro. Sin ser teatro, pero na volta dunha mesa íbamos interpretando os personaxes. E bueno, era unha forma tamén de motivarnos a seguir. Despois, mmm, pois que queres que che diga, a nosa vida iba na volta desto, de, do, do palillo, de vivilo, de, de salir da escuela, correr para o palillo, porque pasábamos ben. Dábannos a merenda, dábannos un bollito cunhas taba-- cunas chocolatinas. En fin, esa era a nosa vida naquele entonces."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseRoa_seg01"
+        ],
+        "story_ids": [
+          "MariaJoseRoa_hist01",
+          "MariaJoseRoa_hist02"
+        ]
+      },
+      {
+        "id": "MariaJoseRoa_seg14",
+        "tipo": "tema",
+        "interview_id": "MariaJoseRoa",
+        "speaker": "María José Roa",
+        "title": "O encaixe na familia e o que representa",
+        "summary": "Non lle gustaría que o encaixe se perdese: é un relax e unha alegría, e gustaríalle ensinar á súa filla e aos seus netos («os homes non palillan porque non queren»). Ten un neto ou neta que desfila en Madrid con pezas súas, e unha neta que estudou arte en Valencia e fixo o seu traballo de fin de curso sobre o encaixe, con fotos dela e de Xusa palillando na Barca; agora dá clases en Holanda. O que se mostra non representa a súa vida: se tivesen que vivir do encaixe, non comerían.",
+        "score_coseno": 0.496773898601532,
+        "rank_en_su_indice": 12,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 1504.23,
+            "end": 1656.97,
+            "from_sentence": 270,
+            "to_sentence": 291,
+            "transcript_text": "Pou, non sei, o significado que ten o encaixe para min é unha cousa que non me gustaría que se perdera. Para min é unha, un relax, unha alegría de velo tamén, hum. E, e por suposto, unha alegría de poder enseñarlle á miña filla que palille. Se algún momento os meus netos, miñas netas tamén queren, tamén-- bueno, miñas netas e meus netos, que eu sempre dixen que os homes non palillan porque non queren. Hai algún que palilla que non veses ti. Teño un neto, bueno, un neto, neta, que desfila en Madrid. Eh. Cando leva así algo que tal, encántame. Eh, sí. Téñolle, téñolle feito algunha cousa. Téñolle feito algunha cousa pa, pa levar. Eh, teño unha neta que fixo por arte en Valencia. Eh, os traballos dela [tos] tamén iban moito sobre o encaixe, sobre o que facía eu, o que non facía. Incluso lle tiven que mandar palillos, encaixe, fío, para o traballo de fin de curso. Eh, basou moito sobre-- e foto, te-- mandámoslle fotos Xusa e eu na barca palillando, para o traballo que fixo de-- ahora mismo está en Holanda dando clases de español e, e arte. Como representar a nosa vida, non. Bueno, a ver, ensinan máis ou menos o que facemos, pero representar a vida non, porque a nosa vida non se basa no encaixe. Porque se tiveramos que vi-- que vivir do encaixe, pasabamos sen comer pan. [risas] A ver as cousas como son."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseRoa_seg14"
+        ],
+        "story_ids": [
+          "MariaJoseRoa_hist11"
+        ]
+      },
+      {
+        "id": "Pilar_Barrientos_Conde_02_2_seg05",
+        "tipo": "tema",
+        "interview_id": "Pilar_Barrientos_Conde_02_2",
+        "speaker": "Pilar Barrientos Conde",
+        "title": "Como era a escola de palillo",
+        "summary": "Volve sobre a escola: dábanlles a merenda e algo de baile, non todo era palillar. Calcula que estaban dúas ou tres horas, aínda que non o sabe con certeza. Sentábanse en banquetas arredor duns cabaletes cadrados.",
+        "score_coseno": 0.4913069009780884,
+        "rank_en_su_indice": 13,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 214.38,
+            "end": 245.84,
+            "from_sentence": 40,
+            "to_sentence": 45,
+            "transcript_text": "Dábannos alí a merenda. Despois tamén, se che, como che dixen antes, ensiñábanos a algo de baile. Non era todo palillar, tamén había... Pois non sei, ao mellor dúas, tres horas, pero non, non sei dicirte. Eh, sentados así nunha banqueta. Había como uns caballetes, así cadrados, e todos na volta."
+          }
+        ],
+        "related_topic_ids": [
+          "Pilar_Barrientos_Conde_02_2_seg05"
+        ],
+        "story_ids": [
+          "Pilar_Barrientos_Conde_02_2_hist01"
+        ]
+      },
+      {
+        "id": "MariaJoseRoa_seg17",
+        "tipo": "tema",
+        "interview_id": "MariaJoseRoa",
+        "speaker": "María José Roa",
+        "title": "Identidade e transmisión",
+        "summary": "O encaixe define a ría, aínda que hoxe hai palilleiras en todas partes, en parte porque galegas da costa deron clases por toda España, coma en Andalucía; Almagro ten a súa propia tradición. Para transmitilo hai que concienciar a xente nova, aínda que saben que non dá cartos. Cre que reaccionarán, como pasou co baile e co canto. Perdelo sería perder a súa cultura.",
+        "score_coseno": 0.4909372329711914,
+        "rank_en_su_indice": 14,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 1803.25,
+            "end": 1923.67,
+            "from_sentence": 317,
+            "to_sentence": 337,
+            "transcript_text": "Eu creo que si. Si. A ver, somos unha ría que o encaixe defínenos, aínda que hoxe en día por todas partes hai palilleiras. Eh, que eu creo que moita culpa tuvémola nós, que fomos dando clases por todas partes, porque en Andalucía hai gallegas dando clases. E bueno, está Almagro, eh, que esa zona non ten nada que ver con nós. Me refiero que fóramos nós a enseñarlle, senón que o teñen eles. Pero dipo, por aí adiante, por todas partes, sempre hai unha gallega no medio. Unha da, da nosa costa. [pausa] Como se debería transmitir? Pou, non sei, concienciando a xente joven de que non deixen que se perda, de... Claro, que a xente joven, eh, se pensan no que se gana co palillo, non, non. Pero conciencialos, polo menos, para que aprendan e que non deixen que se, que se perda. Porque agora son eles os que teñen que mirar. Eu penso que en algún momento si van a reaccionar, como se está reaccionando, pois xa te digo, co, co baile, co canto, con... Creo que van a reaccionar e van a, a facer algo. [pausa] Home, perdes a nosa cultura. A ver, eu que che digo, toda a nosa costa... Esto é a nosa cultura, o noso todo. [pausa]"
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseRoa_seg17"
+        ],
+        "story_ids": []
+      },
+      {
+        "id": "Maria_Antelo_Lema_seg04",
+        "tipo": "tema",
+        "interview_id": "Maria_Antelo_Lema",
+        "speaker": "María Antelo Lema",
+        "title": "As cousas antigas perderíanse",
+        "summary": "Antes a xente era máis clara e máis fiel. Teme que as cousas antigas, coma as palilladas, se perdan.",
+        "score_coseno": 0.489801287651062,
+        "rank_en_su_indice": 15,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 204.96,
+            "end": 224.68,
+            "from_sentence": 51,
+            "to_sentence": 54,
+            "transcript_text": "Era máis clara, máis fieles, que agora non. Bueno, eu tamén, entendeme, pero nota as cousas. As cousas antigas. As cousas antigas, as palilladas, todo eso, se había de perder."
+          }
+        ],
+        "related_topic_ids": [
+          "Maria_Antelo_Lema_seg04"
+        ],
+        "story_ids": []
+      }
+    ],
+    "historia": [
+      {
+        "id": "Carmen_Vileda_Rey_hist02",
+        "tipo": "historia",
+        "interview_id": "Carmen_Vileda_Rey",
+        "speaker": "Carmen Vileda Rey",
+        "title": "Palilladas con luz de carburo",
+        "summary": "De noite as mulleres xuntábanse a palillar con luz de carburo ata a unha; comentábase a vida do pobo, contábanse contos e oíase a radio.",
+        "score_coseno": 0.672950804233551,
+        "rank_en_su_indice": 1,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 100.18,
+            "end": 129.04,
+            "from_sentence": 13,
+            "to_sentence": 18,
+            "transcript_text": "Sí, eh, entón si, tamén se facían xuntanzas de noite. Panillaban con luz de carburo. Pois era un, unha ocupación, un entretenimento. E aí facían un montón de comentarios das cousas. Era o periódico. [risinho]"
+          },
+          {
+            "start": 383.49,
+            "end": 469.63,
+            "from_sentence": 63,
+            "to_sentence": 74,
+            "transcript_text": "Ainda se penillaba hasta a unha da mañana nas, nas penilladas. Claro, bueno, eu aí non, non vivín porque eu familia non, non tiña en ese momento. Tiña miña nai, pero miña nai era a que se ocupaba da casa, de, de, de todo. Entonces eu aí non, non podo explicar porque non, non teño conocimiento. Contaban cuentos, sacabanlle a conduta a algunhas personas do pueblo [ri] . Ou sea, era, era máis ben para traballar, pero ao mismo tiempo distraíanse falando, escoitando a radio a veces. Desde que te levantabas ás oito, depende, a veces ás sete da mañana xa me tiña que levantar, hasta-- se íamos á xuntanza, hasta a unha da mañana. Bueno, eramos jóvenes e non nos dábamos de conta. Sabíamos todo de memoria, claro. Aprendíamos todo de memoria, non..."
+          }
+        ],
+        "related_topic_ids": [
+          "Carmen_Vileda_Rey_seg02",
+          "Carmen_Vileda_Rey_seg06"
+        ],
+        "story_ids": [
+          "Carmen_Vileda_Rey_hist02"
+        ]
+      },
+      {
+        "id": "MariaJoseLiresMartinez_hist05",
+        "tipo": "historia",
+        "interview_id": "MariaJoseLiresMartinez",
+        "speaker": "María José Lires Martínez",
+        "title": "As palilleiras e os mozos",
+        "summary": "Nas palilladas da súa nai, cando chegaban os mozos, deixaban a almofada e marchaban con eles.",
+        "score_coseno": 0.5249313116073608,
+        "rank_en_su_indice": 2,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 309.44,
+            "end": 325.14,
+            "from_sentence": 58,
+            "to_sentence": 63,
+            "transcript_text": "A ver, eu acórdome de sentir tamén a miña nai a todo cando ían, que palillaban. Ian máis ben que conto para, por culpa dos mozos, non? Que estaban palillando, pero en vez de estar palillando, atendían os mozos cando viñan xunta delas. Entón, en vez de palillar, xa collían e marchaban [ri] con eles."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseLiresMartinez_seg06"
+        ],
+        "story_ids": [
+          "MariaJoseLiresMartinez_hist05"
+        ]
+      },
+      {
+        "id": "MariaJoseLiresMartinez_hist01",
+        "tipo": "historia",
+        "interview_id": "MariaJoseLiresMartinez",
+        "speaker": "María José Lires Martínez",
+        "title": "A escola de palillo da Falange na praia",
+        "summary": "Despois da escola ían palillar á Falange, á beira da praia, cunha señora que as ensinaba por mesas, lles daba merenda, lles poñía cine e lles ensinaba baile galego.",
+        "score_coseno": 0.5063197612762451,
+        "rank_en_su_indice": 3,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 17.06,
+            "end": 74.96,
+            "from_sentence": 3,
+            "to_sentence": 14,
+            "transcript_text": "Cando saía da escola, ía á casa a buscar o bocadllo e daquela despois íamos para a Falange, para palillar, que nos ensinaban a palillar unha señora. Aquí abaixo na praia. Tres ou catro en cada mesa. Entonces ela ía por mesa e íamos así. E cando non sabías, ao mellor chamábaslle para que viñera. E así. E para o de merenda, inda que leváramos o bocadllo de a casa, dábanos tamén un-- cando se había como unha fariña, e tamén nos daba, tamén a comíamos alí. Viamos como cine, nunha pantalla que metía tamén. E despois tamén xogabamos un pouco porque eramos nenas. E pouco máis. Despois o de sempre, para a casa outra vez a xogar na calle, porque antes non había outra cousa. Xogabas na porta e todo eso."
+          },
+          {
+            "start": 182.72,
+            "end": 203.8,
+            "from_sentence": 39,
+            "to_sentence": 42,
+            "transcript_text": "Sí, unha señora sola, sí. Inda nos ensinaba tamén a bailar, que non me daba conta, de gallegas, que xa temos ido bailar a Casa do Mar da Coruña. No, desde que estabas na escola podías saír. Non había unha idade."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseLiresMartinez_seg01",
+          "MariaJoseLiresMartinez_seg04"
+        ],
+        "story_ids": [
+          "MariaJoseLiresMartinez_hist01"
+        ]
+      },
+      {
+        "id": "Carmen_Vileda_Rey_hist03",
+        "tipo": "historia",
+        "interview_id": "Carmen_Vileda_Rey",
+        "speaker": "Carmen Vileda Rey",
+        "title": "Contos de pantasmas nas silveiras",
+        "summary": "Nas xuntanzas contaban historias de pantasmas que aparecían polas silveiras; as nenas rían e críano todo.",
+        "score_coseno": 0.5053870677947998,
+        "rank_en_su_indice": 4,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 168.5,
+            "end": 190.08,
+            "from_sentence": 27,
+            "to_sentence": 31,
+            "transcript_text": "Claro, contaban un montón de contos, de, de fantasmas que aparecían po-polas silveiras e cousas así. A nós eso facíanos muito rir, claro. Tampouco non buscabamos se era verdade ou mentira. Creíamos todo. [risinho]"
+          }
+        ],
+        "related_topic_ids": [
+          "Carmen_Vileda_Rey_seg02"
+        ],
+        "story_ids": [
+          "Carmen_Vileda_Rey_hist03"
+        ]
+      },
+      {
+        "id": "MariaJoseRoa_hist09",
+        "tipo": "historia",
+        "interview_id": "MariaJoseRoa",
+        "speaker": "María José Roa",
+        "title": "A volta ao palillo e a sorpresa de Marina Antelo",
+        "summary": "Ao volver a Muxía empezou cun xogo de cama cun cartón de Marina Antelo, que non sabía que ela palillaba de verdade e quedou abraiada.",
+        "score_coseno": 0.4962451159954071,
+        "rank_en_su_indice": 5,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 1074.04,
+            "end": 1158.56,
+            "from_sentence": 189,
+            "to_sentence": 204,
+            "transcript_text": "Entonces, eu fui cando empecei a vir de volta pa Muxía, sen vivir en Muxía, pero empecei a vir. Xa estaba a asociación montada, estaba recén montada. Apunteime. As primeiras veces facía má guardia cando eu non estaba miña nai. E bueno, cando viñen pa Muxía, xa de golpe. E a agilidade, porque aprender isto non se olvida, é como, é como andar en bicicleta, vale? Eu cando vin de volta e empecei, empecei cun xogo de cama. O sea, cun, cun encaixe... que hoxe ando facendo merdiñas que é o que se vende. E bueno, xa che digo, eh, cando me viron coller a almoada e empezar, a xente pensaba que eu non sabía. Porque, por exemplo, a min quen me, quen me deixou o cartón pa empezar ese xogo de cama foi Marina Antelo. E Marina Antelo non tiña nin idea de que eu soubera palillar de verdade. Vale, alucinou. Alucinou Marina e moita xente. Claro, a xente que foi comigo a Falange sabían que eu sabía porque sabía coma elas. Pero moita xente asombrouse de que eu empezara a palillar e, segundín, palillo bastante ben."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseRoa_seg11"
+        ],
+        "story_ids": [
+          "MariaJoseRoa_hist09"
+        ]
+      },
+      {
+        "id": "Maria_Antelo_Lema_hist01",
+        "tipo": "historia",
+        "interview_id": "Maria_Antelo_Lema",
+        "speaker": "María Antelo Lema",
+        "title": "Á fábrica aos doce anos",
+        "summary": "Aos doce anos unha muller de Camariñas animouna a ir á fábrica, onde se gañaba máis ca palillando.",
+        "score_coseno": 0.4753442108631134,
+        "rank_en_su_indice": 6,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 19.74,
+            "end": 43.08,
+            "from_sentence": 4,
+            "to_sentence": 9,
+            "transcript_text": "Bueno, e despois dos doce anos, ven unha de Camariñas e dixo: \"Vén tá fábrica\". Non, primeiro ensinou a palillar señora Luísa de Pryn, a nai da Pelada. Acórdeste? Bueno, e sentadiña no suelo coas pernas así, e un banco, e palillando. Bueno, e despois foi cando fun pa a fábrica, aos doce anos. Ganabas máis cartos, claro."
+          }
+        ],
+        "related_topic_ids": [
+          "Maria_Antelo_Lema_seg01"
+        ],
+        "story_ids": [
+          "Maria_Antelo_Lema_hist01"
+        ]
+      },
+      {
+        "id": "Pilar_Barrientos_Conde_02_2_hist01",
+        "tipo": "historia",
+        "interview_id": "Pilar_Barrientos_Conde_02_2",
+        "speaker": "Pilar Barrientos Conde",
+        "title": "A escola de palillo da Falaxe",
+        "summary": "De nena, despois da escola, ía a unha escola de palillo onde unha profesora as ensinaba sentadas arredor de cabaletes, dáballes o material e a merenda e ensináballes tamén baile e canto.",
+        "score_coseno": 0.4713488817214966,
+        "rank_en_su_indice": 7,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 23.28,
+            "end": 76.14,
+            "from_sentence": 4,
+            "to_sentence": 13,
+            "transcript_text": "Tamén había escuela para as-- tiñamos a escuela de palillo, que era na Falaxe. Había moitas nenas, e así nuns caballetes, tiñan, eh, uns caballetes sentadas nunha silla. E tiñamos unha profesora que nos ensiñaba. E dábame los alfileres, os fíos, palillos. Ademais, ainda nos daba a merenda. Había unha profesora que che ensiñaba, ou a chamabas ou xa viña ela pola, por alí polas mesas, e así. Tamén, eh, baile. Xa lle ogo, acórdome tamén de ir pa, pa praia. Así, ensiñábanos a, a baile, xa lle ogo, algo. E a cantar."
+          },
+          {
+            "start": 214.38,
+            "end": 245.84,
+            "from_sentence": 40,
+            "to_sentence": 45,
+            "transcript_text": "Dábannos alí a merenda. Despois tamén, se che, como che dixen antes, ensiñábanos a algo de baile. Non era todo palillar, tamén había... Pois non sei, ao mellor dúas, tres horas, pero non, non sei dicirte. Eh, sentados así nunha banqueta. Había como uns caballetes, así cadrados, e todos na volta."
+          }
+        ],
+        "related_topic_ids": [
+          "Pilar_Barrientos_Conde_02_2_seg01",
+          "Pilar_Barrientos_Conde_02_2_seg05"
+        ],
+        "story_ids": [
+          "Pilar_Barrientos_Conde_02_2_hist01"
+        ]
+      },
+      {
+        "id": "MariaJesusPensadoPerez_hist04",
+        "tipo": "historia",
+        "interview_id": "MariaJesusPensadoPerez",
+        "speaker": "María Jesús Pensado Pérez",
+        "title": "A gravación na costura",
+        "summary": "Un día gravaron as rapazas da costura e sorprendéronse do barullo que facían falando dos seus mozos.",
+        "score_coseno": 0.4626653790473938,
+        "rank_en_su_indice": 8,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 711.75,
+            "end": 740.5,
+            "from_sentence": 117,
+            "to_sentence": 123,
+            "transcript_text": "como cando falabamos dos mozos na costura. Poñíamonos todas a un dia estar, gravounos. E cando acabamos, dime: \"Agora sentádevos\", porque tiñamos que limpar, eh? Tamén acabar de antes de marchar da costura. Pois o noso radio case, dixen eu: \"Pero nós facemos todo ese ruído? Foi todo desde que viñeste\". Claro, falábamos do que lle pasaba a aquela co mozo, outro co, co outro mozo."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJesusPensadoPerez_seg08"
+        ],
+        "story_ids": [
+          "MariaJesusPensadoPerez_hist04"
+        ]
+      },
+      {
+        "id": "MariaJoseRoa_hist06",
+        "tipo": "historia",
+        "interview_id": "MariaJoseRoa",
+        "speaker": "María José Roa",
+        "title": "O alfinete na man",
+        "summary": "Nas casas con avoas palilleiras, se te equivocabas picábanche a man cun alfinete.",
+        "score_coseno": 0.44240885972976685,
+        "rank_en_su_indice": 9,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 695.67,
+            "end": 702.33,
+            "from_sentence": 127,
+            "to_sentence": 128,
+            "transcript_text": "Pero nas casas donde había aboas que sabían. E cando te equivocabas, collían un alfiler e pinchábanche a man."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseRoa_seg08"
+        ],
+        "story_ids": [
+          "MariaJoseRoa_hist06"
+        ]
+      },
+      {
+        "id": "MariaJoseRoa_hist04",
+        "tipo": "historia",
+        "interview_id": "MariaJoseRoa",
+        "speaker": "María José Roa",
+        "title": "Premios de xota en Muros",
+        "summary": "Foron a Muros e gañaron premios de xota; as maiores bailaban a danza das espadas coa Sección Feminina.",
+        "score_coseno": 0.4332587718963623,
+        "rank_en_su_indice": 10,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 391.45,
+            "end": 427.89,
+            "from_sentence": 62,
+            "to_sentence": 68,
+            "transcript_text": "Fomos a, a Muros, creo que fora Muros. Ganamos os premios de baile de, de xota, era xota. Como rir, pois pasabámolo bomba. Sempre cando tiñamos ás maiores que bailaban a danza das espadas naquele entonces, que o bai-bailaban a-as mulleres. Antes non había danza das espadas como hai agora, non. Eran, a, era a sección feminina da Falange a que bailaba a danza das espadas. E bueno, iban coa danza das espadas e ganaban"
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseRoa_seg05"
+        ],
+        "story_ids": [
+          "MariaJoseRoa_hist04"
+        ]
+      },
+      {
+        "id": "MariaJoseRoa_hist02",
+        "tipo": "historia",
+        "interview_id": "MariaJoseRoa",
+        "speaker": "María José Roa",
+        "title": "A profesora que contaba películas",
+        "summary": "A profesora de palillo contaba películas coma a de Alfonso XII de forma tan viva que as nenas as vivían, e xogaban a interpretalas arredor da mesa.",
+        "score_coseno": 0.431273490190506,
+        "rank_en_su_indice": 11,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 51.04,
+            "end": 97.12,
+            "from_sentence": 8,
+            "to_sentence": 16,
+            "transcript_text": "Tiñamos unha profesora que nos tiña a todas encameladas, porque nos contaba as películas todas. Que si, pois imaxínate, a de Alfonso XII, eh, sí, sí. Eh, e tiñanos a todas as rapazas coa boca aberta, porque, vamos, contábanos as historias dunha maneira que parecía que as estaba vivindo. E nós vivíamola tamén. Ao mismo tempo, tiñamos como unha especie de, [chasquido de lengua] eh, teatro. Sin ser teatro, pero na volta dunha mesa íbamos interpretando os personaxes. E bueno, era unha forma tamén de motivarnos a seguir."
+          },
+          {
+            "start": 981.08,
+            "end": 988.06,
+            "from_sentence": 175,
+            "to_sentence": 175,
+            "transcript_text": "Pois, como a pasar, xa che digo, contar historias, aventuras, películas, facer un pouco de teatro na volta dunhas mesas..."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseRoa_seg01",
+          "MariaJoseRoa_seg10"
+        ],
+        "story_ids": [
+          "MariaJoseRoa_hist02"
+        ]
+      },
+      {
+        "id": "MariaJoseRoa_hist01",
+        "tipo": "historia",
+        "interview_id": "MariaJoseRoa",
+        "speaker": "María José Roa",
+        "title": "O carné da Sección Feminina aos seis anos",
+        "summary": "Conserva un carné da Sección Feminina de cando empezou a palillar con seis anos nos cursiños da Falange.",
+        "score_coseno": 0.4291471540927887,
+        "rank_en_su_indice": 12,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 19.0,
+            "end": 36.66,
+            "from_sentence": 2,
+            "to_sentence": 4,
+            "transcript_text": "Empecei no palillo por sobre os seis anos. Non sei se antes ou despois, pero en esa fecha teño un carné de, da sección feminina. Naquele entonces era a Falange, a que daba os cursillos de, de eso."
+          },
+          {
+            "start": 126.4,
+            "end": 143.54,
+            "from_sentence": 20,
+            "to_sentence": 22,
+            "transcript_text": "Eu o carné que teño é de cando tiña seis anos . Con seis anos xa palillaba . Na Falange."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJoseRoa_seg01",
+          "MariaJoseRoa_seg02"
+        ],
+        "story_ids": [
+          "MariaJoseRoa_hist01"
+        ]
+      },
+      {
+        "id": "MariaJesusPensadoPerez_hist05",
+        "tipo": "historia",
+        "interview_id": "MariaJesusPensadoPerez",
+        "speaker": "María Jesús Pensado Pérez",
+        "title": "Reconciliarse co mozo a porta pechada",
+        "summary": "Os luns, se discutira co seu mozo, que viña en moto, as compañeiras mandábana fóra e pechaban a porta para que se arranxasen.",
+        "score_coseno": 0.42352932691574097,
+        "rank_en_su_indice": 13,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 741.34,
+            "end": 752.02,
+            "from_sentence": 124,
+            "to_sentence": 125,
+            "transcript_text": "Os luns cando eu discutía como o home, viña na moto e elas mandabanme ir para fora e despois fechabanme a porta para que me puxera ben con el. Eramos moi..."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJesusPensadoPerez_seg08"
+        ],
+        "story_ids": [
+          "MariaJesusPensadoPerez_hist05"
+        ]
+      },
+      {
+        "id": "Carmen_Vileda_Rey_hist05",
+        "tipo": "historia",
+        "interview_id": "Carmen_Vileda_Rey",
+        "speaker": "Carmen Vileda Rey",
+        "title": "Unha almofadiña para entretela",
+        "summary": "Como a súa nai palillaba no inverno, aos tres anos e medio puxéronlle unha almofadiña para entretela; despois pasou a ser obriga.",
+        "score_coseno": 0.4197588264942169,
+        "rank_en_su_indice": 14,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 27.98,
+            "end": 51.38,
+            "from_sentence": 5,
+            "to_sentence": 7,
+            "transcript_text": "Tres anos e medio. Na casa, ca miña nai. Pois cando mamá se sentaba a panillar, puñíame ao lado dela e ensiñábame, explicábame e o ía facendo."
+          },
+          {
+            "start": 258.08,
+            "end": 288.3,
+            "from_sentence": 43,
+            "to_sentence": 47,
+            "transcript_text": "A ver, a min empeza-- eu empecei pronto porque miña nai iba panillada. Por eso sei que era aos tres anos e medio. Porque como era panillada no inverno, pois, eh, puxeron unha almoadiña pa entretenerme, pero despois era en serio. Bueno, empezamos por natural, por entretenimento, pa, pa que deixar a panillar as outros. E despois era obrigación."
+          }
+        ],
+        "related_topic_ids": [
+          "Carmen_Vileda_Rey_seg01",
+          "Carmen_Vileda_Rey_seg04"
+        ],
+        "story_ids": [
+          "Carmen_Vileda_Rey_hist05"
+        ]
+      },
+      {
+        "id": "MariaJesusPensadoPerez_hist02",
+        "tipo": "historia",
+        "interview_id": "MariaJesusPensadoPerez",
+        "speaker": "María Jesús Pensado Pérez",
+        "title": "Retito, a intermediaria",
+        "summary": "A súa nai madrugaba os sábados cando viña Retito para venderlle panos; Retito levaba o encaixe á Coruña sen que soubesen a onde ía.",
+        "score_coseno": 0.4187106788158417,
+        "rank_en_su_indice": 15,
+        "quality_flags": [],
+        "fuentes": [
+          {
+            "start": 379.33,
+            "end": 408.13,
+            "from_sentence": 59,
+            "to_sentence": 63,
+            "transcript_text": "E á parte, eu sempre lle vía unha queixiña e dicíame: \"Ai, vai vir Retito\". E tiña os seus pañuelos alí e xa se levantaba aos sabedos moi cedo cando sabía que viña Retito, para ir vender ao mellor quince, vinte. No momento que non tiña nada que facer, entre comillas, eh, puñíase a pelillar. Aí va facendo, e oías. E como dicía ela, se gañan cinco pesos dun lado e dez do outro, son quince."
+          },
+          {
+            "start": 478.01,
+            "end": 479.71,
+            "from_sentence": 77,
+            "to_sentence": 77,
+            "transcript_text": "Claro, Retito era intermediaria."
+          },
+          {
+            "start": 1014.36,
+            "end": 1024.72,
+            "from_sentence": 178,
+            "to_sentence": 179,
+            "transcript_text": "Nós o retito levábamo para Coruña, non sabíamos que se facía con el. Supoñiamos que o vendería, pero non sabías nin donde nin nada."
+          }
+        ],
+        "related_topic_ids": [
+          "MariaJesusPensadoPerez_seg05",
+          "MariaJesusPensadoPerez_seg10"
+        ],
+        "story_ids": [
+          "MariaJesusPensadoPerez_hist02"
+        ]
+      }
+    ]
+  },
+  "seleccion": [
+    {
+      "id": "Carmen_Vileda_Rey_hist02",
+      "tipo": "historia",
+      "interview_id": "Carmen_Vileda_Rey",
+      "speaker": "Carmen Vileda Rey",
+      "title": "Palilladas con luz de carburo",
+      "summary": "De noite as mulleres xuntábanse a palillar con luz de carburo ata a unha; comentábase a vida do pobo, contábanse contos e oíase a radio.",
+      "score_coseno": 0.672950804233551,
+      "rank_en_su_indice": 1,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 100.18,
+          "end": 129.04,
+          "from_sentence": 13,
+          "to_sentence": 18,
+          "transcript_text": "Sí, eh, entón si, tamén se facían xuntanzas de noite. Panillaban con luz de carburo. Pois era un, unha ocupación, un entretenimento. E aí facían un montón de comentarios das cousas. Era o periódico. [risinho]"
+        },
+        {
+          "start": 383.49,
+          "end": 469.63,
+          "from_sentence": 63,
+          "to_sentence": 74,
+          "transcript_text": "Ainda se penillaba hasta a unha da mañana nas, nas penilladas. Claro, bueno, eu aí non, non vivín porque eu familia non, non tiña en ese momento. Tiña miña nai, pero miña nai era a que se ocupaba da casa, de, de, de todo. Entonces eu aí non, non podo explicar porque non, non teño conocimiento. Contaban cuentos, sacabanlle a conduta a algunhas personas do pueblo [ri] . Ou sea, era, era máis ben para traballar, pero ao mismo tiempo distraíanse falando, escoitando a radio a veces. Desde que te levantabas ás oito, depende, a veces ás sete da mañana xa me tiña que levantar, hasta-- se íamos á xuntanza, hasta a unha da mañana. Bueno, eramos jóvenes e non nos dábamos de conta. Sabíamos todo de memoria, claro. Aprendíamos todo de memoria, non..."
+        }
+      ],
+      "related_topic_ids": [
+        "Carmen_Vileda_Rey_seg02",
+        "Carmen_Vileda_Rey_seg06"
+      ],
+      "story_ids": [
+        "Carmen_Vileda_Rey_hist02"
+      ],
+      "orden_seleccion": 1,
+      "duracion_total_segundos": 115.0,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "MariaJoseLiresMartinez_hist05",
+      "tipo": "historia",
+      "interview_id": "MariaJoseLiresMartinez",
+      "speaker": "María José Lires Martínez",
+      "title": "As palilleiras e os mozos",
+      "summary": "Nas palilladas da súa nai, cando chegaban os mozos, deixaban a almofada e marchaban con eles.",
+      "score_coseno": 0.5249313116073608,
+      "rank_en_su_indice": 2,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 309.44,
+          "end": 325.14,
+          "from_sentence": 58,
+          "to_sentence": 63,
+          "transcript_text": "A ver, eu acórdome de sentir tamén a miña nai a todo cando ían, que palillaban. Ian máis ben que conto para, por culpa dos mozos, non? Que estaban palillando, pero en vez de estar palillando, atendían os mozos cando viñan xunta delas. Entón, en vez de palillar, xa collían e marchaban [ri] con eles."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseLiresMartinez_seg06"
+      ],
+      "story_ids": [
+        "MariaJoseLiresMartinez_hist05"
+      ],
+      "orden_seleccion": 2,
+      "duracion_total_segundos": 15.7,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "Carmen_Vileda_Rey_seg02",
+      "tipo": "tema",
+      "interview_id": "Carmen_Vileda_Rey",
+      "speaker": "Carmen Vileda Rey",
+      "title": "Xuntanzas de noite e días duros",
+      "summary": "Facíanse xuntanzas de noite para palillar con luz de carburo: eran ocupación e entretemento, e alí comentábase todo, «era o periódico». Os días de chuvia e vento eran moi duros, cos pés mollados e sen a roupa de agora, pero eran felices porque para elas era o normal. Contaban contos de pantasmas nas silveiras e críano todo.",
+      "score_coseno": 0.5887182354927063,
+      "rank_en_su_indice": 2,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 100.18,
+          "end": 190.08,
+          "from_sentence": 13,
+          "to_sentence": 31,
+          "transcript_text": "Sí, eh, entón si, tamén se facían xuntanzas de noite. Panillaban con luz de carburo. Pois era un, unha ocupación, un entretenimento. E aí facían un montón de comentarios das cousas. Era o periódico. [risinho] Uns días máis duros ca outros, si, porque, por exemplo, cando chovía e había que facer o mesmo trabalho, era moi duro. Era moito vento, moita chuvia, des-- eh, os, os pés mollados. Eh, bueno, todo eso era bastante, bastante duro. E non habían a roupa que hai agora. Nós éramos felices. Estábamos acostumbradas a ese... que non veñan eses momentos pa xente de agora. Pero daquela estabamos-- era normal, pa nós era normal. Claro, contaban un montón de contos, de, de fantasmas que aparecían po-polas silveiras e cousas así. A nós eso facíanos muito rir, claro. Tampouco non buscabamos se era verdade ou mentira. Creíamos todo. [risinho]"
+        }
+      ],
+      "related_topic_ids": [
+        "Carmen_Vileda_Rey_seg02"
+      ],
+      "story_ids": [
+        "Carmen_Vileda_Rey_hist01",
+        "Carmen_Vileda_Rey_hist02",
+        "Carmen_Vileda_Rey_hist03"
+      ],
+      "orden_seleccion": 3,
+      "duracion_total_segundos": 89.9,
+      "fraccion_ya_cubierta": 0.321
+    },
+    {
+      "id": "MariaJoseLiresMartinez_hist01",
+      "tipo": "historia",
+      "interview_id": "MariaJoseLiresMartinez",
+      "speaker": "María José Lires Martínez",
+      "title": "A escola de palillo da Falange na praia",
+      "summary": "Despois da escola ían palillar á Falange, á beira da praia, cunha señora que as ensinaba por mesas, lles daba merenda, lles poñía cine e lles ensinaba baile galego.",
+      "score_coseno": 0.5063197612762451,
+      "rank_en_su_indice": 3,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 17.06,
+          "end": 74.96,
+          "from_sentence": 3,
+          "to_sentence": 14,
+          "transcript_text": "Cando saía da escola, ía á casa a buscar o bocadllo e daquela despois íamos para a Falange, para palillar, que nos ensinaban a palillar unha señora. Aquí abaixo na praia. Tres ou catro en cada mesa. Entonces ela ía por mesa e íamos así. E cando non sabías, ao mellor chamábaslle para que viñera. E así. E para o de merenda, inda que leváramos o bocadllo de a casa, dábanos tamén un-- cando se había como unha fariña, e tamén nos daba, tamén a comíamos alí. Viamos como cine, nunha pantalla que metía tamén. E despois tamén xogabamos un pouco porque eramos nenas. E pouco máis. Despois o de sempre, para a casa outra vez a xogar na calle, porque antes non había outra cousa. Xogabas na porta e todo eso."
+        },
+        {
+          "start": 182.72,
+          "end": 203.8,
+          "from_sentence": 39,
+          "to_sentence": 42,
+          "transcript_text": "Sí, unha señora sola, sí. Inda nos ensinaba tamén a bailar, que non me daba conta, de gallegas, que xa temos ido bailar a Casa do Mar da Coruña. No, desde que estabas na escola podías saír. Non había unha idade."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseLiresMartinez_seg01",
+        "MariaJoseLiresMartinez_seg04"
+      ],
+      "story_ids": [
+        "MariaJoseLiresMartinez_hist01"
+      ],
+      "orden_seleccion": 4,
+      "duracion_total_segundos": 78.98,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "MariaJoseRoa_hist09",
+      "tipo": "historia",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "A volta ao palillo e a sorpresa de Marina Antelo",
+      "summary": "Ao volver a Muxía empezou cun xogo de cama cun cartón de Marina Antelo, que non sabía que ela palillaba de verdade e quedou abraiada.",
+      "score_coseno": 0.4962451159954071,
+      "rank_en_su_indice": 5,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 1074.04,
+          "end": 1158.56,
+          "from_sentence": 189,
+          "to_sentence": 204,
+          "transcript_text": "Entonces, eu fui cando empecei a vir de volta pa Muxía, sen vivir en Muxía, pero empecei a vir. Xa estaba a asociación montada, estaba recén montada. Apunteime. As primeiras veces facía má guardia cando eu non estaba miña nai. E bueno, cando viñen pa Muxía, xa de golpe. E a agilidade, porque aprender isto non se olvida, é como, é como andar en bicicleta, vale? Eu cando vin de volta e empecei, empecei cun xogo de cama. O sea, cun, cun encaixe... que hoxe ando facendo merdiñas que é o que se vende. E bueno, xa che digo, eh, cando me viron coller a almoada e empezar, a xente pensaba que eu non sabía. Porque, por exemplo, a min quen me, quen me deixou o cartón pa empezar ese xogo de cama foi Marina Antelo. E Marina Antelo non tiña nin idea de que eu soubera palillar de verdade. Vale, alucinou. Alucinou Marina e moita xente. Claro, a xente que foi comigo a Falange sabían que eu sabía porque sabía coma elas. Pero moita xente asombrouse de que eu empezara a palillar e, segundín, palillo bastante ben."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseRoa_seg11"
+      ],
+      "story_ids": [
+        "MariaJoseRoa_hist09"
+      ],
+      "orden_seleccion": 5,
+      "duracion_total_segundos": 84.52,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "MariaJoseRoa_seg11",
+      "tipo": "tema",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "Gancho, punto de cruz e a volta ao palillo",
+      "summary": "Deixou o gancho despois dun tapete de mesa camilla interminable, e o punto de cruz «sempre se me cruzou». Viviu moito tempo fóra, mercando Labores de Hogar e imaxinando a bolillos o que vía en gancho. Ao volver a Muxía apuntouse á asociación recén creada, facendo gardas pola súa nai. Palillar non se esquece, coma a bicicleta: empezou cun xogo de cama cun cartón de Marina Antelo, que se asombrou de que soubese palillar de verdade.",
+      "score_coseno": 0.527058482170105,
+      "rank_en_su_indice": 5,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 1011.32,
+          "end": 1171.8,
+          "from_sentence": 177,
+          "to_sentence": 207,
+          "transcript_text": "Pouco, como, pois non sei, porque eu ganchillaba a través das revistas. Iba mirando, eh, que me cansei e dixen, dixen que non volvía a coller un ganchillo nin, nin de coña, porque fixen un tapete pa unha mesa camilla de noventa e aquelas últimas voltas, que me levaban unha tarde enteira facer a volta e non e, non iba pa diante, nin-- dixen que non quería saber nada máis do ganchillo nin de nada. O punto de cruz sempre se me cruzou. Seino facer, eh. Pero sempre se me cruzou. Non... En cambio, o palillo, mira. Eu, por exemplo, vivín moito tempo fora. Fora, en España, pero... Eu, por exemplo, sempre me gustaron moito as revistas de labores. Eh, e sempre comprei Labores de Hogar. E ao mellor vía unha obra que era de ganchillo e eu estaba facéndoa a bolillos na mente. Entonces, eu fui cando empecei a vir de volta pa Muxía, sen vivir en Muxía, pero empecei a vir. Xa estaba a asociación montada, estaba recén montada. Apunteime. As primeiras veces facía má guardia cando eu non estaba miña nai. E bueno, cando viñen pa Muxía, xa de golpe. E a agilidade, porque aprender isto non se olvida, é como, é como andar en bicicleta, vale? Eu cando vin de volta e empecei, empecei cun xogo de cama. O sea, cun, cun encaixe... que hoxe ando facendo merdiñas que é o que se vende. E bueno, xa che digo, eh, cando me viron coller a almoada e empezar, a xente pensaba que eu non sabía. Porque, por exemplo, a min quen me, quen me deixou o cartón pa empezar ese xogo de cama foi Marina Antelo. E Marina Antelo non tiña nin idea de que eu soubera palillar de verdade. Vale, alucinou. Alucinou Marina e moita xente. Claro, a xente que foi comigo a Falange sabían que eu sabía porque sabía coma elas. Pero moita xente asombrouse de que eu empezara a palillar e, segundín, palillo bastante ben. [tose] O que pasa é que, como día a miña amiga, son unha perxeira. [ri]"
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseRoa_seg11"
+      ],
+      "story_ids": [
+        "MariaJoseRoa_hist09"
+      ],
+      "orden_seleccion": 6,
+      "duracion_total_segundos": 160.48,
+      "fraccion_ya_cubierta": 0.5267
+    },
+    {
+      "id": "Maria_Antelo_Lema_hist01",
+      "tipo": "historia",
+      "interview_id": "Maria_Antelo_Lema",
+      "speaker": "María Antelo Lema",
+      "title": "Á fábrica aos doce anos",
+      "summary": "Aos doce anos unha muller de Camariñas animouna a ir á fábrica, onde se gañaba máis ca palillando.",
+      "score_coseno": 0.4753442108631134,
+      "rank_en_su_indice": 6,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 19.74,
+          "end": 43.08,
+          "from_sentence": 4,
+          "to_sentence": 9,
+          "transcript_text": "Bueno, e despois dos doce anos, ven unha de Camariñas e dixo: \"Vén tá fábrica\". Non, primeiro ensinou a palillar señora Luísa de Pryn, a nai da Pelada. Acórdeste? Bueno, e sentadiña no suelo coas pernas así, e un banco, e palillando. Bueno, e despois foi cando fun pa a fábrica, aos doce anos. Ganabas máis cartos, claro."
+        }
+      ],
+      "related_topic_ids": [
+        "Maria_Antelo_Lema_seg01"
+      ],
+      "story_ids": [
+        "Maria_Antelo_Lema_hist01"
+      ],
+      "orden_seleccion": 7,
+      "duracion_total_segundos": 23.34,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "Maria_Antelo_Lema_seg09",
+      "tipo": "tema",
+      "interview_id": "Maria_Antelo_Lema",
+      "speaker": "María Antelo Lema",
+      "title": "O encaixe: alegría, coidados e recoñecemento",
+      "summary": "Palillar é para ela unha alegría e unha felicidade. Brinca coa rivalidade entre Camariñas e Muxía. Coidou de moitos maiores. Ninguén ve as horas que leva: ante «que caro é esta mantelería» responde «pois faga usted, señora». Sen as palilleiras non habería encaixe. É feliz coas súas compañeiras.",
+      "score_coseno": 0.5257524847984314,
+      "rank_en_su_indice": 6,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 492.72,
+          "end": 629.66,
+          "from_sentence": 134,
+          "to_sentence": 161,
+          "transcript_text": "Para min, alegría, o encaixo. Palillar para min é unha alegría. Que bonito é ser, é isto. Sí, a mellor, claro que sí. Sí. Eu colo. [risas] Camariñas, digo, non falas de Camariñas, nin de Muxía tampouco. [risas] Pois eu creo que sí, eh. Sí. Moito, moito, mais é moito, eh. Unha felicidade. De antes, a conservera. Palillar. Maiores, moi ben. Eu moi ben, cuidei a moitos. Isto nada é as horas que leva. E dinche: Que caro é este mantelería. Pois faga usted, señora. E sí, eh. Nadie. Se isto morrerse, pois non había nada encaixe. O traballo non o reconocen. Aí ves que cando entreguei moita xente aquí, ai que caro é. Que son feliz cas miñas compañeiras. Elas comigo non son, pero eu con elas son. [risas]"
+        }
+      ],
+      "related_topic_ids": [
+        "Maria_Antelo_Lema_seg09"
+      ],
+      "story_ids": [
+        "Maria_Antelo_Lema_hist06"
+      ],
+      "orden_seleccion": 8,
+      "duracion_total_segundos": 136.94,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "Pilar_Barrientos_Conde_02_2_hist01",
+      "tipo": "historia",
+      "interview_id": "Pilar_Barrientos_Conde_02_2",
+      "speaker": "Pilar Barrientos Conde",
+      "title": "A escola de palillo da Falaxe",
+      "summary": "De nena, despois da escola, ía a unha escola de palillo onde unha profesora as ensinaba sentadas arredor de cabaletes, dáballes o material e a merenda e ensináballes tamén baile e canto.",
+      "score_coseno": 0.4713488817214966,
+      "rank_en_su_indice": 7,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 23.28,
+          "end": 76.14,
+          "from_sentence": 4,
+          "to_sentence": 13,
+          "transcript_text": "Tamén había escuela para as-- tiñamos a escuela de palillo, que era na Falaxe. Había moitas nenas, e así nuns caballetes, tiñan, eh, uns caballetes sentadas nunha silla. E tiñamos unha profesora que nos ensiñaba. E dábame los alfileres, os fíos, palillos. Ademais, ainda nos daba a merenda. Había unha profesora que che ensiñaba, ou a chamabas ou xa viña ela pola, por alí polas mesas, e así. Tamén, eh, baile. Xa lle ogo, acórdome tamén de ir pa, pa praia. Así, ensiñábanos a, a baile, xa lle ogo, algo. E a cantar."
+        },
+        {
+          "start": 214.38,
+          "end": 245.84,
+          "from_sentence": 40,
+          "to_sentence": 45,
+          "transcript_text": "Dábannos alí a merenda. Despois tamén, se che, como che dixen antes, ensiñábanos a algo de baile. Non era todo palillar, tamén había... Pois non sei, ao mellor dúas, tres horas, pero non, non sei dicirte. Eh, sentados así nunha banqueta. Había como uns caballetes, así cadrados, e todos na volta."
+        }
+      ],
+      "related_topic_ids": [
+        "Pilar_Barrientos_Conde_02_2_seg01",
+        "Pilar_Barrientos_Conde_02_2_seg05"
+      ],
+      "story_ids": [
+        "Pilar_Barrientos_Conde_02_2_hist01"
+      ],
+      "orden_seleccion": 9,
+      "duracion_total_segundos": 84.32,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "MariaJesusPensadoPerez_hist04",
+      "tipo": "historia",
+      "interview_id": "MariaJesusPensadoPerez",
+      "speaker": "María Jesús Pensado Pérez",
+      "title": "A gravación na costura",
+      "summary": "Un día gravaron as rapazas da costura e sorprendéronse do barullo que facían falando dos seus mozos.",
+      "score_coseno": 0.4626653790473938,
+      "rank_en_su_indice": 8,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 711.75,
+          "end": 740.5,
+          "from_sentence": 117,
+          "to_sentence": 123,
+          "transcript_text": "como cando falabamos dos mozos na costura. Poñíamonos todas a un dia estar, gravounos. E cando acabamos, dime: \"Agora sentádevos\", porque tiñamos que limpar, eh? Tamén acabar de antes de marchar da costura. Pois o noso radio case, dixen eu: \"Pero nós facemos todo ese ruído? Foi todo desde que viñeste\". Claro, falábamos do que lle pasaba a aquela co mozo, outro co, co outro mozo."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJesusPensadoPerez_seg08"
+      ],
+      "story_ids": [
+        "MariaJesusPensadoPerez_hist04"
+      ],
+      "orden_seleccion": 10,
+      "duracion_total_segundos": 28.75,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "MariaJesusPensadoPerez_seg06",
+      "tipo": "tema",
+      "interview_id": "MariaJesusPensadoPerez",
+      "speaker": "María Jesús Pensado Pérez",
+      "title": "Labores, xornadas longas e espazos de encontro",
+      "summary": "A labor feita na Falange quedaba alí e non sabían para que era. A súa nai e outras facían panos e vendíanos no Bran antes de que abrise o Piticlín. Ás veces palillaban soas e ás veces xuntas. Un marcapáxinas pode levar seis horas ou tres, segundo a axilidade. Asaban sardiñas ata a medianoite e limpaban a graxa con lixivia. Todo era unión: paraban a tomar café e falaban; era un espazo de encontro de dúas horas pola tarde.",
+      "score_coseno": 0.5133688449859619,
+      "rank_en_su_indice": 9,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 487.07,
+          "end": 634.49,
+          "from_sentence": 78,
+          "to_sentence": 98,
+          "transcript_text": "Pois nós, cando estaba eu na Falange, alí. Ese labor quedaba alí. Non sabíamos pa que era. E poi miña nai, na casa, que despois inda tamén, eh, antes de abrir o, o Piticlín, xa, eh, facían elas os pañuelos con labor, aí no Bran, xuntaba ela e varias, eh, e vendíanos, que tiñan, eh, sabes que... A, eh, a veces solas na casa, e a veces tamén nos xuntabamos todas. Hai xente que ao mellor pa facer un marcapáxinas levelle seis horas e a outra tenga máis, [inspira] eh, máis axilidade e ao mellor en tres horas faio. Pois, eh, asar as cerdiñas ca miña nai, limpar a casa os sabedos a fondo, senón xa non se masabe. Eh, ir aos berberechos, ir ás caramuxas, ir ao Aljazo, a, a poñer as patacas, coller as patacas e agardalas no faiado. De todo. Pois desde que nos levantabamos hasta que nos deitabamos. Porque, por exemplo, de asar as cerdiñas ao mellor acabamos ás doce da noite. E despois inda había que limpar todo o que quedaba alí de grasa, con lixía, con tal. E poi recoller e ir pa casa. Todo era unión. Pois parábamos a tomar o café, a seguir falando, e a pasalo... Pasabámoste ben. No, no, no, no. Era un, un espazo de encontro. Esas tardes eran pequenas, de, de cinco e media a sete e media, dúas horas."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJesusPensadoPerez_seg06"
+      ],
+      "story_ids": [],
+      "orden_seleccion": 11,
+      "duracion_total_segundos": 147.42,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "MariaJoseLiresMartinez_seg06",
+      "tipo": "tema",
+      "interview_id": "MariaJoseLiresMartinez",
+      "speaker": "María José Lires Martínez",
+      "title": "As palilleiras de antes",
+      "summary": "Lembra as palilladas da súa nai: cando chegaban os mozos, deixaban de palillar e marchaban con eles. Estaban todas xuntas no chan, coas pernas cruzadas, sen cadeiras. Ademais coidaban dos maiores, coma a bisavoa encamada. As maiores ensinaban ás pequenas o pouco que sabían.",
+      "score_coseno": 0.5791431069374084,
+      "rank_en_su_indice": 3,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 309.44,
+          "end": 384.42,
+          "from_sentence": 58,
+          "to_sentence": 70,
+          "transcript_text": "A ver, eu acórdome de sentir tamén a miña nai a todo cando ían, que palillaban. Ian máis ben que conto para, por culpa dos mozos, non? Que estaban palillando, pero en vez de estar palillando, atendían os mozos cando viñan xunta delas. Entón, en vez de palillar, xa collían e marchaban [ri] con eles. Eso mesmo, sí. Estaban todas xuntas, pasaban o coche e daquela tamén, non é como agora, porque agora inda estamos aquí, ao mellor imos tomar un café, pero antes non había nada. Estaban a ese punto. Sí, no chan, así coas pernas cruzadas e non había silla de nada, no suelo. Inda agora nos queixamos, antes tiña que ser peor, porque ao estar no suelo... Eu daquela non, pero miña nai, por exemplo, tiña a miña bisavoa, que estaba encamada, e claro, tamén a tiñan que atender. Claro, ivas á que non sería, ensiñábanche o pouco que sabían elas, ensiñábanche a ti."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseLiresMartinez_seg06"
+      ],
+      "story_ids": [
+        "MariaJoseLiresMartinez_hist05"
+      ],
+      "orden_seleccion": 12,
+      "duracion_total_segundos": 74.98,
+      "fraccion_ya_cubierta": 0.2094
+    },
+    {
+      "id": "MariaJoseRoa_seg08",
+      "tipo": "tema",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "Como se aprendía e a lembranza da avoa",
+      "summary": "Poñíanlle diante o cartón cun anaco de mostra e íanlle explicando como pasar os palillos, sentada ao lado da mestra ata que se soltaba. Empezou arredor dos seis anos, aínda que cando chegou á Falange xa sabía pasar os pares porque llo ensinara a súa avoa. As avoas picábanche a man cun alfinete se te equivocabas. Era algo natural: lembra a súa avoa, que morreu con 90 anos, palillando no inverno sentada na cama con tres almofadóns detrás.",
+      "score_coseno": 0.5195829272270203,
+      "rank_en_su_indice": 7,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 649.15,
+          "end": 742.9,
+          "from_sentence": 117,
+          "to_sentence": 136,
+          "transcript_text": "Como se aprendía? Pois mira, a min poñíanme o cartón diante cun cachiño dunha mostra. Íbame explicando como pasan os palillos. Mentres nos enseñaba, sentábannos ao lado dela e íbannos dirigindo ata que xa nos soltabamos un pouco. Entonces... Pois eu creo que a partir dos seis anos. [tos] Mais que nada creo cando empezabamos a escuela. A ver, despois na casa, eh, por exemplo, miña avoa facía má almoada. Sí, enseñábame, porque eu cando fun para a Falange creo que xa sabía pasar os, os paves. Pero nas casas donde había aboas que sabían. E cando te equivocabas, collían un alfiler e pinchábanche a man. No, e-era natural. A ver, é que xa o tiñamos asumido case desde que nacíamos, porque o estabamos vendo... Eu acórdome de miña avoa. Miña avoa morreu con noventa anos. Eu acórdome de miña avoa sentada na cama con tres almoadóns detrás, as pernas cruzadas e a almoada adiante, palillando no inverno. Non, entonces, pois non sei, xa o tiñamos na casa. Non, non era nada que nos fora a estrañar nin que... Xa o tiñámolo dentro."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseRoa_seg08"
+      ],
+      "story_ids": [
+        "MariaJoseRoa_hist06"
+      ],
+      "orden_seleccion": 13,
+      "duracion_total_segundos": 93.75,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "MariaJoseRoa_hist04",
+      "tipo": "historia",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "Premios de xota en Muros",
+      "summary": "Foron a Muros e gañaron premios de xota; as maiores bailaban a danza das espadas coa Sección Feminina.",
+      "score_coseno": 0.4332587718963623,
+      "rank_en_su_indice": 10,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 391.45,
+          "end": 427.89,
+          "from_sentence": 62,
+          "to_sentence": 68,
+          "transcript_text": "Fomos a, a Muros, creo que fora Muros. Ganamos os premios de baile de, de xota, era xota. Como rir, pois pasabámolo bomba. Sempre cando tiñamos ás maiores que bailaban a danza das espadas naquele entonces, que o bai-bailaban a-as mulleres. Antes non había danza das espadas como hai agora, non. Eran, a, era a sección feminina da Falange a que bailaba a danza das espadas. E bueno, iban coa danza das espadas e ganaban"
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseRoa_seg05"
+      ],
+      "story_ids": [
+        "MariaJoseRoa_hist04"
+      ],
+      "orden_seleccion": 14,
+      "duracion_total_segundos": 36.44,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "MariaJoseRoa_seg05",
+      "tipo": "tema",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "Unha infancia privilexiada e os premios de baile",
+      "summary": "Non pode falar de días duros: o seu pai era municipal e non pasou as necesidades doutras casas. Lembra unha viaxe a Muros, onde gañaron premios de xota. A danza das espadas bailábana daquela as mulleres maiores da Sección Feminina da Falange, e gañaban.",
+      "score_coseno": 0.5048467516899109,
+      "rank_en_su_indice": 10,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 346.3,
+          "end": 435.57,
+          "from_sentence": 55,
+          "to_sentence": 70,
+          "transcript_text": "Mira, eh, en ese sentido, eu, mmm, falar dos días duros, digamos que eu fun unha persona privilexiada, vale? Eh, noutras casas sí que o teñen pasado moi mal Eu muitas cousas que oía eu non as vivía. Meu pai era municipal. Eee non, non pasei, digamos, os traballos e as necesidades que había en outras casas. Por eso eu falarche de días duros. Se eu falo de días duros, estou mentindo. Home, facernos rir. Fomos a, a Muros, creo que fora Muros. Ganamos os premios de baile de, de xota, era xota. Como rir, pois pasabámolo bomba. Sempre cando tiñamos ás maiores que bailaban a danza das espadas naquele entonces, que o bai-bailaban a-as mulleres. Antes non había danza das espadas como hai agora, non. Eran, a, era a sección feminina da Falange a que bailaba a danza das espadas. E bueno, iban coa danza das espadas e ganaban [ri] ."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseRoa_seg05"
+      ],
+      "story_ids": [
+        "MariaJoseRoa_hist04"
+      ],
+      "orden_seleccion": 15,
+      "duracion_total_segundos": 89.27,
+      "fraccion_ya_cubierta": 0.4082
+    },
+    {
+      "id": "MariaJoseRoa_hist02",
+      "tipo": "historia",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "A profesora que contaba películas",
+      "summary": "A profesora de palillo contaba películas coma a de Alfonso XII de forma tan viva que as nenas as vivían, e xogaban a interpretalas arredor da mesa.",
+      "score_coseno": 0.431273490190506,
+      "rank_en_su_indice": 11,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 51.04,
+          "end": 97.12,
+          "from_sentence": 8,
+          "to_sentence": 16,
+          "transcript_text": "Tiñamos unha profesora que nos tiña a todas encameladas, porque nos contaba as películas todas. Que si, pois imaxínate, a de Alfonso XII, eh, sí, sí. Eh, e tiñanos a todas as rapazas coa boca aberta, porque, vamos, contábanos as historias dunha maneira que parecía que as estaba vivindo. E nós vivíamola tamén. Ao mismo tempo, tiñamos como unha especie de, [chasquido de lengua] eh, teatro. Sin ser teatro, pero na volta dunha mesa íbamos interpretando os personaxes. E bueno, era unha forma tamén de motivarnos a seguir."
+        },
+        {
+          "start": 981.08,
+          "end": 988.06,
+          "from_sentence": 175,
+          "to_sentence": 175,
+          "transcript_text": "Pois, como a pasar, xa che digo, contar historias, aventuras, películas, facer un pouco de teatro na volta dunhas mesas..."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseRoa_seg01",
+        "MariaJoseRoa_seg10"
+      ],
+      "story_ids": [
+        "MariaJoseRoa_hist02"
+      ],
+      "orden_seleccion": 16,
+      "duracion_total_segundos": 53.06,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "MariaJoseRoa_seg01",
+      "tipo": "tema",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "Comezar no palillo na Falange",
+      "summary": "Empezou arredor dos seis anos e conserva un carné da Sección Feminina desa época. A Falange daba os cursiños: as nenas escollían coser ou palillar e a ela a costura nunca lle gustou. Tiñan unha profesora que as tiña engaioladas contándolles películas coma a de Alfonso XII, e interpretaban os personaxes arredor da mesa. Dábanlles merenda: un bolliño con chocolatiñas.",
+      "score_coseno": 0.5013512372970581,
+      "rank_en_su_indice": 11,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 19.0,
+          "end": 125.52,
+          "from_sentence": 2,
+          "to_sentence": 19,
+          "transcript_text": "Empecei no palillo por sobre os seis anos. Non sei se antes ou despois, pero en esa fecha teño un carné de, da sección feminina. Naquele entonces era a Falange, a que daba os cursillos de, de eso. Entonces, queda-- as nenas quedábanos ou ir a coser ou ir a palillar. A miña costura como que nunca me gustou. Entonces, pois, saía da escuela e iba para o palillo. Tiñamos unha profesora que nos tiña a todas encameladas, porque nos contaba as películas todas. Que si, pois imaxínate, a de Alfonso XII, eh, sí, sí. Eh, e tiñanos a todas as rapazas coa boca aberta, porque, vamos, contábanos as historias dunha maneira que parecía que as estaba vivindo. E nós vivíamola tamén. Ao mismo tempo, tiñamos como unha especie de, [chasquido de lengua] eh, teatro. Sin ser teatro, pero na volta dunha mesa íbamos interpretando os personaxes. E bueno, era unha forma tamén de motivarnos a seguir. Despois, mmm, pois que queres que che diga, a nosa vida iba na volta desto, de, do, do palillo, de vivilo, de, de salir da escuela, correr para o palillo, porque pasábamos ben. Dábannos a merenda, dábannos un bollito cunhas taba-- cunas chocolatinas. En fin, esa era a nosa vida naquele entonces."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseRoa_seg01"
+      ],
+      "story_ids": [
+        "MariaJoseRoa_hist01",
+        "MariaJoseRoa_hist02"
+      ],
+      "orden_seleccion": 17,
+      "duracion_total_segundos": 106.52,
+      "fraccion_ya_cubierta": 0.4326
+    },
+    {
+      "id": "MariaJoseRoa_hist01",
+      "tipo": "historia",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "O carné da Sección Feminina aos seis anos",
+      "summary": "Conserva un carné da Sección Feminina de cando empezou a palillar con seis anos nos cursiños da Falange.",
+      "score_coseno": 0.4291471540927887,
+      "rank_en_su_indice": 12,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 19.0,
+          "end": 36.66,
+          "from_sentence": 2,
+          "to_sentence": 4,
+          "transcript_text": "Empecei no palillo por sobre os seis anos. Non sei se antes ou despois, pero en esa fecha teño un carné de, da sección feminina. Naquele entonces era a Falange, a que daba os cursillos de, de eso."
+        },
+        {
+          "start": 126.4,
+          "end": 143.54,
+          "from_sentence": 20,
+          "to_sentence": 22,
+          "transcript_text": "Eu o carné que teño é de cando tiña seis anos . Con seis anos xa palillaba . Na Falange."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseRoa_seg01",
+        "MariaJoseRoa_seg02"
+      ],
+      "story_ids": [
+        "MariaJoseRoa_hist01"
+      ],
+      "orden_seleccion": 18,
+      "duracion_total_segundos": 34.8,
+      "fraccion_ya_cubierta": 0.5075
+    },
+    {
+      "id": "MariaJoseRoa_seg14",
+      "tipo": "tema",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "O encaixe na familia e o que representa",
+      "summary": "Non lle gustaría que o encaixe se perdese: é un relax e unha alegría, e gustaríalle ensinar á súa filla e aos seus netos («os homes non palillan porque non queren»). Ten un neto ou neta que desfila en Madrid con pezas súas, e unha neta que estudou arte en Valencia e fixo o seu traballo de fin de curso sobre o encaixe, con fotos dela e de Xusa palillando na Barca; agora dá clases en Holanda. O que se mostra non representa a súa vida: se tivesen que vivir do encaixe, non comerían.",
+      "score_coseno": 0.496773898601532,
+      "rank_en_su_indice": 12,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 1504.23,
+          "end": 1656.97,
+          "from_sentence": 270,
+          "to_sentence": 291,
+          "transcript_text": "Pou, non sei, o significado que ten o encaixe para min é unha cousa que non me gustaría que se perdera. Para min é unha, un relax, unha alegría de velo tamén, hum. E, e por suposto, unha alegría de poder enseñarlle á miña filla que palille. Se algún momento os meus netos, miñas netas tamén queren, tamén-- bueno, miñas netas e meus netos, que eu sempre dixen que os homes non palillan porque non queren. Hai algún que palilla que non veses ti. Teño un neto, bueno, un neto, neta, que desfila en Madrid. Eh. Cando leva así algo que tal, encántame. Eh, sí. Téñolle, téñolle feito algunha cousa. Téñolle feito algunha cousa pa, pa levar. Eh, teño unha neta que fixo por arte en Valencia. Eh, os traballos dela [tos] tamén iban moito sobre o encaixe, sobre o que facía eu, o que non facía. Incluso lle tiven que mandar palillos, encaixe, fío, para o traballo de fin de curso. Eh, basou moito sobre-- e foto, te-- mandámoslle fotos Xusa e eu na barca palillando, para o traballo que fixo de-- ahora mismo está en Holanda dando clases de español e, e arte. Como representar a nosa vida, non. Bueno, a ver, ensinan máis ou menos o que facemos, pero representar a vida non, porque a nosa vida non se basa no encaixe. Porque se tiveramos que vi-- que vivir do encaixe, pasabamos sen comer pan. [risas] A ver as cousas como son."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseRoa_seg14"
+      ],
+      "story_ids": [
+        "MariaJoseRoa_hist11"
+      ],
+      "orden_seleccion": 19,
+      "duracion_total_segundos": 152.74,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "MariaJesusPensadoPerez_hist05",
+      "tipo": "historia",
+      "interview_id": "MariaJesusPensadoPerez",
+      "speaker": "María Jesús Pensado Pérez",
+      "title": "Reconciliarse co mozo a porta pechada",
+      "summary": "Os luns, se discutira co seu mozo, que viña en moto, as compañeiras mandábana fóra e pechaban a porta para que se arranxasen.",
+      "score_coseno": 0.42352932691574097,
+      "rank_en_su_indice": 13,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 741.34,
+          "end": 752.02,
+          "from_sentence": 124,
+          "to_sentence": 125,
+          "transcript_text": "Os luns cando eu discutía como o home, viña na moto e elas mandabanme ir para fora e despois fechabanme a porta para que me puxera ben con el. Eramos moi..."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJesusPensadoPerez_seg08"
+      ],
+      "story_ids": [
+        "MariaJesusPensadoPerez_hist05"
+      ],
+      "orden_seleccion": 20,
+      "duracion_total_segundos": 10.68,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "Carmen_Vileda_Rey_hist05",
+      "tipo": "historia",
+      "interview_id": "Carmen_Vileda_Rey",
+      "speaker": "Carmen Vileda Rey",
+      "title": "Unha almofadiña para entretela",
+      "summary": "Como a súa nai palillaba no inverno, aos tres anos e medio puxéronlle unha almofadiña para entretela; despois pasou a ser obriga.",
+      "score_coseno": 0.4197588264942169,
+      "rank_en_su_indice": 14,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 27.98,
+          "end": 51.38,
+          "from_sentence": 5,
+          "to_sentence": 7,
+          "transcript_text": "Tres anos e medio. Na casa, ca miña nai. Pois cando mamá se sentaba a panillar, puñíame ao lado dela e ensiñábame, explicábame e o ía facendo."
+        },
+        {
+          "start": 258.08,
+          "end": 288.3,
+          "from_sentence": 43,
+          "to_sentence": 47,
+          "transcript_text": "A ver, a min empeza-- eu empecei pronto porque miña nai iba panillada. Por eso sei que era aos tres anos e medio. Porque como era panillada no inverno, pois, eh, puxeron unha almoadiña pa entretenerme, pero despois era en serio. Bueno, empezamos por natural, por entretenimento, pa, pa que deixar a panillar as outros. E despois era obrigación."
+        }
+      ],
+      "related_topic_ids": [
+        "Carmen_Vileda_Rey_seg01",
+        "Carmen_Vileda_Rey_seg04"
+      ],
+      "story_ids": [
+        "Carmen_Vileda_Rey_hist05"
+      ],
+      "orden_seleccion": 21,
+      "duracion_total_segundos": 53.62,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "MariaJoseRoa_seg17",
+      "tipo": "tema",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "Identidade e transmisión",
+      "summary": "O encaixe define a ría, aínda que hoxe hai palilleiras en todas partes, en parte porque galegas da costa deron clases por toda España, coma en Andalucía; Almagro ten a súa propia tradición. Para transmitilo hai que concienciar a xente nova, aínda que saben que non dá cartos. Cre que reaccionarán, como pasou co baile e co canto. Perdelo sería perder a súa cultura.",
+      "score_coseno": 0.4909372329711914,
+      "rank_en_su_indice": 14,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 1803.25,
+          "end": 1923.67,
+          "from_sentence": 317,
+          "to_sentence": 337,
+          "transcript_text": "Eu creo que si. Si. A ver, somos unha ría que o encaixe defínenos, aínda que hoxe en día por todas partes hai palilleiras. Eh, que eu creo que moita culpa tuvémola nós, que fomos dando clases por todas partes, porque en Andalucía hai gallegas dando clases. E bueno, está Almagro, eh, que esa zona non ten nada que ver con nós. Me refiero que fóramos nós a enseñarlle, senón que o teñen eles. Pero dipo, por aí adiante, por todas partes, sempre hai unha gallega no medio. Unha da, da nosa costa. [pausa] Como se debería transmitir? Pou, non sei, concienciando a xente joven de que non deixen que se perda, de... Claro, que a xente joven, eh, se pensan no que se gana co palillo, non, non. Pero conciencialos, polo menos, para que aprendan e que non deixen que se, que se perda. Porque agora son eles os que teñen que mirar. Eu penso que en algún momento si van a reaccionar, como se está reaccionando, pois xa te digo, co, co baile, co canto, con... Creo que van a reaccionar e van a, a facer algo. [pausa] Home, perdes a nosa cultura. A ver, eu que che digo, toda a nosa costa... Esto é a nosa cultura, o noso todo. [pausa]"
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJoseRoa_seg17"
+      ],
+      "story_ids": [],
+      "orden_seleccion": 22,
+      "duracion_total_segundos": 120.42,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "MariaJesusPensadoPerez_hist02",
+      "tipo": "historia",
+      "interview_id": "MariaJesusPensadoPerez",
+      "speaker": "María Jesús Pensado Pérez",
+      "title": "Retito, a intermediaria",
+      "summary": "A súa nai madrugaba os sábados cando viña Retito para venderlle panos; Retito levaba o encaixe á Coruña sen que soubesen a onde ía.",
+      "score_coseno": 0.4187106788158417,
+      "rank_en_su_indice": 15,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 379.33,
+          "end": 408.13,
+          "from_sentence": 59,
+          "to_sentence": 63,
+          "transcript_text": "E á parte, eu sempre lle vía unha queixiña e dicíame: \"Ai, vai vir Retito\". E tiña os seus pañuelos alí e xa se levantaba aos sabedos moi cedo cando sabía que viña Retito, para ir vender ao mellor quince, vinte. No momento que non tiña nada que facer, entre comillas, eh, puñíase a pelillar. Aí va facendo, e oías. E como dicía ela, se gañan cinco pesos dun lado e dez do outro, son quince."
+        },
+        {
+          "start": 478.01,
+          "end": 479.71,
+          "from_sentence": 77,
+          "to_sentence": 77,
+          "transcript_text": "Claro, Retito era intermediaria."
+        },
+        {
+          "start": 1014.36,
+          "end": 1024.72,
+          "from_sentence": 178,
+          "to_sentence": 179,
+          "transcript_text": "Nós o retito levábamo para Coruña, non sabíamos que se facía con el. Supoñiamos que o vendería, pero non sabías nin donde nin nada."
+        }
+      ],
+      "related_topic_ids": [
+        "MariaJesusPensadoPerez_seg05",
+        "MariaJesusPensadoPerez_seg10"
+      ],
+      "story_ids": [
+        "MariaJesusPensadoPerez_hist02"
+      ],
+      "orden_seleccion": 23,
+      "duracion_total_segundos": 40.86,
+      "fraccion_ya_cubierta": 0.0
+    },
+    {
+      "id": "Maria_Antelo_Lema_seg04",
+      "tipo": "tema",
+      "interview_id": "Maria_Antelo_Lema",
+      "speaker": "María Antelo Lema",
+      "title": "As cousas antigas perderíanse",
+      "summary": "Antes a xente era máis clara e máis fiel. Teme que as cousas antigas, coma as palilladas, se perdan.",
+      "score_coseno": 0.489801287651062,
+      "rank_en_su_indice": 15,
+      "quality_flags": [],
+      "fuentes": [
+        {
+          "start": 204.96,
+          "end": 224.68,
+          "from_sentence": 51,
+          "to_sentence": 54,
+          "transcript_text": "Era máis clara, máis fieles, que agora non. Bueno, eu tamén, entendeme, pero nota as cousas. As cousas antigas. As cousas antigas, as palilladas, todo eso, se había de perder."
+        }
+      ],
+      "related_topic_ids": [
+        "Maria_Antelo_Lema_seg04"
+      ],
+      "story_ids": [],
+      "orden_seleccion": 24,
+      "duracion_total_segundos": 19.72,
+      "fraccion_ya_cubierta": 0.0
+    }
+  ],
+  "descartados": [
+    {
+      "id": "Carmen_Vileda_Rey_seg06",
+      "motivo": "solapamiento temporal",
+      "fraccion_ya_cubierta": 0.7707
+    },
+    {
+      "id": "Pilar_Barrientos_Conde_02_2_seg01",
+      "motivo": "solapamiento temporal",
+      "fraccion_ya_cubierta": 0.8714
+    },
+    {
+      "id": "Pilar_Barrientos_Conde_02_2_seg05",
+      "motivo": "solapamiento temporal",
+      "fraccion_ya_cubierta": 1.0
+    },
+    {
+      "id": "Carmen_Vileda_Rey_hist03",
+      "motivo": "solapamiento temporal",
+      "fraccion_ya_cubierta": 1.0
+    },
+    {
+      "id": "MariaJoseLiresMartinez_seg01",
+      "motivo": "solapamiento temporal",
+      "fraccion_ya_cubierta": 0.6807
+    },
+    {
+      "id": "MariaJoseRoa_hist06",
+      "motivo": "solapamiento temporal",
+      "fraccion_ya_cubierta": 1.0
+    }
+  ],
+  "playlist": [
+    {
+      "clip_id": "Carmen_Vileda_Rey_hist02__clip01",
+      "selection_order": 1,
+      "source_number": 1,
+      "record_id": "Carmen_Vileda_Rey_hist02",
+      "record_type": "historia",
+      "interview_id": "Carmen_Vileda_Rey",
+      "speaker": "Carmen Vileda Rey",
+      "title": "Palilladas con luz de carburo",
+      "summary": "De noite as mulleres xuntábanse a palillar con luz de carburo ata a unha; comentábase a vida do pobo, contábanse contos e oíase a radio.",
+      "rank_in_index": 1,
+      "cosine_similarity": 0.672951,
+      "start": 100.18,
+      "end": 129.04,
+      "duration_seconds": 28.86,
+      "start_hms": "00:01:40.180",
+      "end_hms": "00:02:09.040",
+      "from_sentence": 13,
+      "to_sentence": 18,
+      "transcript_text": "Sí, eh, entón si, tamén se facían xuntanzas de noite. Panillaban con luz de carburo. Pois era un, unha ocupación, un entretenimento. E aí facían un montón de comentarios das cousas. Era o periódico. [risinho]",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Carmen Vileda Rey.mp4",
+      "drive_url": "https://drive.google.com/file/d/1ce4qL52Y52nEmlPl6h3ooGe9qGNTu82X/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "Carmen_Vileda_Rey_hist02__clip02",
+      "selection_order": 1,
+      "source_number": 2,
+      "record_id": "Carmen_Vileda_Rey_hist02",
+      "record_type": "historia",
+      "interview_id": "Carmen_Vileda_Rey",
+      "speaker": "Carmen Vileda Rey",
+      "title": "Palilladas con luz de carburo",
+      "summary": "De noite as mulleres xuntábanse a palillar con luz de carburo ata a unha; comentábase a vida do pobo, contábanse contos e oíase a radio.",
+      "rank_in_index": 1,
+      "cosine_similarity": 0.672951,
+      "start": 383.49,
+      "end": 469.63,
+      "duration_seconds": 86.14,
+      "start_hms": "00:06:23.490",
+      "end_hms": "00:07:49.630",
+      "from_sentence": 63,
+      "to_sentence": 74,
+      "transcript_text": "Ainda se penillaba hasta a unha da mañana nas, nas penilladas. Claro, bueno, eu aí non, non vivín porque eu familia non, non tiña en ese momento. Tiña miña nai, pero miña nai era a que se ocupaba da casa, de, de, de todo. Entonces eu aí non, non podo explicar porque non, non teño conocimiento. Contaban cuentos, sacabanlle a conduta a algunhas personas do pueblo [ri] . Ou sea, era, era máis ben para traballar, pero ao mismo tiempo distraíanse falando, escoitando a radio a veces. Desde que te levantabas ás oito, depende, a veces ás sete da mañana xa me tiña que levantar, hasta-- se íamos á xuntanza, hasta a unha da mañana. Bueno, eramos jóvenes e non nos dábamos de conta. Sabíamos todo de memoria, claro. Aprendíamos todo de memoria, non...",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Carmen Vileda Rey.mp4",
+      "drive_url": "https://drive.google.com/file/d/1ce4qL52Y52nEmlPl6h3ooGe9qGNTu82X/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseLiresMartinez_hist05__clip01",
+      "selection_order": 2,
+      "source_number": 1,
+      "record_id": "MariaJoseLiresMartinez_hist05",
+      "record_type": "historia",
+      "interview_id": "MariaJoseLiresMartinez",
+      "speaker": "María José Lires Martínez",
+      "title": "As palilleiras e os mozos",
+      "summary": "Nas palilladas da súa nai, cando chegaban os mozos, deixaban a almofada e marchaban con eles.",
+      "rank_in_index": 2,
+      "cosine_similarity": 0.524931,
+      "start": 309.44,
+      "end": 325.14,
+      "duration_seconds": 15.7,
+      "start_hms": "00:05:09.440",
+      "end_hms": "00:05:25.140",
+      "from_sentence": 58,
+      "to_sentence": 63,
+      "transcript_text": "A ver, eu acórdome de sentir tamén a miña nai a todo cando ían, que palillaban. Ian máis ben que conto para, por culpa dos mozos, non? Que estaban palillando, pero en vez de estar palillando, atendían os mozos cando viñan xunta delas. Entón, en vez de palillar, xa collían e marchaban [ri] con eles.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseLiresMartinez.mp4",
+      "drive_url": "https://drive.google.com/file/d/1Je2gB3hlLw25VEkHJjvUcVXJU454YO7K/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "Carmen_Vileda_Rey_seg02__clip01",
+      "selection_order": 3,
+      "source_number": 1,
+      "record_id": "Carmen_Vileda_Rey_seg02",
+      "record_type": "tema",
+      "interview_id": "Carmen_Vileda_Rey",
+      "speaker": "Carmen Vileda Rey",
+      "title": "Xuntanzas de noite e días duros",
+      "summary": "Facíanse xuntanzas de noite para palillar con luz de carburo: eran ocupación e entretemento, e alí comentábase todo, «era o periódico». Os días de chuvia e vento eran moi duros, cos pés mollados e sen a roupa de agora, pero eran felices porque para elas era o normal. Contaban contos de pantasmas nas silveiras e críano todo.",
+      "rank_in_index": 2,
+      "cosine_similarity": 0.588718,
+      "start": 100.18,
+      "end": 190.08,
+      "duration_seconds": 89.9,
+      "start_hms": "00:01:40.180",
+      "end_hms": "00:03:10.080",
+      "from_sentence": 13,
+      "to_sentence": 31,
+      "transcript_text": "Sí, eh, entón si, tamén se facían xuntanzas de noite. Panillaban con luz de carburo. Pois era un, unha ocupación, un entretenimento. E aí facían un montón de comentarios das cousas. Era o periódico. [risinho] Uns días máis duros ca outros, si, porque, por exemplo, cando chovía e había que facer o mesmo trabalho, era moi duro. Era moito vento, moita chuvia, des-- eh, os, os pés mollados. Eh, bueno, todo eso era bastante, bastante duro. E non habían a roupa que hai agora. Nós éramos felices. Estábamos acostumbradas a ese... que non veñan eses momentos pa xente de agora. Pero daquela estabamos-- era normal, pa nós era normal. Claro, contaban un montón de contos, de, de fantasmas que aparecían po-polas silveiras e cousas así. A nós eso facíanos muito rir, claro. Tampouco non buscabamos se era verdade ou mentira. Creíamos todo. [risinho]",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Carmen Vileda Rey.mp4",
+      "drive_url": "https://drive.google.com/file/d/1ce4qL52Y52nEmlPl6h3ooGe9qGNTu82X/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseLiresMartinez_hist01__clip01",
+      "selection_order": 4,
+      "source_number": 1,
+      "record_id": "MariaJoseLiresMartinez_hist01",
+      "record_type": "historia",
+      "interview_id": "MariaJoseLiresMartinez",
+      "speaker": "María José Lires Martínez",
+      "title": "A escola de palillo da Falange na praia",
+      "summary": "Despois da escola ían palillar á Falange, á beira da praia, cunha señora que as ensinaba por mesas, lles daba merenda, lles poñía cine e lles ensinaba baile galego.",
+      "rank_in_index": 3,
+      "cosine_similarity": 0.50632,
+      "start": 17.06,
+      "end": 74.96,
+      "duration_seconds": 57.9,
+      "start_hms": "00:00:17.060",
+      "end_hms": "00:01:14.960",
+      "from_sentence": 3,
+      "to_sentence": 14,
+      "transcript_text": "Cando saía da escola, ía á casa a buscar o bocadllo e daquela despois íamos para a Falange, para palillar, que nos ensinaban a palillar unha señora. Aquí abaixo na praia. Tres ou catro en cada mesa. Entonces ela ía por mesa e íamos así. E cando non sabías, ao mellor chamábaslle para que viñera. E así. E para o de merenda, inda que leváramos o bocadllo de a casa, dábanos tamén un-- cando se había como unha fariña, e tamén nos daba, tamén a comíamos alí. Viamos como cine, nunha pantalla que metía tamén. E despois tamén xogabamos un pouco porque eramos nenas. E pouco máis. Despois o de sempre, para a casa outra vez a xogar na calle, porque antes non había outra cousa. Xogabas na porta e todo eso.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseLiresMartinez.mp4",
+      "drive_url": "https://drive.google.com/file/d/1Je2gB3hlLw25VEkHJjvUcVXJU454YO7K/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseLiresMartinez_hist01__clip02",
+      "selection_order": 4,
+      "source_number": 2,
+      "record_id": "MariaJoseLiresMartinez_hist01",
+      "record_type": "historia",
+      "interview_id": "MariaJoseLiresMartinez",
+      "speaker": "María José Lires Martínez",
+      "title": "A escola de palillo da Falange na praia",
+      "summary": "Despois da escola ían palillar á Falange, á beira da praia, cunha señora que as ensinaba por mesas, lles daba merenda, lles poñía cine e lles ensinaba baile galego.",
+      "rank_in_index": 3,
+      "cosine_similarity": 0.50632,
+      "start": 182.72,
+      "end": 203.8,
+      "duration_seconds": 21.08,
+      "start_hms": "00:03:02.720",
+      "end_hms": "00:03:23.800",
+      "from_sentence": 39,
+      "to_sentence": 42,
+      "transcript_text": "Sí, unha señora sola, sí. Inda nos ensinaba tamén a bailar, que non me daba conta, de gallegas, que xa temos ido bailar a Casa do Mar da Coruña. No, desde que estabas na escola podías saír. Non había unha idade.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseLiresMartinez.mp4",
+      "drive_url": "https://drive.google.com/file/d/1Je2gB3hlLw25VEkHJjvUcVXJU454YO7K/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseRoa_hist09__clip01",
+      "selection_order": 5,
+      "source_number": 1,
+      "record_id": "MariaJoseRoa_hist09",
+      "record_type": "historia",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "A volta ao palillo e a sorpresa de Marina Antelo",
+      "summary": "Ao volver a Muxía empezou cun xogo de cama cun cartón de Marina Antelo, que non sabía que ela palillaba de verdade e quedou abraiada.",
+      "rank_in_index": 5,
+      "cosine_similarity": 0.496245,
+      "start": 1074.04,
+      "end": 1158.56,
+      "duration_seconds": 84.52,
+      "start_hms": "00:17:54.040",
+      "end_hms": "00:19:18.560",
+      "from_sentence": 189,
+      "to_sentence": 204,
+      "transcript_text": "Entonces, eu fui cando empecei a vir de volta pa Muxía, sen vivir en Muxía, pero empecei a vir. Xa estaba a asociación montada, estaba recén montada. Apunteime. As primeiras veces facía má guardia cando eu non estaba miña nai. E bueno, cando viñen pa Muxía, xa de golpe. E a agilidade, porque aprender isto non se olvida, é como, é como andar en bicicleta, vale? Eu cando vin de volta e empecei, empecei cun xogo de cama. O sea, cun, cun encaixe... que hoxe ando facendo merdiñas que é o que se vende. E bueno, xa che digo, eh, cando me viron coller a almoada e empezar, a xente pensaba que eu non sabía. Porque, por exemplo, a min quen me, quen me deixou o cartón pa empezar ese xogo de cama foi Marina Antelo. E Marina Antelo non tiña nin idea de que eu soubera palillar de verdade. Vale, alucinou. Alucinou Marina e moita xente. Claro, a xente que foi comigo a Falange sabían que eu sabía porque sabía coma elas. Pero moita xente asombrouse de que eu empezara a palillar e, segundín, palillo bastante ben.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseRoa_seg11__clip01",
+      "selection_order": 6,
+      "source_number": 1,
+      "record_id": "MariaJoseRoa_seg11",
+      "record_type": "tema",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "Gancho, punto de cruz e a volta ao palillo",
+      "summary": "Deixou o gancho despois dun tapete de mesa camilla interminable, e o punto de cruz «sempre se me cruzou». Viviu moito tempo fóra, mercando Labores de Hogar e imaxinando a bolillos o que vía en gancho. Ao volver a Muxía apuntouse á asociación recén creada, facendo gardas pola súa nai. Palillar non se esquece, coma a bicicleta: empezou cun xogo de cama cun cartón de Marina Antelo, que se asombrou de que soubese palillar de verdade.",
+      "rank_in_index": 5,
+      "cosine_similarity": 0.527058,
+      "start": 1011.32,
+      "end": 1171.8,
+      "duration_seconds": 160.48,
+      "start_hms": "00:16:51.320",
+      "end_hms": "00:19:31.800",
+      "from_sentence": 177,
+      "to_sentence": 207,
+      "transcript_text": "Pouco, como, pois non sei, porque eu ganchillaba a través das revistas. Iba mirando, eh, que me cansei e dixen, dixen que non volvía a coller un ganchillo nin, nin de coña, porque fixen un tapete pa unha mesa camilla de noventa e aquelas últimas voltas, que me levaban unha tarde enteira facer a volta e non e, non iba pa diante, nin-- dixen que non quería saber nada máis do ganchillo nin de nada. O punto de cruz sempre se me cruzou. Seino facer, eh. Pero sempre se me cruzou. Non... En cambio, o palillo, mira. Eu, por exemplo, vivín moito tempo fora. Fora, en España, pero... Eu, por exemplo, sempre me gustaron moito as revistas de labores. Eh, e sempre comprei Labores de Hogar. E ao mellor vía unha obra que era de ganchillo e eu estaba facéndoa a bolillos na mente. Entonces, eu fui cando empecei a vir de volta pa Muxía, sen vivir en Muxía, pero empecei a vir. Xa estaba a asociación montada, estaba recén montada. Apunteime. As primeiras veces facía má guardia cando eu non estaba miña nai. E bueno, cando viñen pa Muxía, xa de golpe. E a agilidade, porque aprender isto non se olvida, é como, é como andar en bicicleta, vale? Eu cando vin de volta e empecei, empecei cun xogo de cama. O sea, cun, cun encaixe... que hoxe ando facendo merdiñas que é o que se vende. E bueno, xa che digo, eh, cando me viron coller a almoada e empezar, a xente pensaba que eu non sabía. Porque, por exemplo, a min quen me, quen me deixou o cartón pa empezar ese xogo de cama foi Marina Antelo. E Marina Antelo non tiña nin idea de que eu soubera palillar de verdade. Vale, alucinou. Alucinou Marina e moita xente. Claro, a xente que foi comigo a Falange sabían que eu sabía porque sabía coma elas. Pero moita xente asombrouse de que eu empezara a palillar e, segundín, palillo bastante ben. [tose] O que pasa é que, como día a miña amiga, son unha perxeira. [ri]",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "Maria_Antelo_Lema_hist01__clip01",
+      "selection_order": 7,
+      "source_number": 1,
+      "record_id": "Maria_Antelo_Lema_hist01",
+      "record_type": "historia",
+      "interview_id": "Maria_Antelo_Lema",
+      "speaker": "María Antelo Lema",
+      "title": "Á fábrica aos doce anos",
+      "summary": "Aos doce anos unha muller de Camariñas animouna a ir á fábrica, onde se gañaba máis ca palillando.",
+      "rank_in_index": 6,
+      "cosine_similarity": 0.475344,
+      "start": 19.74,
+      "end": 43.08,
+      "duration_seconds": 23.34,
+      "start_hms": "00:00:19.740",
+      "end_hms": "00:00:43.080",
+      "from_sentence": 4,
+      "to_sentence": 9,
+      "transcript_text": "Bueno, e despois dos doce anos, ven unha de Camariñas e dixo: \"Vén tá fábrica\". Non, primeiro ensinou a palillar señora Luísa de Pryn, a nai da Pelada. Acórdeste? Bueno, e sentadiña no suelo coas pernas así, e un banco, e palillando. Bueno, e despois foi cando fun pa a fábrica, aos doce anos. Ganabas máis cartos, claro.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Maria Antelo Lema.mp4",
+      "drive_url": "https://drive.google.com/file/d/1z-dBSumDtfQcG9L1WVNyjwOUKCGahX2U/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "Maria_Antelo_Lema_seg09__clip01",
+      "selection_order": 8,
+      "source_number": 1,
+      "record_id": "Maria_Antelo_Lema_seg09",
+      "record_type": "tema",
+      "interview_id": "Maria_Antelo_Lema",
+      "speaker": "María Antelo Lema",
+      "title": "O encaixe: alegría, coidados e recoñecemento",
+      "summary": "Palillar é para ela unha alegría e unha felicidade. Brinca coa rivalidade entre Camariñas e Muxía. Coidou de moitos maiores. Ninguén ve as horas que leva: ante «que caro é esta mantelería» responde «pois faga usted, señora». Sen as palilleiras non habería encaixe. É feliz coas súas compañeiras.",
+      "rank_in_index": 6,
+      "cosine_similarity": 0.525752,
+      "start": 492.72,
+      "end": 629.66,
+      "duration_seconds": 136.94,
+      "start_hms": "00:08:12.720",
+      "end_hms": "00:10:29.660",
+      "from_sentence": 134,
+      "to_sentence": 161,
+      "transcript_text": "Para min, alegría, o encaixo. Palillar para min é unha alegría. Que bonito é ser, é isto. Sí, a mellor, claro que sí. Sí. Eu colo. [risas] Camariñas, digo, non falas de Camariñas, nin de Muxía tampouco. [risas] Pois eu creo que sí, eh. Sí. Moito, moito, mais é moito, eh. Unha felicidade. De antes, a conservera. Palillar. Maiores, moi ben. Eu moi ben, cuidei a moitos. Isto nada é as horas que leva. E dinche: Que caro é este mantelería. Pois faga usted, señora. E sí, eh. Nadie. Se isto morrerse, pois non había nada encaixe. O traballo non o reconocen. Aí ves que cando entreguei moita xente aquí, ai que caro é. Que son feliz cas miñas compañeiras. Elas comigo non son, pero eu con elas son. [risas]",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Maria Antelo Lema.mp4",
+      "drive_url": "https://drive.google.com/file/d/1z-dBSumDtfQcG9L1WVNyjwOUKCGahX2U/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "Pilar_Barrientos_Conde_02_2_hist01__clip01",
+      "selection_order": 9,
+      "source_number": 1,
+      "record_id": "Pilar_Barrientos_Conde_02_2_hist01",
+      "record_type": "historia",
+      "interview_id": "Pilar_Barrientos_Conde_02_2",
+      "speaker": "Pilar Barrientos Conde",
+      "title": "A escola de palillo da Falaxe",
+      "summary": "De nena, despois da escola, ía a unha escola de palillo onde unha profesora as ensinaba sentadas arredor de cabaletes, dáballes o material e a merenda e ensináballes tamén baile e canto.",
+      "rank_in_index": 7,
+      "cosine_similarity": 0.471349,
+      "start": 23.28,
+      "end": 76.14,
+      "duration_seconds": 52.86,
+      "start_hms": "00:00:23.280",
+      "end_hms": "00:01:16.140",
+      "from_sentence": 4,
+      "to_sentence": 13,
+      "transcript_text": "Tamén había escuela para as-- tiñamos a escuela de palillo, que era na Falaxe. Había moitas nenas, e así nuns caballetes, tiñan, eh, uns caballetes sentadas nunha silla. E tiñamos unha profesora que nos ensiñaba. E dábame los alfileres, os fíos, palillos. Ademais, ainda nos daba a merenda. Había unha profesora que che ensiñaba, ou a chamabas ou xa viña ela pola, por alí polas mesas, e así. Tamén, eh, baile. Xa lle ogo, acórdome tamén de ir pa, pa praia. Así, ensiñábanos a, a baile, xa lle ogo, algo. E a cantar.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Pilar Barrientos Conde.mp4",
+      "drive_url": "https://drive.google.com/file/d/17KCjI1WRQ02ND8WEPr29UMfCvhx1kR3p/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "Pilar_Barrientos_Conde_02_2_hist01__clip02",
+      "selection_order": 9,
+      "source_number": 2,
+      "record_id": "Pilar_Barrientos_Conde_02_2_hist01",
+      "record_type": "historia",
+      "interview_id": "Pilar_Barrientos_Conde_02_2",
+      "speaker": "Pilar Barrientos Conde",
+      "title": "A escola de palillo da Falaxe",
+      "summary": "De nena, despois da escola, ía a unha escola de palillo onde unha profesora as ensinaba sentadas arredor de cabaletes, dáballes o material e a merenda e ensináballes tamén baile e canto.",
+      "rank_in_index": 7,
+      "cosine_similarity": 0.471349,
+      "start": 214.38,
+      "end": 245.84,
+      "duration_seconds": 31.46,
+      "start_hms": "00:03:34.380",
+      "end_hms": "00:04:05.840",
+      "from_sentence": 40,
+      "to_sentence": 45,
+      "transcript_text": "Dábannos alí a merenda. Despois tamén, se che, como che dixen antes, ensiñábanos a algo de baile. Non era todo palillar, tamén había... Pois non sei, ao mellor dúas, tres horas, pero non, non sei dicirte. Eh, sentados así nunha banqueta. Había como uns caballetes, así cadrados, e todos na volta.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Pilar Barrientos Conde.mp4",
+      "drive_url": "https://drive.google.com/file/d/17KCjI1WRQ02ND8WEPr29UMfCvhx1kR3p/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJesusPensadoPerez_hist04__clip01",
+      "selection_order": 10,
+      "source_number": 1,
+      "record_id": "MariaJesusPensadoPerez_hist04",
+      "record_type": "historia",
+      "interview_id": "MariaJesusPensadoPerez",
+      "speaker": "María Jesús Pensado Pérez",
+      "title": "A gravación na costura",
+      "summary": "Un día gravaron as rapazas da costura e sorprendéronse do barullo que facían falando dos seus mozos.",
+      "rank_in_index": 8,
+      "cosine_similarity": 0.462665,
+      "start": 711.75,
+      "end": 740.5,
+      "duration_seconds": 28.75,
+      "start_hms": "00:11:51.750",
+      "end_hms": "00:12:20.500",
+      "from_sentence": 117,
+      "to_sentence": 123,
+      "transcript_text": "como cando falabamos dos mozos na costura. Poñíamonos todas a un dia estar, gravounos. E cando acabamos, dime: \"Agora sentádevos\", porque tiñamos que limpar, eh? Tamén acabar de antes de marchar da costura. Pois o noso radio case, dixen eu: \"Pero nós facemos todo ese ruído? Foi todo desde que viñeste\". Claro, falábamos do que lle pasaba a aquela co mozo, outro co, co outro mozo.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJesusPensadoPerez.mp4",
+      "drive_url": "https://drive.google.com/file/d/1H3tP8iCVJJi72MWMTsKXdV3XVAFbi-fn/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJesusPensadoPerez_seg06__clip01",
+      "selection_order": 11,
+      "source_number": 1,
+      "record_id": "MariaJesusPensadoPerez_seg06",
+      "record_type": "tema",
+      "interview_id": "MariaJesusPensadoPerez",
+      "speaker": "María Jesús Pensado Pérez",
+      "title": "Labores, xornadas longas e espazos de encontro",
+      "summary": "A labor feita na Falange quedaba alí e non sabían para que era. A súa nai e outras facían panos e vendíanos no Bran antes de que abrise o Piticlín. Ás veces palillaban soas e ás veces xuntas. Un marcapáxinas pode levar seis horas ou tres, segundo a axilidade. Asaban sardiñas ata a medianoite e limpaban a graxa con lixivia. Todo era unión: paraban a tomar café e falaban; era un espazo de encontro de dúas horas pola tarde.",
+      "rank_in_index": 9,
+      "cosine_similarity": 0.513369,
+      "start": 487.07,
+      "end": 634.49,
+      "duration_seconds": 147.42,
+      "start_hms": "00:08:07.070",
+      "end_hms": "00:10:34.490",
+      "from_sentence": 78,
+      "to_sentence": 98,
+      "transcript_text": "Pois nós, cando estaba eu na Falange, alí. Ese labor quedaba alí. Non sabíamos pa que era. E poi miña nai, na casa, que despois inda tamén, eh, antes de abrir o, o Piticlín, xa, eh, facían elas os pañuelos con labor, aí no Bran, xuntaba ela e varias, eh, e vendíanos, que tiñan, eh, sabes que... A, eh, a veces solas na casa, e a veces tamén nos xuntabamos todas. Hai xente que ao mellor pa facer un marcapáxinas levelle seis horas e a outra tenga máis, [inspira] eh, máis axilidade e ao mellor en tres horas faio. Pois, eh, asar as cerdiñas ca miña nai, limpar a casa os sabedos a fondo, senón xa non se masabe. Eh, ir aos berberechos, ir ás caramuxas, ir ao Aljazo, a, a poñer as patacas, coller as patacas e agardalas no faiado. De todo. Pois desde que nos levantabamos hasta que nos deitabamos. Porque, por exemplo, de asar as cerdiñas ao mellor acabamos ás doce da noite. E despois inda había que limpar todo o que quedaba alí de grasa, con lixía, con tal. E poi recoller e ir pa casa. Todo era unión. Pois parábamos a tomar o café, a seguir falando, e a pasalo... Pasabámoste ben. No, no, no, no. Era un, un espazo de encontro. Esas tardes eran pequenas, de, de cinco e media a sete e media, dúas horas.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJesusPensadoPerez.mp4",
+      "drive_url": "https://drive.google.com/file/d/1H3tP8iCVJJi72MWMTsKXdV3XVAFbi-fn/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseLiresMartinez_seg06__clip01",
+      "selection_order": 12,
+      "source_number": 1,
+      "record_id": "MariaJoseLiresMartinez_seg06",
+      "record_type": "tema",
+      "interview_id": "MariaJoseLiresMartinez",
+      "speaker": "María José Lires Martínez",
+      "title": "As palilleiras de antes",
+      "summary": "Lembra as palilladas da súa nai: cando chegaban os mozos, deixaban de palillar e marchaban con eles. Estaban todas xuntas no chan, coas pernas cruzadas, sen cadeiras. Ademais coidaban dos maiores, coma a bisavoa encamada. As maiores ensinaban ás pequenas o pouco que sabían.",
+      "rank_in_index": 3,
+      "cosine_similarity": 0.579143,
+      "start": 309.44,
+      "end": 384.42,
+      "duration_seconds": 74.98,
+      "start_hms": "00:05:09.440",
+      "end_hms": "00:06:24.420",
+      "from_sentence": 58,
+      "to_sentence": 70,
+      "transcript_text": "A ver, eu acórdome de sentir tamén a miña nai a todo cando ían, que palillaban. Ian máis ben que conto para, por culpa dos mozos, non? Que estaban palillando, pero en vez de estar palillando, atendían os mozos cando viñan xunta delas. Entón, en vez de palillar, xa collían e marchaban [ri] con eles. Eso mesmo, sí. Estaban todas xuntas, pasaban o coche e daquela tamén, non é como agora, porque agora inda estamos aquí, ao mellor imos tomar un café, pero antes non había nada. Estaban a ese punto. Sí, no chan, así coas pernas cruzadas e non había silla de nada, no suelo. Inda agora nos queixamos, antes tiña que ser peor, porque ao estar no suelo... Eu daquela non, pero miña nai, por exemplo, tiña a miña bisavoa, que estaba encamada, e claro, tamén a tiñan que atender. Claro, ivas á que non sería, ensiñábanche o pouco que sabían elas, ensiñábanche a ti.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseLiresMartinez.mp4",
+      "drive_url": "https://drive.google.com/file/d/1Je2gB3hlLw25VEkHJjvUcVXJU454YO7K/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseRoa_seg08__clip01",
+      "selection_order": 13,
+      "source_number": 1,
+      "record_id": "MariaJoseRoa_seg08",
+      "record_type": "tema",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "Como se aprendía e a lembranza da avoa",
+      "summary": "Poñíanlle diante o cartón cun anaco de mostra e íanlle explicando como pasar os palillos, sentada ao lado da mestra ata que se soltaba. Empezou arredor dos seis anos, aínda que cando chegou á Falange xa sabía pasar os pares porque llo ensinara a súa avoa. As avoas picábanche a man cun alfinete se te equivocabas. Era algo natural: lembra a súa avoa, que morreu con 90 anos, palillando no inverno sentada na cama con tres almofadóns detrás.",
+      "rank_in_index": 7,
+      "cosine_similarity": 0.519583,
+      "start": 649.15,
+      "end": 742.9,
+      "duration_seconds": 93.75,
+      "start_hms": "00:10:49.150",
+      "end_hms": "00:12:22.900",
+      "from_sentence": 117,
+      "to_sentence": 136,
+      "transcript_text": "Como se aprendía? Pois mira, a min poñíanme o cartón diante cun cachiño dunha mostra. Íbame explicando como pasan os palillos. Mentres nos enseñaba, sentábannos ao lado dela e íbannos dirigindo ata que xa nos soltabamos un pouco. Entonces... Pois eu creo que a partir dos seis anos. [tos] Mais que nada creo cando empezabamos a escuela. A ver, despois na casa, eh, por exemplo, miña avoa facía má almoada. Sí, enseñábame, porque eu cando fun para a Falange creo que xa sabía pasar os, os paves. Pero nas casas donde había aboas que sabían. E cando te equivocabas, collían un alfiler e pinchábanche a man. No, e-era natural. A ver, é que xa o tiñamos asumido case desde que nacíamos, porque o estabamos vendo... Eu acórdome de miña avoa. Miña avoa morreu con noventa anos. Eu acórdome de miña avoa sentada na cama con tres almoadóns detrás, as pernas cruzadas e a almoada adiante, palillando no inverno. Non, entonces, pois non sei, xa o tiñamos na casa. Non, non era nada que nos fora a estrañar nin que... Xa o tiñámolo dentro.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseRoa_hist04__clip01",
+      "selection_order": 14,
+      "source_number": 1,
+      "record_id": "MariaJoseRoa_hist04",
+      "record_type": "historia",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "Premios de xota en Muros",
+      "summary": "Foron a Muros e gañaron premios de xota; as maiores bailaban a danza das espadas coa Sección Feminina.",
+      "rank_in_index": 10,
+      "cosine_similarity": 0.433259,
+      "start": 391.45,
+      "end": 427.89,
+      "duration_seconds": 36.44,
+      "start_hms": "00:06:31.450",
+      "end_hms": "00:07:07.890",
+      "from_sentence": 62,
+      "to_sentence": 68,
+      "transcript_text": "Fomos a, a Muros, creo que fora Muros. Ganamos os premios de baile de, de xota, era xota. Como rir, pois pasabámolo bomba. Sempre cando tiñamos ás maiores que bailaban a danza das espadas naquele entonces, que o bai-bailaban a-as mulleres. Antes non había danza das espadas como hai agora, non. Eran, a, era a sección feminina da Falange a que bailaba a danza das espadas. E bueno, iban coa danza das espadas e ganaban",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseRoa_seg05__clip01",
+      "selection_order": 15,
+      "source_number": 1,
+      "record_id": "MariaJoseRoa_seg05",
+      "record_type": "tema",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "Unha infancia privilexiada e os premios de baile",
+      "summary": "Non pode falar de días duros: o seu pai era municipal e non pasou as necesidades doutras casas. Lembra unha viaxe a Muros, onde gañaron premios de xota. A danza das espadas bailábana daquela as mulleres maiores da Sección Feminina da Falange, e gañaban.",
+      "rank_in_index": 10,
+      "cosine_similarity": 0.504847,
+      "start": 346.3,
+      "end": 435.57,
+      "duration_seconds": 89.27,
+      "start_hms": "00:05:46.300",
+      "end_hms": "00:07:15.570",
+      "from_sentence": 55,
+      "to_sentence": 70,
+      "transcript_text": "Mira, eh, en ese sentido, eu, mmm, falar dos días duros, digamos que eu fun unha persona privilexiada, vale? Eh, noutras casas sí que o teñen pasado moi mal Eu muitas cousas que oía eu non as vivía. Meu pai era municipal. Eee non, non pasei, digamos, os traballos e as necesidades que había en outras casas. Por eso eu falarche de días duros. Se eu falo de días duros, estou mentindo. Home, facernos rir. Fomos a, a Muros, creo que fora Muros. Ganamos os premios de baile de, de xota, era xota. Como rir, pois pasabámolo bomba. Sempre cando tiñamos ás maiores que bailaban a danza das espadas naquele entonces, que o bai-bailaban a-as mulleres. Antes non había danza das espadas como hai agora, non. Eran, a, era a sección feminina da Falange a que bailaba a danza das espadas. E bueno, iban coa danza das espadas e ganaban [ri] .",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseRoa_hist02__clip01",
+      "selection_order": 16,
+      "source_number": 1,
+      "record_id": "MariaJoseRoa_hist02",
+      "record_type": "historia",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "A profesora que contaba películas",
+      "summary": "A profesora de palillo contaba películas coma a de Alfonso XII de forma tan viva que as nenas as vivían, e xogaban a interpretalas arredor da mesa.",
+      "rank_in_index": 11,
+      "cosine_similarity": 0.431273,
+      "start": 51.04,
+      "end": 97.12,
+      "duration_seconds": 46.08,
+      "start_hms": "00:00:51.040",
+      "end_hms": "00:01:37.120",
+      "from_sentence": 8,
+      "to_sentence": 16,
+      "transcript_text": "Tiñamos unha profesora que nos tiña a todas encameladas, porque nos contaba as películas todas. Que si, pois imaxínate, a de Alfonso XII, eh, sí, sí. Eh, e tiñanos a todas as rapazas coa boca aberta, porque, vamos, contábanos as historias dunha maneira que parecía que as estaba vivindo. E nós vivíamola tamén. Ao mismo tempo, tiñamos como unha especie de, [chasquido de lengua] eh, teatro. Sin ser teatro, pero na volta dunha mesa íbamos interpretando os personaxes. E bueno, era unha forma tamén de motivarnos a seguir.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseRoa_hist02__clip02",
+      "selection_order": 16,
+      "source_number": 2,
+      "record_id": "MariaJoseRoa_hist02",
+      "record_type": "historia",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "A profesora que contaba películas",
+      "summary": "A profesora de palillo contaba películas coma a de Alfonso XII de forma tan viva que as nenas as vivían, e xogaban a interpretalas arredor da mesa.",
+      "rank_in_index": 11,
+      "cosine_similarity": 0.431273,
+      "start": 981.08,
+      "end": 988.06,
+      "duration_seconds": 6.98,
+      "start_hms": "00:16:21.080",
+      "end_hms": "00:16:28.060",
+      "from_sentence": 175,
+      "to_sentence": 175,
+      "transcript_text": "Pois, como a pasar, xa che digo, contar historias, aventuras, películas, facer un pouco de teatro na volta dunhas mesas...",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseRoa_seg01__clip01",
+      "selection_order": 17,
+      "source_number": 1,
+      "record_id": "MariaJoseRoa_seg01",
+      "record_type": "tema",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "Comezar no palillo na Falange",
+      "summary": "Empezou arredor dos seis anos e conserva un carné da Sección Feminina desa época. A Falange daba os cursiños: as nenas escollían coser ou palillar e a ela a costura nunca lle gustou. Tiñan unha profesora que as tiña engaioladas contándolles películas coma a de Alfonso XII, e interpretaban os personaxes arredor da mesa. Dábanlles merenda: un bolliño con chocolatiñas.",
+      "rank_in_index": 11,
+      "cosine_similarity": 0.501351,
+      "start": 19.0,
+      "end": 125.52,
+      "duration_seconds": 106.52,
+      "start_hms": "00:00:19.000",
+      "end_hms": "00:02:05.520",
+      "from_sentence": 2,
+      "to_sentence": 19,
+      "transcript_text": "Empecei no palillo por sobre os seis anos. Non sei se antes ou despois, pero en esa fecha teño un carné de, da sección feminina. Naquele entonces era a Falange, a que daba os cursillos de, de eso. Entonces, queda-- as nenas quedábanos ou ir a coser ou ir a palillar. A miña costura como que nunca me gustou. Entonces, pois, saía da escuela e iba para o palillo. Tiñamos unha profesora que nos tiña a todas encameladas, porque nos contaba as películas todas. Que si, pois imaxínate, a de Alfonso XII, eh, sí, sí. Eh, e tiñanos a todas as rapazas coa boca aberta, porque, vamos, contábanos as historias dunha maneira que parecía que as estaba vivindo. E nós vivíamola tamén. Ao mismo tempo, tiñamos como unha especie de, [chasquido de lengua] eh, teatro. Sin ser teatro, pero na volta dunha mesa íbamos interpretando os personaxes. E bueno, era unha forma tamén de motivarnos a seguir. Despois, mmm, pois que queres que che diga, a nosa vida iba na volta desto, de, do, do palillo, de vivilo, de, de salir da escuela, correr para o palillo, porque pasábamos ben. Dábannos a merenda, dábannos un bollito cunhas taba-- cunas chocolatinas. En fin, esa era a nosa vida naquele entonces.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseRoa_hist01__clip01",
+      "selection_order": 18,
+      "source_number": 1,
+      "record_id": "MariaJoseRoa_hist01",
+      "record_type": "historia",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "O carné da Sección Feminina aos seis anos",
+      "summary": "Conserva un carné da Sección Feminina de cando empezou a palillar con seis anos nos cursiños da Falange.",
+      "rank_in_index": 12,
+      "cosine_similarity": 0.429147,
+      "start": 19.0,
+      "end": 36.66,
+      "duration_seconds": 17.66,
+      "start_hms": "00:00:19.000",
+      "end_hms": "00:00:36.660",
+      "from_sentence": 2,
+      "to_sentence": 4,
+      "transcript_text": "Empecei no palillo por sobre os seis anos. Non sei se antes ou despois, pero en esa fecha teño un carné de, da sección feminina. Naquele entonces era a Falange, a que daba os cursillos de, de eso.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseRoa_hist01__clip02",
+      "selection_order": 18,
+      "source_number": 2,
+      "record_id": "MariaJoseRoa_hist01",
+      "record_type": "historia",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "O carné da Sección Feminina aos seis anos",
+      "summary": "Conserva un carné da Sección Feminina de cando empezou a palillar con seis anos nos cursiños da Falange.",
+      "rank_in_index": 12,
+      "cosine_similarity": 0.429147,
+      "start": 126.4,
+      "end": 143.54,
+      "duration_seconds": 17.14,
+      "start_hms": "00:02:06.400",
+      "end_hms": "00:02:23.540",
+      "from_sentence": 20,
+      "to_sentence": 22,
+      "transcript_text": "Eu o carné que teño é de cando tiña seis anos . Con seis anos xa palillaba . Na Falange.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseRoa_seg14__clip01",
+      "selection_order": 19,
+      "source_number": 1,
+      "record_id": "MariaJoseRoa_seg14",
+      "record_type": "tema",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "O encaixe na familia e o que representa",
+      "summary": "Non lle gustaría que o encaixe se perdese: é un relax e unha alegría, e gustaríalle ensinar á súa filla e aos seus netos («os homes non palillan porque non queren»). Ten un neto ou neta que desfila en Madrid con pezas súas, e unha neta que estudou arte en Valencia e fixo o seu traballo de fin de curso sobre o encaixe, con fotos dela e de Xusa palillando na Barca; agora dá clases en Holanda. O que se mostra non representa a súa vida: se tivesen que vivir do encaixe, non comerían.",
+      "rank_in_index": 12,
+      "cosine_similarity": 0.496774,
+      "start": 1504.23,
+      "end": 1656.97,
+      "duration_seconds": 152.74,
+      "start_hms": "00:25:04.230",
+      "end_hms": "00:27:36.970",
+      "from_sentence": 270,
+      "to_sentence": 291,
+      "transcript_text": "Pou, non sei, o significado que ten o encaixe para min é unha cousa que non me gustaría que se perdera. Para min é unha, un relax, unha alegría de velo tamén, hum. E, e por suposto, unha alegría de poder enseñarlle á miña filla que palille. Se algún momento os meus netos, miñas netas tamén queren, tamén-- bueno, miñas netas e meus netos, que eu sempre dixen que os homes non palillan porque non queren. Hai algún que palilla que non veses ti. Teño un neto, bueno, un neto, neta, que desfila en Madrid. Eh. Cando leva así algo que tal, encántame. Eh, sí. Téñolle, téñolle feito algunha cousa. Téñolle feito algunha cousa pa, pa levar. Eh, teño unha neta que fixo por arte en Valencia. Eh, os traballos dela [tos] tamén iban moito sobre o encaixe, sobre o que facía eu, o que non facía. Incluso lle tiven que mandar palillos, encaixe, fío, para o traballo de fin de curso. Eh, basou moito sobre-- e foto, te-- mandámoslle fotos Xusa e eu na barca palillando, para o traballo que fixo de-- ahora mismo está en Holanda dando clases de español e, e arte. Como representar a nosa vida, non. Bueno, a ver, ensinan máis ou menos o que facemos, pero representar a vida non, porque a nosa vida non se basa no encaixe. Porque se tiveramos que vi-- que vivir do encaixe, pasabamos sen comer pan. [risas] A ver as cousas como son.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJesusPensadoPerez_hist05__clip01",
+      "selection_order": 20,
+      "source_number": 1,
+      "record_id": "MariaJesusPensadoPerez_hist05",
+      "record_type": "historia",
+      "interview_id": "MariaJesusPensadoPerez",
+      "speaker": "María Jesús Pensado Pérez",
+      "title": "Reconciliarse co mozo a porta pechada",
+      "summary": "Os luns, se discutira co seu mozo, que viña en moto, as compañeiras mandábana fóra e pechaban a porta para que se arranxasen.",
+      "rank_in_index": 13,
+      "cosine_similarity": 0.423529,
+      "start": 741.34,
+      "end": 752.02,
+      "duration_seconds": 10.68,
+      "start_hms": "00:12:21.340",
+      "end_hms": "00:12:32.020",
+      "from_sentence": 124,
+      "to_sentence": 125,
+      "transcript_text": "Os luns cando eu discutía como o home, viña na moto e elas mandabanme ir para fora e despois fechabanme a porta para que me puxera ben con el. Eramos moi...",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJesusPensadoPerez.mp4",
+      "drive_url": "https://drive.google.com/file/d/1H3tP8iCVJJi72MWMTsKXdV3XVAFbi-fn/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "Carmen_Vileda_Rey_hist05__clip01",
+      "selection_order": 21,
+      "source_number": 1,
+      "record_id": "Carmen_Vileda_Rey_hist05",
+      "record_type": "historia",
+      "interview_id": "Carmen_Vileda_Rey",
+      "speaker": "Carmen Vileda Rey",
+      "title": "Unha almofadiña para entretela",
+      "summary": "Como a súa nai palillaba no inverno, aos tres anos e medio puxéronlle unha almofadiña para entretela; despois pasou a ser obriga.",
+      "rank_in_index": 14,
+      "cosine_similarity": 0.419759,
+      "start": 27.98,
+      "end": 51.38,
+      "duration_seconds": 23.4,
+      "start_hms": "00:00:27.980",
+      "end_hms": "00:00:51.380",
+      "from_sentence": 5,
+      "to_sentence": 7,
+      "transcript_text": "Tres anos e medio. Na casa, ca miña nai. Pois cando mamá se sentaba a panillar, puñíame ao lado dela e ensiñábame, explicábame e o ía facendo.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Carmen Vileda Rey.mp4",
+      "drive_url": "https://drive.google.com/file/d/1ce4qL52Y52nEmlPl6h3ooGe9qGNTu82X/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "Carmen_Vileda_Rey_hist05__clip02",
+      "selection_order": 21,
+      "source_number": 2,
+      "record_id": "Carmen_Vileda_Rey_hist05",
+      "record_type": "historia",
+      "interview_id": "Carmen_Vileda_Rey",
+      "speaker": "Carmen Vileda Rey",
+      "title": "Unha almofadiña para entretela",
+      "summary": "Como a súa nai palillaba no inverno, aos tres anos e medio puxéronlle unha almofadiña para entretela; despois pasou a ser obriga.",
+      "rank_in_index": 14,
+      "cosine_similarity": 0.419759,
+      "start": 258.08,
+      "end": 288.3,
+      "duration_seconds": 30.22,
+      "start_hms": "00:04:18.080",
+      "end_hms": "00:04:48.300",
+      "from_sentence": 43,
+      "to_sentence": 47,
+      "transcript_text": "A ver, a min empeza-- eu empecei pronto porque miña nai iba panillada. Por eso sei que era aos tres anos e medio. Porque como era panillada no inverno, pois, eh, puxeron unha almoadiña pa entretenerme, pero despois era en serio. Bueno, empezamos por natural, por entretenimento, pa, pa que deixar a panillar as outros. E despois era obrigación.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Carmen Vileda Rey.mp4",
+      "drive_url": "https://drive.google.com/file/d/1ce4qL52Y52nEmlPl6h3ooGe9qGNTu82X/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJoseRoa_seg17__clip01",
+      "selection_order": 22,
+      "source_number": 1,
+      "record_id": "MariaJoseRoa_seg17",
+      "record_type": "tema",
+      "interview_id": "MariaJoseRoa",
+      "speaker": "María José Roa",
+      "title": "Identidade e transmisión",
+      "summary": "O encaixe define a ría, aínda que hoxe hai palilleiras en todas partes, en parte porque galegas da costa deron clases por toda España, coma en Andalucía; Almagro ten a súa propia tradición. Para transmitilo hai que concienciar a xente nova, aínda que saben que non dá cartos. Cre que reaccionarán, como pasou co baile e co canto. Perdelo sería perder a súa cultura.",
+      "rank_in_index": 14,
+      "cosine_similarity": 0.490937,
+      "start": 1803.25,
+      "end": 1923.67,
+      "duration_seconds": 120.42,
+      "start_hms": "00:30:03.250",
+      "end_hms": "00:32:03.670",
+      "from_sentence": 317,
+      "to_sentence": 337,
+      "transcript_text": "Eu creo que si. Si. A ver, somos unha ría que o encaixe defínenos, aínda que hoxe en día por todas partes hai palilleiras. Eh, que eu creo que moita culpa tuvémola nós, que fomos dando clases por todas partes, porque en Andalucía hai gallegas dando clases. E bueno, está Almagro, eh, que esa zona non ten nada que ver con nós. Me refiero que fóramos nós a enseñarlle, senón que o teñen eles. Pero dipo, por aí adiante, por todas partes, sempre hai unha gallega no medio. Unha da, da nosa costa. [pausa] Como se debería transmitir? Pou, non sei, concienciando a xente joven de que non deixen que se perda, de... Claro, que a xente joven, eh, se pensan no que se gana co palillo, non, non. Pero conciencialos, polo menos, para que aprendan e que non deixen que se, que se perda. Porque agora son eles os que teñen que mirar. Eu penso que en algún momento si van a reaccionar, como se está reaccionando, pois xa te digo, co, co baile, co canto, con... Creo que van a reaccionar e van a, a facer algo. [pausa] Home, perdes a nosa cultura. A ver, eu que che digo, toda a nosa costa... Esto é a nosa cultura, o noso todo. [pausa]",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJoseRoa.mp4",
+      "drive_url": "https://drive.google.com/file/d/1dVU_TkNO_pmCLNvtwUWR1PIS1_UGH3nx/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJesusPensadoPerez_hist02__clip01",
+      "selection_order": 23,
+      "source_number": 1,
+      "record_id": "MariaJesusPensadoPerez_hist02",
+      "record_type": "historia",
+      "interview_id": "MariaJesusPensadoPerez",
+      "speaker": "María Jesús Pensado Pérez",
+      "title": "Retito, a intermediaria",
+      "summary": "A súa nai madrugaba os sábados cando viña Retito para venderlle panos; Retito levaba o encaixe á Coruña sen que soubesen a onde ía.",
+      "rank_in_index": 15,
+      "cosine_similarity": 0.418711,
+      "start": 379.33,
+      "end": 408.13,
+      "duration_seconds": 28.8,
+      "start_hms": "00:06:19.330",
+      "end_hms": "00:06:48.130",
+      "from_sentence": 59,
+      "to_sentence": 63,
+      "transcript_text": "E á parte, eu sempre lle vía unha queixiña e dicíame: \"Ai, vai vir Retito\". E tiña os seus pañuelos alí e xa se levantaba aos sabedos moi cedo cando sabía que viña Retito, para ir vender ao mellor quince, vinte. No momento que non tiña nada que facer, entre comillas, eh, puñíase a pelillar. Aí va facendo, e oías. E como dicía ela, se gañan cinco pesos dun lado e dez do outro, son quince.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJesusPensadoPerez.mp4",
+      "drive_url": "https://drive.google.com/file/d/1H3tP8iCVJJi72MWMTsKXdV3XVAFbi-fn/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJesusPensadoPerez_hist02__clip02",
+      "selection_order": 23,
+      "source_number": 2,
+      "record_id": "MariaJesusPensadoPerez_hist02",
+      "record_type": "historia",
+      "interview_id": "MariaJesusPensadoPerez",
+      "speaker": "María Jesús Pensado Pérez",
+      "title": "Retito, a intermediaria",
+      "summary": "A súa nai madrugaba os sábados cando viña Retito para venderlle panos; Retito levaba o encaixe á Coruña sen que soubesen a onde ía.",
+      "rank_in_index": 15,
+      "cosine_similarity": 0.418711,
+      "start": 478.01,
+      "end": 479.71,
+      "duration_seconds": 1.7,
+      "start_hms": "00:07:58.010",
+      "end_hms": "00:07:59.710",
+      "from_sentence": 77,
+      "to_sentence": 77,
+      "transcript_text": "Claro, Retito era intermediaria.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJesusPensadoPerez.mp4",
+      "drive_url": "https://drive.google.com/file/d/1H3tP8iCVJJi72MWMTsKXdV3XVAFbi-fn/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "MariaJesusPensadoPerez_hist02__clip03",
+      "selection_order": 23,
+      "source_number": 3,
+      "record_id": "MariaJesusPensadoPerez_hist02",
+      "record_type": "historia",
+      "interview_id": "MariaJesusPensadoPerez",
+      "speaker": "María Jesús Pensado Pérez",
+      "title": "Retito, a intermediaria",
+      "summary": "A súa nai madrugaba os sábados cando viña Retito para venderlle panos; Retito levaba o encaixe á Coruña sen que soubesen a onde ía.",
+      "rank_in_index": 15,
+      "cosine_similarity": 0.418711,
+      "start": 1014.36,
+      "end": 1024.72,
+      "duration_seconds": 10.36,
+      "start_hms": "00:16:54.360",
+      "end_hms": "00:17:04.720",
+      "from_sentence": 178,
+      "to_sentence": 179,
+      "transcript_text": "Nós o retito levábamo para Coruña, non sabíamos que se facía con el. Supoñiamos que o vendería, pero non sabías nin donde nin nada.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/MariaJesusPensadoPerez.mp4",
+      "drive_url": "https://drive.google.com/file/d/1H3tP8iCVJJi72MWMTsKXdV3XVAFbi-fn/view",
+      "video_mapping_status": "mapped"
+    },
+    {
+      "clip_id": "Maria_Antelo_Lema_seg04__clip01",
+      "selection_order": 24,
+      "source_number": 1,
+      "record_id": "Maria_Antelo_Lema_seg04",
+      "record_type": "tema",
+      "interview_id": "Maria_Antelo_Lema",
+      "speaker": "María Antelo Lema",
+      "title": "As cousas antigas perderíanse",
+      "summary": "Antes a xente era máis clara e máis fiel. Teme que as cousas antigas, coma as palilladas, se perdan.",
+      "rank_in_index": 15,
+      "cosine_similarity": 0.489801,
+      "start": 204.96,
+      "end": 224.68,
+      "duration_seconds": 19.72,
+      "start_hms": "00:03:24.960",
+      "end_hms": "00:03:44.680",
+      "from_sentence": 51,
+      "to_sentence": 54,
+      "transcript_text": "Era máis clara, máis fieles, que agora non. Bueno, eu tamén, entendeme, pero nota as cousas. As cousas antigas. As cousas antigas, as palilladas, todo eso, se había de perder.",
+      "quality_flags": [],
+      "video_path": "/content/drive/MyDrive/Mar_de_fondo_prototipo/videos_originales/Maria Antelo Lema.mp4",
+      "drive_url": "https://drive.google.com/file/d/1z-dBSumDtfQcG9L1WVNyjwOUKCGahX2U/view",
+      "video_mapping_status": "mapped"
+    }
+  ],
+  "exported_at_utc": "2026-10-22T19:01:50.845604+00:00",
+  "source_notebook": "08_recuperacion_fragmentos_audiovisuales.ipynb",
+  "model_id": "BAAI/bge-m3",
+  "faiss_manifest_sha256": "908f02071a656fd8da9fdf58c57b3b9272f568277b100d3105218050dd7af011"
+}

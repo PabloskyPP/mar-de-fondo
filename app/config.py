@@ -46,6 +46,26 @@ class Ajustes(BaseSettings):
     # Opcional: metadatos (título, lugar, temas) y, si no hay otra fuente,
     # capítulos y transcripción en el formato propio del portal.
     entrevistas_archivo: str = "entrevistas.json"
+    # Procedencia del corpus (modelo, versión, fecha y duración del audio).
+    manifest_corpus_archivo: str = "manifest_corpus.json"
+
+    # --- Buscador en directo (BGE-M3 + FAISS) ---------------------------------
+    # "auto": se activa si están los archivos y las dependencias; "off": nunca.
+    buscador: str = "auto"
+    # Corpus de historias (los temas son ``temas_archivo``).
+    historias_archivo: str = "historias_preparadas.json"
+    # Carpeta con temas.faiss, historias.faiss, los mapas y manifest_indice.json.
+    # Por defecto, «indice» dentro de la carpeta de datos.
+    indice_dir: Path | None = None
+    # Modelo que codifica la CONSULTA. Debe ser el mismo con el que se
+    # construyó el índice. Puede ser una ruta local con una copia del modelo.
+    modelo_consultas: str = "BAAI/bge-m3"
+    modelo_dispositivo: str = ""  # "" = automático (cuda si hay, si no cpu)
+    # Carga el modelo al arrancar en vez de en la primera consulta.
+    buscador_precarga: bool = False
+    # Búsqueda guardada de referencia: aporta el texto y la fecha de la consulta
+    # de la demostración y sirve para validar el buscador.
+    busqueda_referencia_archivo: str = "busqueda_referencia.json"
 
     # Carpeta local con los MP4. Sin ella el portal arranca igualmente, pero
     # cada entrevista mostrará «vídeo no disponible».
@@ -67,6 +87,12 @@ class Ajustes(BaseSettings):
     @property
     def datos_ruta(self) -> Path:
         return self._absoluta(self.datos_dir)
+
+    @property
+    def indice_ruta(self) -> Path:
+        if self.indice_dir is not None:
+            return self._absoluta(self.indice_dir)
+        return self.datos_ruta / "indice"
 
     @property
     def transcripciones_ruta(self) -> Path:

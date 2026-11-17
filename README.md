@@ -1,9 +1,13 @@
 # Mar de Fondo · portal (primera entrega)
 
 Portal web del archivo audiovisual de entrevistas de memoria oral de aAntena.
-Esta fase carga **una búsqueda guardada** (32 cortes de 6 entrevistas) y construye
-las vistas **Inicio, Catálogo, Resultados y Entrevista** de la maqueta. El buscador
-en directo está pendiente: el portal lo indica en pantalla.
+Construye las vistas **Inicio, Catálogo, Resultados y Entrevista** de la maqueta y es la
+última etapa del pipeline (transcripción → segmentación → embeddings → índice →
+**consulta y presentación**). Los resultados de **Resultados** vienen de dos orígenes:
+
+- **Búsqueda en directo** (BGE-M3 + FAISS), si están instaladas las dependencias.
+- **Búsqueda guardada de demostración** (32 cortes), cuando no lo están o falla. La interfaz
+  siempre dice cuál de las dos se está viendo.
 
 Python + FastAPI + plantillas Jinja2, CSS y JavaScript sin dependencias.
 
@@ -12,13 +16,21 @@ Python + FastAPI + plantillas Jinja2, CSS y JavaScript sin dependencias.
 ```bash
 python -m venv .venv
 source .venv/bin/activate            # Windows: .venv\Scripts\activate
-pip install -e ".[dev]"              # sin pruebas: pip install -e .
+pip install -e ".[dev]"              # portal + pruebas (sin buscador en directo).
+pip install -e ".[busqueda]"         # añade el buscador en directo (PyTorch, FAISS…; varios GB). En principio el propio programa instala esto en su debida 
+                                     # carpeta gracias a la ruta del intérprete. En caso contrario, .\.venv\Scripts\python.exe -m pip install -e ".[dev,busqueda]"
 cp .env.example .env                 # y edita MDF_VIDEOS_DIR
+
 ```
-Para instalar todas las dependencias necesarias ejecutar en la terminal: 
-py --version
-py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e .
+## Pruebas preliminares
+```bash
+.\.venv\Scripts\python.exe -m pytest -q   # Ejecutar pruebas normales en powershell. Debe terminar con 92 passed, 3 skipped
+
+# Ejecutar la prueba de aceptación con el modelo real_
+$env:MDF_PRUEBA_MODELO = "1"
+.\.venv\Scripts\python.exe -m pytest tests/test_busqueda_modelo.py -s
+Remove-Item Env:MDF_PRUEBA_MODELO         
+```
 
 ## Datos
 
@@ -28,6 +40,10 @@ py -m venv .venv
 | `datos/demo/video_mapping.json` | Entrevistas y nombre del MP4 de cada una. Sus `video_path` apuntan a Colab y **no se usan como ruta**: solo se toma el nombre del archivo. |
 | `datos/demo/temas_preparados.json` | **Capítulos** reales: 70 segmentos de las 6 entrevistas (`id`, `title`, `summary`, `start`/`end`, historias, avisos de calidad, notas). |
 | `datos/demo/transcripciones/*.json` | **Transcripción** con marcas temporales, una por entrevista. Hoy solo está la de Pilar Barrientos Conde. |
+| `datos/demo/historias_preparadas.json` | **Historias**: 42 relatos con sus cortes (pueden tener varios tramos discontinuos). Corpus que se vectorizó. |
+| `datos/demo/indice/` | **Índice FAISS** de temas (70) e historias (42), con sus mapas fila→id y `manifest_indice.json`. |
+| `datos/demo/manifest_corpus.json` | Procedencia por entrevista: modelo, versión del procesador y del prompt, fecha, archivo de origen y duración del audio. |
+| `datos/demo/busqueda_referencia.json` | La búsqueda guardada completa (consulta, parámetros, candidatos, selección, descartados). Sirve de referencia para validar el buscador. |
 | `datos/demo/entrevistas.json` | **Opcional.** Título, lugar y temas; y capítulos/transcripción solo si no hay otra fuente. |
 | `MDF_VIDEOS_DIR` | Carpeta local con los MP4 (`Pilar Barrientos Conde.mp4`, `MariaJoseRoa.mp4`…). No se versionan. |
 
@@ -55,8 +71,9 @@ buscan en cada petición: puedes copiarlos con el portal en marcha.
 Rutas útiles: `/api/videos` (qué vídeos hay), `/api/busqueda`, `/api/plan`,
 `/api/entrevistas`, `/api/docs`.
 
-Para ejecutar programa ejecuta en la terminal:
+*Para ejecutar el programa, pegar y ejecutar en la terminal el siguiente script:
 .\.venv\Scripts\python.exe -m uvicorn app.main:app
+
 ## Prueba manual (criterio de «entrega lista»)
 
 1. Abre `/api/videos`: las 6 entrevistas deben salir con `"disponible": true`.
@@ -108,7 +125,7 @@ posición **real** del vídeo tras saltar.
 ## Pruebas automáticas
 
 ```bash
-pytest                               # 59 pruebas: datos reales, plan, rutas, rangos, vídeo ausente
+pytest                               # 92 pruebas (+3 con el modelo real, omitidas por defecto): datos reales, plan, rutas, rangos, vídeo ausente, buscador
 cd tests/js && npm install && npm test   # 17 pruebas del reproductor con un <video> simulado (jsdom)
 ```
 
@@ -149,6 +166,52 @@ comprueba que el navegador puede saltar y, si no, muestra un aviso. Consejo: los
 el índice (`moov`) al principio empiezan antes; se consigue con
 `ffmpeg -i entrada.mp4 -c copy -movflags +faststart salida.mp4`.
 
+## Buscador en directo
+
+Para activarlo: `pip install -e ".[busqueda]"` y reiniciar uvicorn. La **primera consulta
+descarga BAAI/bge-m3 (~2 GB, una sola vez) y tarda en cargarlo**; las siguientes son rápidas.
+Para que cargue al arrancar: `MDF_BUSCADOR_PRECARGA=true`. Estado: `/api/buscador`.
+
+**Qué hace una consulta** (adaptación fiel del cuaderno `08_recuperacion_audiovisual`):
+
+1. BGE-M3 codifica el texto, en gallego o castellano y sin traducir; el vector se normaliza.
+2. Se consultan por separado el índice de **temas** y el de **historias**: hasta 15
+   candidatos de cada uno.
+3. Se intercalan las posiciones (primero la historia en caso de empate). Se omite todo
+   candidato cubierto en un 60 % o más por lo ya incluido de la misma entrevista. Se prefieren
+   como mucho **dos fragmentos por persona** al principio; los demás **no se descartan**, pasan
+   al final de la lista.
+4. Resultados, «Reproducir fragmentos» y Entrevista funcionan igual que con la búsqueda guardada.
+
+**Opciones.** *Buscar en*: temas e historias, solo temas o solo historias. *Palabras que deben
+aparecer literalmente*: filtran por texto exacto (sin distinguir mayúsculas ni acentos) en
+título, resumen y transcripción, examinando **todo** el índice. Restringen la búsqueda por
+significado; no la sustituyen.
+
+**Lo que no hace, a propósito.** No hay LLM, reranker ni umbral de similitud: una pregunta
+sin respuesta también recibe sus vecinos más cercanos. Por eso la interfaz avisa de que los
+resultados no garantizan pertinencia y de que no encontrar nada no demuestra que nadie hable
+del asunto. La validación formal de la recuperación sigue pendiente
+(`formal_retrieval_evaluation: pending` en el manifiesto del índice).
+
+**Seguridad de los datos.** Al cargar, el buscador verifica con SHA-256 que el corpus y el
+índice son exactamente los del manifiesto: no se mezclan embeddings con un corpus distinto. Si
+cambias `temas_preparados.json` o `historias_preparadas.json`, hay que regenerar el índice
+(cuaderno 07) y el buscador se desactiva con un mensaje claro hasta entonces. Se tolera que Git
+convierta los saltos de línea a CRLF en Windows; `.gitattributes` evita además que lo haga.
+
+**Probarlo con el modelo real** (la prueba de aceptación): repite la consulta de la búsqueda
+guardada y exige los mismos registros, el mismo orden y las mismas puntuaciones (tolerancia
+0,0005, por diferencias de CPU frente a GPU):
+
+```bash
+MDF_PRUEBA_MODELO=1 pytest tests/test_busqueda_modelo.py -s     # PowerShell: $env:MDF_PRUEBA_MODELO=1
+```
+
+Una prueba manual: en `/resultados` escribe «Que lembran as mulleres das palilladas e das
+xuntanzas pola noite?». Deben salir los mismos 32 cortes que en la demostración, y
+«Cómo se ha construido esta lista» debe decir «15 temas y 15 historias» y 6 omitidos.
+
 ## Capítulos y transcripción reales
 
 **Capítulos** (`temas_preparados.json`). Una lista de segmentos con `id` (el mismo
@@ -182,11 +245,11 @@ y, si no, un archivo cuyo nombre sea un prefijo del identificador (por eso
 siempre que haya uno solo. Si hay varios, no se usa ninguno y se avisa en el registro.
 Excepciones: `MDF_TRANSCRIPCIONES_EXTRA='{"MariaJoseRoa": "roa.json"}'`.
 
-**Procedencia.** «Contexto y uso» muestra lo que traen los archivos: archivo e
-identificador de la transcripción, idioma detectado y su probabilidad, duración del audio,
-archivo de origen y número de capítulos, y las notas de transcripción (p. ej. «Muxía aparece
-transcrito ás veces como “Musía”»). Los archivos **no** traen modelo, versión del
-procesador ni fecha de generación; el portal lo dice en pantalla en vez de inventarlo.
+**Procedencia.** «Contexto y uso» muestra lo que traen los archivos: del manifiesto del corpus,
+el modelo (`claude-opus-5-5`), la versión del procesador, la del prompt, la fecha y el archivo de
+origen; de la transcripción, su identificador, el idioma detectado y su probabilidad; y las
+notas de transcripción (p. ej. «Muxía aparece transcrito ás veces como “Musía”»). La duración
+del audio de **las seis** entrevistas sale del manifiesto y alimenta el aviso si un vídeo no coincide.
 
 Si falta la transcripción de una entrevista, su pantalla muestra los capítulos y usa el
 texto de los cortes de la búsqueda, rotulado como «no es la entrevista entera».
@@ -211,6 +274,6 @@ Sin ellos no se muestra nada inventado.
 
 ## Pendiente o fuera de esta fase
 
-Buscador en directo (la caja abre la búsqueda guardada) · filtros de Resultados por
+Respuesta con citas por LLM («lectura asistida», segunda fase) · filtros de Resultados por
 tema y lugar (no hay esos datos en la lista) · Historias · interfaz en gallego ·
 subtítulos · créditos y condiciones de uso por material · área privada.

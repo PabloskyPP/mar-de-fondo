@@ -1,0 +1,100 @@
+{
+  "project": "Mar de fondo",
+  "notebook": "06_preparacion_corpus_temas_historias.ipynb",
+  "phase": "01_preparacion_sin_embeddings",
+  "generated_at_utc": "2026-10-22T11:10:27.316964+00:00",
+  "topic_count": 70,
+  "story_count": 42,
+  "interview_count": 6,
+  "embedding_model_planned": "BAAI/bge-m3",
+  "topic_embedding_strategy": "C:title+summary+transcript_text",
+  "story_embedding_strategy": "title+summary",
+  "vector_index_planned": "FAISS IndexFlatIP + L2 normalization (dense)",
+  "input_provenance": {
+    "Pilar_Barrientos_Conde_02_2": {
+      "json_filename": "Pilar_Barrientos_Conde_02_2.json",
+      "sha256": "367e5a27c29005e164962452c27c23c907f1b12aa319dc6b77b8e6dfc8df3ea8",
+      "source_file": "Pilar_Barrientos_Conde_02_2_scribe_v2_wav_glg_forzado_raw.json",
+      "audio_duration_secs": 447.04,
+      "language": "gl",
+      "model": "claude-opus-5-5",
+      "processor_version": "output_claude-1.0",
+      "prompt_version": "segmentacion-manual-v2-gl",
+      "created_at": "2026-10-20",
+      "transcription_notes": [
+        "Só se oen as respostas da entrevistada; as preguntas están cortadas na edición."
+      ]
+    },
+    "Maria_Antelo_Lema": {
+      "json_filename": "Maria_Antelo_Lema.json",
+      "sha256": "b1ebf0fa4e70d5776900358234c9691e8628b6599b410e2f7214a2267886c41d",
+      "source_file": "Maria_Antelo_Lema_scribe_v2_wav_glg_forzado_raw.json",
+      "audio_duration_secs": 630.016,
+      "language": "gl",
+      "model": "claude-opus-5-5",
+      "processor_version": "output_claude-1.0",
+      "prompt_version": "segmentacion-manual-v2-gl",
+      "created_at": "2026-10-20",
+      "transcription_notes": [
+        "As pasaxes de 02:25-03:18 e 06:07-06:52 son case ininteligibles na transcrición; convén revisalas co audio."
+      ]
+    },
+    "MariaJoseLiresMartinez": {
+      "json_filename": "MariaJoseLiresMartinez.json",
+      "sha256": "527dba2d375201f86fe336d73dba43b7bc9e82012ee8cdc2ab9c55ffad64fb39",
+      "source_file": "MariaJoseLiresMartinez_scribe_v2_wav_glg_forzado_raw.json",
+      "audio_duration_secs": 621.5893125,
+      "language": "gl",
+      "model": "claude-opus-5-5",
+      "processor_version": "output_claude-1.0",
+      "prompt_version": "segmentacion-manual-v2-gl",
+      "created_at": "2026-10-20",
+      "transcription_notes": []
+    },
+    "Carmen_Vileda_Rey": {
+      "json_filename": "Carmen_Vileda_Rey.json",
+      "sha256": "2e647e156455b3f7b6042d6188eb86c94311ceece5135be2464f445642e3cd05",
+      "source_file": "Carmen_Vileda_Rey_scribe_v2_wav_glg_forzado_raw.json",
+      "audio_duration_secs": 839.808,
+      "language": "gl",
+      "model": "claude-opus-5-5",
+      "processor_version": "output_claude-1.0",
+      "prompt_version": "segmentacion-manual-v2-gl",
+      "created_at": "2026-10-20",
+      "transcription_notes": [
+        "O modelo escribe «panillar/penillar» por «palillar» en varios puntos."
+      ]
+    },
+    "MariaJesusPensadoPerez": {
+      "json_filename": "MariaJesusPensadoPerez.json",
+      "sha256": "e772b7fe512ec5510c822360554d5f50bed3fc7afcea87eb6e87655a8a8c64b4",
+      "source_file": "MariaJesusPensadoPerez_scribe_v2_wav_glg_forzado_raw.json",
+      "audio_duration_secs": 1395.6906875,
+      "language": "gl",
+      "model": "claude-opus-5-5",
+      "processor_version": "output_claude-1.0",
+      "prompt_version": "segmentacion-manual-v2-gl",
+      "created_at": "2026-10-20",
+      "transcription_notes": [
+        "O modelo escribe «pelillar/perlí/pejar» por «palillar» en varios puntos.",
+        "«cerdiñas» probablemente sexa «sardiñas»."
+      ]
+    },
+    "MariaJoseRoa": {
+      "json_filename": "MariaJoseRoa.json",
+      "sha256": "24c808120e3def023409fa758ad8d569a15959fbf6488d528a83f8b7f5a65ff5",
+      "source_file": "MariaJoseRoa_scribe_v2_wav_glg_forzado_raw.json",
+      "audio_duration_secs": 2361.536,
+      "language": "gl",
+      "model": "claude-opus-5-5",
+      "processor_version": "output_claude-1.0",
+      "prompt_version": "segmentacion-manual-v2-gl",
+      "created_at": "2026-10-20",
+      "transcription_notes": [
+        "Muxía aparece transcrito ás veces como «Musía»."
+      ]
+    }
+  },
+  "video_mapping_status": "pending: video_id=null",
+  "original_jsons_modified": false
+}

@@ -212,7 +212,10 @@ def test_pagina_de_pilar_con_datos_reales(cliente):
     assert "BnXbNp6lyBGOsktqsWYX" in html and 'data-duracion="447.04"' in html
     assert "Pilar_Barrientos_Conde_02_2.json" in html and "probabilidad 100 %" in html
     assert "preguntas están cortadas na edición" in html
-    assert "no indican el modelo" in html
+    # procedencia del manifiesto del corpus: modelo, versiones, fecha y archivo de origen
+    assert "claude-opus-5-5" in html and "output_claude-1.0" in html and "segmentacion-manual-v2-gl" in html
+    assert "2026-10-20" in html and "Pilar_Barrientos_Conde_02_2_scribe_v2_wav_glg_forzado_raw.json" in html
+    assert "no indican el modelo" not in html
 
 
 def test_tramos_poco_fiables_se_marcan_en_capitulos_y_transcripcion(carpeta_videos, datos_copia):
@@ -230,7 +233,8 @@ def test_tramos_poco_fiables_se_marcan_en_capitulos_y_transcripcion(carpeta_vide
 
 def test_sin_transcripcion_las_otras_entrevistas_siguen_con_capitulos(cliente):
     html = cliente.get("/entrevista/Carmen_Vileda_Rey").text
-    assert html.count('data-capitulo="') == 10 and 'data-duracion=""' in html
+    # sin transcripción cargada, la duración sale del manifiesto del corpus
+    assert html.count('data-capitulo="') == 10 and 'data-duracion="839.808"' in html
     assert "no es la entrevista entera" in html
 
 

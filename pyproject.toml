@@ -12,9 +12,18 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+# Buscador en directo. Las versiones son las del cuaderno 07/08 que construyó el índice.
+busqueda = [
+    "numpy",
+    "faiss-cpu>=1.10,<2",
+    "sentence-transformers>=3.3,<6",   # trae PyTorch: unos GB en disco
+]
+# Pruebas. No incluyen sentence-transformers: usan un codificador simulado con vectores reales.
 dev = [
     "pytest>=8",
     "httpx>=0.27",              # lo usa el cliente de pruebas de FastAPI
+    "numpy",
+    "faiss-cpu>=1.10,<2",
 ]
 
 [tool.setuptools]

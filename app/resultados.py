@@ -68,6 +68,13 @@ class Busqueda:
     archivo: str = ""
     avisos: tuple[str, ...] = ()
     es_demo: bool = True
+    tipo: str = "ambos"
+    terminos: tuple[str, ...] = ()
+    # Cómo se llegó a esta lista (solo si se conoce): parámetros, nº de candidatos
+    # por índice y candidatos descartados por solapamiento.
+    parametros: tuple[tuple[str, Any], ...] = ()
+    n_candidatos: tuple[int, int] | None = None  # (temas, historias)
+    descartados: tuple[tuple[str, float | None], ...] = ()  # (título, fracción ya cubierta)
 
     def por_id(self, clip_id: str) -> Corte | None:
         for c in self.cortes:
@@ -189,23 +196,25 @@ def _interpretar(bruto: Any, posicion: int) -> tuple[Corte | None, str | None]:
     return corte, None
 
 
-def cargar_busqueda(ajustes: Ajustes) -> Busqueda:
-    ruta = ajustes.datos_ruta / ajustes.playlist_archivo
-    avisos: list[str] = []
-    try:
-        with ruta.open(encoding="utf-8") as f:
-            brutos = json.load(f)
-    except FileNotFoundError:
-        log.error("No existe la búsqueda guardada: %s", ruta)
-        return Busqueda((), avisos=(f"No se encuentra {ajustes.playlist_archivo}.",),)
-    except (OSError, ValueError) as exc:
-        log.error("No se pudo leer %s: %s", ruta, exc)
-        return Busqueda((), avisos=(f"No se pudo leer {ajustes.playlist_archivo}.",),)
+def corte_desde_playlist(bruto: Any) -> Corte | None:
+    """Un solo corte a partir de un elemento de lista; None si no es válido."""
+    if bruto is None:
+        return None
+    return _interpretar(bruto, 1)[0]
 
+
+def construir_busqueda(brutos: Any, **datos: Any) -> Busqueda:
+    """Convierte una lista de cortes (``playlist``) en una ``Busqueda``.
+
+    ``datos`` se pasa tal cual a ``Busqueda`` (consulta, fecha, es_demo…). Los
+    elementos no válidos se omiten con un aviso; el orden es el de
+    ``selection_order`` y después ``source_number``.
+    """
+    avisos: list[str] = []
     if isinstance(brutos, dict):  # tolera {"clips": [...]} o {"cortes": [...]}
         brutos = brutos.get("clips") or brutos.get("cortes") or []
     if not isinstance(brutos, list):
-        return Busqueda((), avisos=("La lista exportada no tiene el formato esperado.",))
+        return Busqueda((), avisos=("La lista exportada no tiene el formato esperado.",), **datos)
 
     cortes: list[Corte] = []
     vistos: set[str] = set()
@@ -233,12 +242,57 @@ def cargar_busqueda(ajustes: Ajustes) -> Busqueda:
 
     for aviso in avisos:
         log.warning(aviso)
+    return Busqueda(cortes=tuple(finales), avisos=tuple(avisos), **datos)
 
-    fecha = ajustes.demo_fecha.strip() or fecha_desde_nombre(ajustes.playlist_archivo)
-    return Busqueda(
-        cortes=tuple(finales),
-        consulta=ajustes.demo_consulta.strip(),
-        fecha=fecha,
-        archivo=ajustes.playlist_archivo,
-        avisos=tuple(avisos),
+
+def busqueda_en_directo(resultado: dict) -> Busqueda:
+    """``Busqueda`` a partir de lo que devuelve ``Buscador.buscar``."""
+    titulos = {c["id"]: c["title"] for lista in resultado["candidatos"].values() for c in lista}
+    descartados = tuple(
+        (titulos.get(d["id"], d["id"]), d.get("fraccion_ya_cubierta")) for d in resultado["descartados"]
+    )
+    cand = resultado["candidatos"]
+    return construir_busqueda(
+        resultado["playlist"],
+        consulta=resultado["consulta"], es_demo=False,
+        tipo=resultado["parametros"]["tipo"],
+        terminos=tuple(resultado["terminos_obligatorios"]),
+        parametros=tuple(resultado["parametros"].items()),
+        n_candidatos=(len(cand.get("tema", [])), len(cand.get("historia", []))),
+        descartados=descartados,
+    )
+
+
+def _referencia(ajustes: Ajustes) -> dict[str, Any]:
+    """Consulta y fecha de la búsqueda guardada, si hay un archivo de referencia."""
+    try:
+        with (ajustes.datos_ruta / ajustes.busqueda_referencia_archivo).open(encoding="utf-8") as f:
+            ref = json.load(f)
+    except (OSError, ValueError):
+        return {}
+    return ref if isinstance(ref, dict) else {}
+
+
+def cargar_busqueda(ajustes: Ajustes) -> Busqueda:
+    """La búsqueda guardada de demostración (``playlist.json``)."""
+    ruta = ajustes.datos_ruta / ajustes.playlist_archivo
+    try:
+        with ruta.open(encoding="utf-8") as f:
+            brutos = json.load(f)
+    except FileNotFoundError:
+        log.error("No existe la búsqueda guardada: %s", ruta)
+        return Busqueda((), avisos=(f"No se encuentra {ajustes.playlist_archivo}.",),)
+    except (OSError, ValueError) as exc:
+        log.error("No se pudo leer %s: %s", ruta, exc)
+        return Busqueda((), avisos=(f"No se pudo leer {ajustes.playlist_archivo}.",),)
+
+    ref = _referencia(ajustes)
+    consulta = ajustes.demo_consulta.strip() or str(ref.get("consulta") or "").strip()
+    fecha = (ajustes.demo_fecha.strip() or str(ref.get("exported_at_utc") or "").strip()
+             or fecha_desde_nombre(ajustes.playlist_archivo))
+    parametros = ref.get("parametros") if isinstance(ref.get("parametros"), dict) else {}
+    return construir_busqueda(
+        brutos, consulta=consulta, fecha=fecha, archivo=ajustes.playlist_archivo, es_demo=True,
+        tipo=str(parametros.get("tipo") or "ambos"),
+        terminos=tuple(ref.get("terminos_obligatorios") or ()),
     )

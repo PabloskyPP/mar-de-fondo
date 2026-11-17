@@ -235,6 +235,18 @@ th { font-weight: 600; color: var(--tinta-suave); }
 .datos-fuente dd { margin: 0; }
 @media (max-width: 40rem) { .datos-fuente { grid-template-columns: 1fr; } .datos-fuente dd { margin-bottom: 0.6rem; } }
 
+/* Búsqueda en directo */
+.aviso-vivo { display: flex; gap: 0.9rem; align-items: flex-start; margin: 0 0 1.25rem; padding: 0.9rem 1.1rem; background: #e7efe9; border: 1px solid #9fbfae; border-left-width: 6px; border-left-color: var(--mar); border-radius: var(--radio); }
+.aviso-vivo p { margin: 0; }
+.aviso-vivo-sello { flex: none; color: var(--mar-oscuro); font-family: var(--serif); font-size: 1.1rem; }
+.opciones-busqueda { flex: 1 1 100%; }
+.opciones-busqueda summary { cursor: pointer; color: var(--mar); font-weight: 600; width: fit-content; }
+.opciones-rejilla { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.6rem; }
+.campo-ancho { flex: 1 1 18rem; }
+.campo-ancho input { width: 100%; }
+.detalle-seleccion { margin-bottom: 1rem; }
+.detalle-seleccion ul { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+
 /* Transcripción con datos reales */
 .turno.evento .turno-texto { font-style: italic; color: var(--tinta-suave); }
 .turno.tras-pausa { border-top: 2px solid #b9b29e; }

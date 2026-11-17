@@ -169,13 +169,22 @@
     {% if procedencia.duracion_audio %}
     <dt>Duración del audio transcrito</dt><dd>{{ procedencia.duracion_audio | tiempo }} ({{ procedencia.duracion_audio }} s)</dd>
     {% endif %}
+    {% if procedencia.archivo_fuente %}
+    <dt>Transcripción de origen</dt><dd><code>{{ procedencia.archivo_fuente }}</code></dd>
+    {% endif %}
+    {% if procedencia.modelo or procedencia.version_procesador or procedencia.version_prompt %}
+    <dt>Capítulos generados con</dt>
+    <dd>{% if procedencia.modelo %}modelo <code>{{ procedencia.modelo }}</code>{% endif %}{% if procedencia.version_procesador %}, procesador <code>{{ procedencia.version_procesador }}</code>{% endif %}{% if procedencia.version_prompt %}, prompt <code>{{ procedencia.version_prompt }}</code>{% endif %}{% if procedencia.creado %}, el {{ procedencia.creado }}{% endif %}</dd>
+    {% endif %}
     {% if procedencia.archivo_origen_temas or procedencia.n_capitulos %}
     <dt>Capítulos</dt>
     <dd>{{ procedencia.n_capitulos }} {{ 'capítulo' if procedencia.n_capitulos == 1 else 'capítulos' }}{% if procedencia.archivo_origen_temas %}, origen <code>{{ procedencia.archivo_origen_temas }}</code>{% endif %}{% if procedencia.idioma_temas %}, idioma <code>{{ procedencia.idioma_temas }}</code>{% endif %}</dd>
     {% endif %}
   </dl>
   {% endif %}
+  {% if not procedencia.modelo %}
   <p class="nota">Los archivos cargados no indican el modelo, la versión del procesador ni la fecha de generación de capítulos y transcripción.</p>
+  {% endif %}
 
   {% if notas_transcripcion %}
   <h3 class="subindice">Notas sobre la transcripción</h3>

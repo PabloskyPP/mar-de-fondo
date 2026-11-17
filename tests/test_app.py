@@ -15,12 +15,17 @@ def test_paginas_principales(cliente):
 
 
 def test_la_demostracion_es_visible(cliente):
-    for url in ("/resultados", "/resultados?q=emigraci%C3%B3n"):
-        html = cliente.get(url).text
-        assert 'class="aviso-demo"' in html and "Demostración" in html
-        assert "32 cortes de 6 entrevistas" in html
-    assert "Has escrito «emigración»" in cliente.get("/resultados?q=emigraci%C3%B3n").text
-    assert "búsqueda guardada de demostración" in cliente.get("/").text
+    html = cliente.get("/resultados").text
+    assert 'class="aviso-demo"' in html and "Demostración" in html
+    assert "32 cortes de 6 entrevistas" in html
+    # la consulta y la fecha de la búsqueda guardada se leen de busqueda_referencia.json
+    assert "«Que lembran as mulleres das palilladas e das xuntanzas pola noite?»" in html
+    assert "22/10/2026 19:01 UTC" in html
+    # con una consulta nueva y el buscador no disponible, se dice por qué y se muestra la guardada
+    html = cliente.get("/resultados?q=emigraci%C3%B3n").text
+    assert "El buscador en directo no está disponible" in html and "MDF_BUSCADOR=off" in html
+    assert "Se muestra la búsqueda guardada" in html
+    assert "no está disponible" in cliente.get("/").text
 
 
 def test_el_texto_de_la_consulta_se_muestra_si_se_configura(carpeta_videos):

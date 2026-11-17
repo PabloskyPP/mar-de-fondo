@@ -42,9 +42,12 @@ def datos_copia(tmp_path: Path) -> Path:
     return destino
 
 
-def hacer_cliente(**kw) -> TestClient:
+def hacer_cliente(buscador=None, **kw) -> TestClient:
+    """Cliente de pruebas. El buscador real queda desactivado (no debe descargar el modelo);
+    se puede inyectar uno con un codificador simulado."""
+    kw.setdefault("buscador", "off")
     ajustes = Ajustes(_env_file=None, **kw)
-    return TestClient(crear_app(ajustes))
+    return TestClient(crear_app(ajustes, buscador=buscador))
 
 
 @pytest.fixture

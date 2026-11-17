@@ -14,11 +14,19 @@
     <button type="submit">Buscar en el archivo</button>
   </form>
 
+  {% if buscador_listo %}
   <p class="nota-buscador">
-    El buscador en directo está pendiente. De momento, la caja abre una
+    Escribe una pregunta o unas palabras, en gallego o castellano: se buscan fragmentos de
+    entrevistas por su significado. La primera consulta tarda unos segundos. Mientras tanto,
+    puedes ver <a href="/resultados">una búsqueda guardada de ejemplo</a>.
+  </p>
+  {% else %}
+  <p class="nota-buscador">
+    El buscador en directo no está disponible ({{ motivo_buscador }}). La caja abre una
     <a href="/resultados">búsqueda guardada de demostración</a>
     ({{ busqueda.cortes | length }} cortes de {{ busqueda.n_entrevistas }} entrevistas).
   </p>
+  {% endif %}
 </section>
 
 {% if temas %}

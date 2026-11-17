@@ -1,0 +1,1764 @@
+[
+  {
+    "id": "Pilar_Barrientos_Conde_02_2_hist01",
+    "record_type": "story",
+    "interview_id": "Pilar_Barrientos_Conde_02_2",
+    "speaker": "Pilar Barrientos Conde",
+    "language": "gl",
+    "title": "A escola de palillo da Falaxe",
+    "summary": "De nena, despois da escola, ía a unha escola de palillo onde unha profesora as ensinaba sentadas arredor de cabaletes, dáballes o material e a merenda e ensináballes tamén baile e canto.",
+    "themes": [
+      "escola de palillo",
+      "infancia",
+      "baile"
+    ],
+    "people": [],
+    "places": [
+      "Falaxe"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 23.28,
+        "end": 76.14,
+        "from_sentence": 4,
+        "to_sentence": 13,
+        "transcript_text": "Tamén había escuela para as-- tiñamos a escuela de palillo, que era na Falaxe. Había moitas nenas, e así nuns caballetes, tiñan, eh, uns caballetes sentadas nunha silla. E tiñamos unha profesora que nos ensiñaba. E dábame los alfileres, os fíos, palillos. Ademais, ainda nos daba a merenda. Había unha profesora que che ensiñaba, ou a chamabas ou xa viña ela pola, por alí polas mesas, e así. Tamén, eh, baile. Xa lle ogo, acórdome tamén de ir pa, pa praia. Así, ensiñábanos a, a baile, xa lle ogo, algo. E a cantar."
+      },
+      {
+        "start": 214.38,
+        "end": 245.84,
+        "from_sentence": 40,
+        "to_sentence": 45,
+        "transcript_text": "Dábannos alí a merenda. Despois tamén, se che, como che dixen antes, ensiñábanos a algo de baile. Non era todo palillar, tamén había... Pois non sei, ao mellor dúas, tres horas, pero non, non sei dicirte. Eh, sentados así nunha banqueta. Había como uns caballetes, así cadrados, e todos na volta."
+      }
+    ],
+    "related_topic_ids": [
+      "Pilar_Barrientos_Conde_02_2_seg01",
+      "Pilar_Barrientos_Conde_02_2_seg05"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Só se oen as respostas da entrevistada; as preguntas están cortadas na edición."
+    ],
+    "video_id": null,
+    "source_json": "Pilar_Barrientos_Conde_02_2.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: A escola de palillo da Falaxe\nResumo: De nena, despois da escola, ía a unha escola de palillo onde unha profesora as ensinaba sentadas arredor de cabaletes, dáballes o material e a merenda e ensináballes tamén baile e canto."
+  },
+  {
+    "id": "Pilar_Barrientos_Conde_02_2_hist02",
+    "record_type": "story",
+    "interview_id": "Pilar_Barrientos_Conde_02_2",
+    "speaker": "Pilar Barrientos Conde",
+    "language": "gl",
+    "title": "Xogos nas portas das veciñas",
+    "summary": "As nenas xogaban á corda e á goma nas portas das veciñas, nun barrio coas portas sempre abertas.",
+    "themes": [
+      "infancia",
+      "xogos",
+      "veciñanza"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 82.56,
+        "end": 141.44,
+        "from_sentence": 14,
+        "to_sentence": 24,
+        "transcript_text": "Xuntabámonos e tiñamos o que íamos facer, además de paso, despois quedábamos, para ir xogar ou o que fora. Pois as cousas que, de nosas, pois cando xogábamos, que non-- xogabamos, además non tiñamos nada. A cuerda, a goma, a semana. Eso todo. Está moi bonito, nunca estabas-- non é como agora, que teñen que estar, eh, así con eses xoguetes caros e todo. Era moi bonito. Nós os que xogábamos así na, na portas das, das veciñas. Íamos pa casa dos veciños. Así, iso todo. Bueno, pois así como, como antes, que se, nin se cerraban as portas. Ibas pa casa da túa veciña como se fora a tua."
+      }
+    ],
+    "related_topic_ids": [
+      "Pilar_Barrientos_Conde_02_2_seg02"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Só se oen as respostas da entrevistada; as preguntas están cortadas na edición."
+    ],
+    "video_id": null,
+    "source_json": "Pilar_Barrientos_Conde_02_2.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Xogos nas portas das veciñas\nResumo: As nenas xogaban á corda e á goma nas portas das veciñas, nun barrio coas portas sempre abertas."
+  },
+  {
+    "id": "Pilar_Barrientos_Conde_02_2_hist03",
+    "record_type": "story",
+    "interview_id": "Pilar_Barrientos_Conde_02_2",
+    "speaker": "Pilar Barrientos Conde",
+    "language": "gl",
+    "title": "Acarrexar auga e lavar no río",
+    "summary": "Na casa dos tíos, sen auga corrente, había que encher depósitos nas fontes públicas e ir lavar a roupa ao río.",
+    "themes": [
+      "traballo doméstico",
+      "auga",
+      "lavar no río"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 185.34,
+        "end": 208.46,
+        "from_sentence": 32,
+        "to_sentence": 39,
+        "transcript_text": "Bueno, pero eu donde me crie, na casa duns tíos, tiñan unha taberna. Daquela non había auga. Había nas fontes públicas, pero pouquiño. Había que encher os depósitos de, na casa, de auga. E había que ir a lavar ao río, que non había lavadoras. Que xa é, [ri] xa é traballo."
+      }
+    ],
+    "related_topic_ids": [
+      "Pilar_Barrientos_Conde_02_2_seg04"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Só se oen as respostas da entrevistada; as preguntas están cortadas na edición."
+    ],
+    "video_id": null,
+    "source_json": "Pilar_Barrientos_Conde_02_2.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Acarrexar auga e lavar no río\nResumo: Na casa dos tíos, sen auga corrente, había que encher depósitos nas fontes públicas e ir lavar a roupa ao río."
+  },
+  {
+    "id": "Pilar_Barrientos_Conde_02_2_hist04",
+    "record_type": "story",
+    "interview_id": "Pilar_Barrientos_Conde_02_2",
+    "speaker": "Pilar Barrientos Conde",
+    "language": "gl",
+    "title": "Cine e baile de mocidade",
+    "summary": "De moza ía coas amigas ao cine; antes da película poñían discos e bailaban.",
+    "themes": [
+      "mocidade",
+      "lecer",
+      "baile"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 253.44,
+        "end": 268.2,
+        "from_sentence": 46,
+        "to_sentence": 49,
+        "transcript_text": "De rapaza xa grande, cando, daquelas amigas que salías. Eh, que íbamos, aquí había cine, íamos ao cine. Antes do cine poñíanche discos, bailábamos. Moi ben."
+      }
+    ],
+    "related_topic_ids": [
+      "Pilar_Barrientos_Conde_02_2_seg06"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Só se oen as respostas da entrevistada; as preguntas están cortadas na edición."
+    ],
+    "video_id": null,
+    "source_json": "Pilar_Barrientos_Conde_02_2.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Cine e baile de mocidade\nResumo: De moza ía coas amigas ao cine; antes da película poñían discos e bailaban."
+  },
+  {
+    "id": "Maria_Antelo_Lema_hist01",
+    "record_type": "story",
+    "interview_id": "Maria_Antelo_Lema",
+    "speaker": "María Antelo Lema",
+    "language": "gl",
+    "title": "Á fábrica aos doce anos",
+    "summary": "Aos doce anos unha muller de Camariñas animouna a ir á fábrica, onde se gañaba máis ca palillando.",
+    "themes": [
+      "traballo infantil",
+      "fábrica de conservas"
+    ],
+    "people": [],
+    "places": [
+      "Camariñas"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 19.74,
+        "end": 43.08,
+        "from_sentence": 4,
+        "to_sentence": 9,
+        "transcript_text": "Bueno, e despois dos doce anos, ven unha de Camariñas e dixo: \"Vén tá fábrica\". Non, primeiro ensinou a palillar señora Luísa de Pryn, a nai da Pelada. Acórdeste? Bueno, e sentadiña no suelo coas pernas así, e un banco, e palillando. Bueno, e despois foi cando fun pa a fábrica, aos doce anos. Ganabas máis cartos, claro."
+      }
+    ],
+    "related_topic_ids": [
+      "Maria_Antelo_Lema_seg01"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "As pasaxes de 02:25-03:18 e 06:07-06:52 son case ininteligibles na transcrición; convén revisalas co audio."
+    ],
+    "video_id": null,
+    "source_json": "Maria_Antelo_Lema.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Á fábrica aos doce anos\nResumo: Aos doce anos unha muller de Camariñas animouna a ir á fábrica, onde se gañaba máis ca palillando."
+  },
+  {
+    "id": "Maria_Antelo_Lema_hist02",
+    "record_type": "story",
+    "interview_id": "Maria_Antelo_Lema",
+    "speaker": "María Antelo Lema",
+    "language": "gl",
+    "title": "O título de bolillo en Santiago",
+    "summary": "Xa casada e en Muxía, daba clases de bolillo e foi sacar o título a Santiago.",
+    "themes": [
+      "ensino do encaixe"
+    ],
+    "people": [
+      "Fraga"
+    ],
+    "places": [
+      "Muxía",
+      "Santiago"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 44.22,
+        "end": 53.42,
+        "from_sentence": 10,
+        "to_sentence": 11,
+        "transcript_text": "E cando me casei, pois xa vin pa Muxía e seguín palillando, dando clases de bolecho. E fun quitar o título a Santiago con Fraga."
+      }
+    ],
+    "related_topic_ids": [
+      "Maria_Antelo_Lema_seg01"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "As pasaxes de 02:25-03:18 e 06:07-06:52 son case ininteligibles na transcrición; convén revisalas co audio."
+    ],
+    "video_id": null,
+    "source_json": "Maria_Antelo_Lema.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: O título de bolillo en Santiago\nResumo: Xa casada e en Muxía, daba clases de bolillo e foi sacar o título a Santiago."
+  },
+  {
+    "id": "Maria_Antelo_Lema_hist03",
+    "record_type": "story",
+    "interview_id": "Maria_Antelo_Lema",
+    "speaker": "María Antelo Lema",
+    "language": "gl",
+    "title": "Pechada no váter por medo ao xefe",
+    "summary": "Sendo xefa na fábrica, o xefe pillouna nun comentario e ela agochouse no váter; ao final non lle descontaron nada.",
+    "themes": [
+      "fábrica de conservas",
+      "humor"
+    ],
+    "people": [
+      "Andrés o Vello",
+      "Tiyuca",
+      "señor Merodallo"
+    ],
+    "places": [],
+    "approx_date": null,
+    "confidence": "baixa: transcrición moi confusa",
+    "sources": [
+      {
+        "start": 145.98,
+        "end": 198.72,
+        "from_sentence": 28,
+        "to_sentence": 50,
+        "transcript_text": "A don Andrés o Vello coñecía, a verdade. Vou che contar todo, eh. Ven e dime el: \"Peixa, peixa o diminutivo de meus pais\". Ven, colle dúas mulleres e fora pa outro día de San Jorge, remata a festa. Colle dúas mulleres e lévasse pa baixo, poñellas as caixas encima do arfunil, a conserva. Bueno, e dime Tiyuca, que está casada con... [ri] Dime Tiyuca. Tamén o pensei, Merin, eh. Vaio subindo o tableiro, estaba mandando neles, e subindo o tableiro e dixen eu: \"Ai, Tiyuca, cando quente vai o casto do negro. Mira ese barco entrando e lavai\". E por encima Andrés o Vello. Eu corre, corre parriba, encerréime no váter, orinando por min, eh, orinando por min. [ri] Cheo. Ora sal que xa está. Mercheu. E dime: \"Lévelo na sancre, muller. Eres como teu pai\". Cheguei á oficina e estaba señor Merodallo, es... Se acorda de el? Apunteime tantas de mandóra, tantas de... Non me descontou nada."
+      }
+    ],
+    "related_topic_ids": [
+      "Maria_Antelo_Lema_seg03"
+    ],
+    "quality_flags": [
+      {
+        "kind": "low_transcription_quality",
+        "reason": "Transcripción casi ininteligible (02:25–03:18)",
+        "affected_interval": {
+          "start": 145.0,
+          "end": 198.0
+        }
+      },
+      {
+        "kind": "annotation_confidence",
+        "value": "baixa: transcrición moi confusa"
+      }
+    ],
+    "transcription_notes": [
+      "As pasaxes de 02:25-03:18 e 06:07-06:52 son case ininteligibles na transcrición; convén revisalas co audio."
+    ],
+    "video_id": null,
+    "source_json": "Maria_Antelo_Lema.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Pechada no váter por medo ao xefe\nResumo: Sendo xefa na fábrica, o xefe pillouna nun comentario e ela agochouse no váter; ao final non lle descontaron nada."
+  },
+  {
+    "id": "Maria_Antelo_Lema_hist04",
+    "record_type": "story",
+    "interview_id": "Maria_Antelo_Lema",
+    "speaker": "María Antelo Lema",
+    "language": "gl",
+    "title": "O punto «antena» aprendido en Carnés",
+    "summary": "Nunha festa en Carnés viu a unha muller de loito facer un punto chamado «antena» e ao chegar á casa reproduciuno pola súa conta.",
+    "themes": [
+      "aprendizaxe do encaixe",
+      "puntos"
+    ],
+    "people": [],
+    "places": [
+      "Carnés"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 247.18,
+        "end": 277.38,
+        "from_sentence": 60,
+        "to_sentence": 70,
+        "transcript_text": "E íamos a Carnés á festa que tiña unha prima casada en Carnés. E había unha señoriña que lle morrera un fillo espedazado. E estaba facendo... Saíu pa fóra, dende que se foi á misa todos, e estaba alí, nun furado, casa moada. E vinlle aquel punte e digolle: \"Señora, que punte é ese?\" E dime ela: \"Antena, é meu filliño\". Pero eu figa, figa, figa. Chegueiña a casa e fun ao roeiro, collín uns couciños que non me chafaban os pelillos, de pino, bolille o fío. Pois ten que ser así. Pois ten que ser así. Pelien, pelien, quiteilo."
+      }
+    ],
+    "related_topic_ids": [
+      "Maria_Antelo_Lema_seg05"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "As pasaxes de 02:25-03:18 e 06:07-06:52 son case ininteligibles na transcrición; convén revisalas co audio."
+    ],
+    "video_id": null,
+    "source_json": "Maria_Antelo_Lema.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: O punto «antena» aprendido en Carnés\nResumo: Nunha festa en Carnés viu a unha muller de loito facer un punto chamado «antena» e ao chegar á casa reproduciuno pola súa conta."
+  },
+  {
+    "id": "Maria_Antelo_Lema_hist05",
+    "record_type": "story",
+    "interview_id": "Maria_Antelo_Lema",
+    "speaker": "María Antelo Lema",
+    "language": "gl",
+    "title": "Bañar a conserva ata as catro da mañá",
+    "summary": "Nos baños da conserva traballaba soa controlando a calor; segundo o tipo de lata levaba de tres a seis horas e ás veces saía de madrugada; o seu pai ía buscala.",
+    "themes": [
+      "fábrica de conservas",
+      "traballo nocturno"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 307.24,
+        "end": 341.58,
+        "from_sentence": 79,
+        "to_sentence": 89,
+        "transcript_text": "Eu despois estiven nos baños, que os baños eran bañar a conserva. Eran catro furados e había que andar dun lado pa outro cando se che pasara a calor, se non perdía a conserva toda. E despois que estiven nos baños, estuve moi ben. E cobraba o dobre. Porque che daban o dobre, si. Hasta que me casei estiven nos baños. Amás fun ame, e nese entretanto eu fun ame. Ame. En compañía. Menos nos baños, eh, que nos baños estaba eu sola. Estaba eu sola e que non me pasara o termómetro da, da calor."
+      },
+      {
+        "start": 437.72,
+        "end": 459.08,
+        "from_sentence": 119,
+        "to_sentence": 127,
+        "transcript_text": "Más difícil é cando quedaba bañando a conserva. E ao mellor sería catro baños. Así, unha conserva, ao mellor se era oval, levábache tres horas. Se era pandereta, sabes que é pandereta? Levábache catro horas. Se era pandereta o dobre, levaba seis horas. Entonces eu tiña que quedar bañando. E teño salido, che digo, ás catro da mañán. Viña meu pai buscarme, eh."
+      }
+    ],
+    "related_topic_ids": [
+      "Maria_Antelo_Lema_seg06",
+      "Maria_Antelo_Lema_seg08"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "As pasaxes de 02:25-03:18 e 06:07-06:52 son case ininteligibles na transcrición; convén revisalas co audio."
+    ],
+    "video_id": null,
+    "source_json": "Maria_Antelo_Lema.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Bañar a conserva ata as catro da mañá\nResumo: Nos baños da conserva traballaba soa controlando a calor; segundo o tipo de lata levaba de tres a seis horas e ás veces saía de madrugada; o seu pai ía buscala."
+  },
+  {
+    "id": "Maria_Antelo_Lema_hist06",
+    "record_type": "story",
+    "interview_id": "Maria_Antelo_Lema",
+    "speaker": "María Antelo Lema",
+    "language": "gl",
+    "title": "«Pois faga usted, señora»",
+    "summary": "A quen lle di que unha mantelería é cara, respóndelle que a faga ela; ninguén recoñece as horas de traballo.",
+    "themes": [
+      "prezo",
+      "recoñecemento do traballo"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 583.1,
+        "end": 609.12,
+        "from_sentence": 151,
+        "to_sentence": 158,
+        "transcript_text": "Isto nada é as horas que leva. E dinche: Que caro é este mantelería. Pois faga usted, señora. E sí, eh. Nadie. Se isto morrerse, pois non había nada encaixe. O traballo non o reconocen. Aí ves que cando entreguei moita xente aquí, ai que caro é."
+      }
+    ],
+    "related_topic_ids": [
+      "Maria_Antelo_Lema_seg09"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "As pasaxes de 02:25-03:18 e 06:07-06:52 son case ininteligibles na transcrición; convén revisalas co audio."
+    ],
+    "video_id": null,
+    "source_json": "Maria_Antelo_Lema.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: «Pois faga usted, señora»\nResumo: A quen lle di que unha mantelería é cara, respóndelle que a faga ela; ninguén recoñece as horas de traballo."
+  },
+  {
+    "id": "MariaJoseLiresMartinez_hist01",
+    "record_type": "story",
+    "interview_id": "MariaJoseLiresMartinez",
+    "speaker": "María José Lires Martínez",
+    "language": "gl",
+    "title": "A escola de palillo da Falange na praia",
+    "summary": "Despois da escola ían palillar á Falange, á beira da praia, cunha señora que as ensinaba por mesas, lles daba merenda, lles poñía cine e lles ensinaba baile galego.",
+    "themes": [
+      "escola de palillo",
+      "Falange",
+      "infancia",
+      "baile"
+    ],
+    "people": [],
+    "places": [
+      "Falange",
+      "Casa do Mar da Coruña"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 17.06,
+        "end": 74.96,
+        "from_sentence": 3,
+        "to_sentence": 14,
+        "transcript_text": "Cando saía da escola, ía á casa a buscar o bocadllo e daquela despois íamos para a Falange, para palillar, que nos ensinaban a palillar unha señora. Aquí abaixo na praia. Tres ou catro en cada mesa. Entonces ela ía por mesa e íamos así. E cando non sabías, ao mellor chamábaslle para que viñera. E así. E para o de merenda, inda que leváramos o bocadllo de a casa, dábanos tamén un-- cando se había como unha fariña, e tamén nos daba, tamén a comíamos alí. Viamos como cine, nunha pantalla que metía tamén. E despois tamén xogabamos un pouco porque eramos nenas. E pouco máis. Despois o de sempre, para a casa outra vez a xogar na calle, porque antes non había outra cousa. Xogabas na porta e todo eso."
+      },
+      {
+        "start": 182.72,
+        "end": 203.8,
+        "from_sentence": 39,
+        "to_sentence": 42,
+        "transcript_text": "Sí, unha señora sola, sí. Inda nos ensinaba tamén a bailar, que non me daba conta, de gallegas, que xa temos ido bailar a Casa do Mar da Coruña. No, desde que estabas na escola podías saír. Non había unha idade."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseLiresMartinez_seg01",
+      "MariaJoseLiresMartinez_seg04"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [],
+    "video_id": null,
+    "source_json": "MariaJoseLiresMartinez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: A escola de palillo da Falange na praia\nResumo: Despois da escola ían palillar á Falange, á beira da praia, cunha señora que as ensinaba por mesas, lles daba merenda, lles poñía cine e lles ensinaba baile galego."
+  },
+  {
+    "id": "MariaJoseLiresMartinez_hist02",
+    "record_type": "story",
+    "interview_id": "MariaJoseLiresMartinez",
+    "speaker": "María José Lires Martínez",
+    "language": "gl",
+    "title": "«Franco, dame pan blanco»",
+    "summary": "Por cantar «Franco, dame pan blanco» a profesora mandouna para a casa.",
+    "themes": [
+      "franquismo",
+      "censura",
+      "infancia"
+    ],
+    "people": [
+      "Franco"
+    ],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 120.64,
+        "end": 135.66,
+        "from_sentence": 24,
+        "to_sentence": 28,
+        "transcript_text": "Bueno, rir non, pero unha vez cantan, eh: \"Franco, dame pan blanco\", ela collime e dixo: \"María José, para casa\". Por dicir eso, eh. Non se podía, fíxate. E claro, eu que sabía eu. Bué, salime a punto, pero puxome para a casa."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseLiresMartinez_seg02"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [],
+    "video_id": null,
+    "source_json": "MariaJoseLiresMartinez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: «Franco, dame pan blanco»\nResumo: Por cantar «Franco, dame pan blanco» a profesora mandouna para a casa."
+  },
+  {
+    "id": "MariaJoseLiresMartinez_hist03",
+    "record_type": "story",
+    "interview_id": "MariaJoseLiresMartinez",
+    "speaker": "María José Lires Martínez",
+    "language": "gl",
+    "title": "A avoa á aldea con peixe",
+    "summary": "A súa avoa ía á aldea con peixe e ao percebe; na casa plantaban patacas para saír adiante.",
+    "themes": [
+      "economía familiar",
+      "venda ambulante",
+      "marisqueo"
+    ],
+    "people": [],
+    "places": [
+      "aldea"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 209.96,
+        "end": 227.16,
+        "from_sentence": 43,
+        "to_sentence": 45,
+        "transcript_text": "Eu, por exemplo, non, pero eu acórdome a, a miña nai, a máxa-- a case a maioría, que facían para ir vender, para comprar aunque fora un coche de pan, porque outra cousa non había daquela. Ou ían á aldea, porque acórdome que miña avoa tamén ía á aldea con peixe, e miña avoa foi ao percebe. Poñían patacas e todos es-todo eso."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseLiresMartinez_seg05"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [],
+    "video_id": null,
+    "source_json": "MariaJoseLiresMartinez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: A avoa á aldea con peixe\nResumo: A súa avoa ía á aldea con peixe e ao percebe; na casa plantaban patacas para saír adiante."
+  },
+  {
+    "id": "MariaJoseLiresMartinez_hist04",
+    "record_type": "story",
+    "interview_id": "MariaJoseLiresMartinez",
+    "speaker": "María José Lires Martínez",
+    "language": "gl",
+    "title": "O secadoiro de congro",
+    "summary": "A súa nai traballou toda a vida no secadoiro de congro e ela foi axudala de maior.",
+    "themes": [
+      "traballo",
+      "congro",
+      "economía familiar"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 233.0,
+        "end": 242.58,
+        "from_sentence": 46,
+        "to_sentence": 46,
+        "transcript_text": "Do encaixe pouco podían comer, porque miña nai tamén traballou sempre no fu-- no secador de congrio, toda a vida, que eu despois cando fun máis grande tamén fun de axudar."
+      },
+      {
+        "start": 269.1,
+        "end": 296.0,
+        "from_sentence": 52,
+        "to_sentence": 56,
+        "transcript_text": "Claro, eu cando fun un pouco máis grande fun de axudar a miña nai, que de se a ti, que traballou toda a vida no secador de congrio. Eramos varios. Ai, moi ben, porque eu na casa non facía porque tiña miña avoa. Entón, eso de comer, era todo rollo ese, xa facía ela todo. Nós, por exemplo, chegabamos do almazán do congrio, xa tiñamos a comida feita."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseLiresMartinez_seg05"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [],
+    "video_id": null,
+    "source_json": "MariaJoseLiresMartinez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: O secadoiro de congro\nResumo: A súa nai traballou toda a vida no secadoiro de congro e ela foi axudala de maior."
+  },
+  {
+    "id": "MariaJoseLiresMartinez_hist05",
+    "record_type": "story",
+    "interview_id": "MariaJoseLiresMartinez",
+    "speaker": "María José Lires Martínez",
+    "language": "gl",
+    "title": "As palilleiras e os mozos",
+    "summary": "Nas palilladas da súa nai, cando chegaban os mozos, deixaban a almofada e marchaban con eles.",
+    "themes": [
+      "palilladas",
+      "mocerío",
+      "sociabilidade"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 309.44,
+        "end": 325.14,
+        "from_sentence": 58,
+        "to_sentence": 63,
+        "transcript_text": "A ver, eu acórdome de sentir tamén a miña nai a todo cando ían, que palillaban. Ian máis ben que conto para, por culpa dos mozos, non? Que estaban palillando, pero en vez de estar palillando, atendían os mozos cando viñan xunta delas. Entón, en vez de palillar, xa collían e marchaban [ri] con eles."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseLiresMartinez_seg06"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [],
+    "video_id": null,
+    "source_json": "MariaJoseLiresMartinez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: As palilleiras e os mozos\nResumo: Nas palilladas da súa nai, cando chegaban os mozos, deixaban a almofada e marchaban con eles."
+  },
+  {
+    "id": "Carmen_Vileda_Rey_hist01",
+    "record_type": "story",
+    "interview_id": "Carmen_Vileda_Rey",
+    "speaker": "Carmen Vileda Rey",
+    "language": "gl",
+    "title": "Lavar a roupa no río",
+    "summary": "Como asistenta lavaba a roupa no río: deixábaa a clarear, volvía recollela e aclarala, en días de chuvia e vento cos pés mollados.",
+    "themes": [
+      "traballo doméstico",
+      "lavar no río",
+      "asistenta"
+    ],
+    "people": [],
+    "places": [
+      "río"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 57.66,
+        "end": 94.1,
+        "from_sentence": 8,
+        "to_sentence": 12,
+        "transcript_text": "Bueno, ca-- xa cando empecei a traballar, xa empecei a, a traballar nas casas de asistenta, a carregar agua, a lavar roupa, ao río, eso. Cosas de, dos pueblos de antes que non habían lavadoras. Pois empezábamos por os horarios de lavar a roupa ao río. Poñiámola a clareo, viñamos a casa con roupa escura lavada. Despois íbamos outra vez a recoller a roupa que estaba a clareo, volviámola a pasar no río e volvíamos a vir pa casa con ela pa poñela a secar."
+      },
+      {
+        "start": 129.08,
+        "end": 143.6,
+        "from_sentence": 19,
+        "to_sentence": 22,
+        "transcript_text": "Uns días máis duros ca outros, si, porque, por exemplo, cando chovía e había que facer o mesmo trabalho, era moi duro. Era moito vento, moita chuvia, des-- eh, os, os pés mollados. Eh, bueno, todo eso era bastante, bastante duro. E non habían a roupa que hai agora."
+      }
+    ],
+    "related_topic_ids": [
+      "Carmen_Vileda_Rey_seg01",
+      "Carmen_Vileda_Rey_seg02"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «panillar/penillar» por «palillar» en varios puntos."
+    ],
+    "video_id": null,
+    "source_json": "Carmen_Vileda_Rey.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Lavar a roupa no río\nResumo: Como asistenta lavaba a roupa no río: deixábaa a clarear, volvía recollela e aclarala, en días de chuvia e vento cos pés mollados."
+  },
+  {
+    "id": "Carmen_Vileda_Rey_hist02",
+    "record_type": "story",
+    "interview_id": "Carmen_Vileda_Rey",
+    "speaker": "Carmen Vileda Rey",
+    "language": "gl",
+    "title": "Palilladas con luz de carburo",
+    "summary": "De noite as mulleres xuntábanse a palillar con luz de carburo ata a unha; comentábase a vida do pobo, contábanse contos e oíase a radio.",
+    "themes": [
+      "palilladas",
+      "sociabilidade",
+      "noite"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 100.18,
+        "end": 129.04,
+        "from_sentence": 13,
+        "to_sentence": 18,
+        "transcript_text": "Sí, eh, entón si, tamén se facían xuntanzas de noite. Panillaban con luz de carburo. Pois era un, unha ocupación, un entretenimento. E aí facían un montón de comentarios das cousas. Era o periódico. [risinho]"
+      },
+      {
+        "start": 383.49,
+        "end": 469.63,
+        "from_sentence": 63,
+        "to_sentence": 74,
+        "transcript_text": "Ainda se penillaba hasta a unha da mañana nas, nas penilladas. Claro, bueno, eu aí non, non vivín porque eu familia non, non tiña en ese momento. Tiña miña nai, pero miña nai era a que se ocupaba da casa, de, de, de todo. Entonces eu aí non, non podo explicar porque non, non teño conocimiento. Contaban cuentos, sacabanlle a conduta a algunhas personas do pueblo [ri] . Ou sea, era, era máis ben para traballar, pero ao mismo tiempo distraíanse falando, escoitando a radio a veces. Desde que te levantabas ás oito, depende, a veces ás sete da mañana xa me tiña que levantar, hasta-- se íamos á xuntanza, hasta a unha da mañana. Bueno, eramos jóvenes e non nos dábamos de conta. Sabíamos todo de memoria, claro. Aprendíamos todo de memoria, non..."
+      }
+    ],
+    "related_topic_ids": [
+      "Carmen_Vileda_Rey_seg02",
+      "Carmen_Vileda_Rey_seg06"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «panillar/penillar» por «palillar» en varios puntos."
+    ],
+    "video_id": null,
+    "source_json": "Carmen_Vileda_Rey.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Palilladas con luz de carburo\nResumo: De noite as mulleres xuntábanse a palillar con luz de carburo ata a unha; comentábase a vida do pobo, contábanse contos e oíase a radio."
+  },
+  {
+    "id": "Carmen_Vileda_Rey_hist03",
+    "record_type": "story",
+    "interview_id": "Carmen_Vileda_Rey",
+    "speaker": "Carmen Vileda Rey",
+    "language": "gl",
+    "title": "Contos de pantasmas nas silveiras",
+    "summary": "Nas xuntanzas contaban historias de pantasmas que aparecían polas silveiras; as nenas rían e críano todo.",
+    "themes": [
+      "tradición oral",
+      "pantasmas"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 168.5,
+        "end": 190.08,
+        "from_sentence": 27,
+        "to_sentence": 31,
+        "transcript_text": "Claro, contaban un montón de contos, de, de fantasmas que aparecían po-polas silveiras e cousas así. A nós eso facíanos muito rir, claro. Tampouco non buscabamos se era verdade ou mentira. Creíamos todo. [risinho]"
+      }
+    ],
+    "related_topic_ids": [
+      "Carmen_Vileda_Rey_seg02"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «panillar/penillar» por «palillar» en varios puntos."
+    ],
+    "video_id": null,
+    "source_json": "Carmen_Vileda_Rey.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Contos de pantasmas nas silveiras\nResumo: Nas xuntanzas contaban historias de pantasmas que aparecían polas silveiras; as nenas rían e críano todo."
+  },
+  {
+    "id": "Carmen_Vileda_Rey_hist04",
+    "record_type": "story",
+    "interview_id": "Carmen_Vileda_Rey",
+    "speaker": "Carmen Vileda Rey",
+    "language": "gl",
+    "title": "A televisión no bar",
+    "summary": "Cando chegou a televisión ían vela ao bar e foi un gran entretemento.",
+    "themes": [
+      "lecer",
+      "televisión"
+    ],
+    "people": [],
+    "places": [
+      "bar"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 221.06,
+        "end": 233.98,
+        "from_sentence": 36,
+        "to_sentence": 38,
+        "transcript_text": "Eh, e bueno, por exemplo, cando nos chegou a televisión, disfrutamoso muito. Empezamos a ir a ver a televisión ao bar. E eso, pois, foi un entretenimento muy ben."
+      }
+    ],
+    "related_topic_ids": [
+      "Carmen_Vileda_Rey_seg03"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «panillar/penillar» por «palillar» en varios puntos."
+    ],
+    "video_id": null,
+    "source_json": "Carmen_Vileda_Rey.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: A televisión no bar\nResumo: Cando chegou a televisión ían vela ao bar e foi un gran entretemento."
+  },
+  {
+    "id": "Carmen_Vileda_Rey_hist05",
+    "record_type": "story",
+    "interview_id": "Carmen_Vileda_Rey",
+    "speaker": "Carmen Vileda Rey",
+    "language": "gl",
+    "title": "Unha almofadiña para entretela",
+    "summary": "Como a súa nai palillaba no inverno, aos tres anos e medio puxéronlle unha almofadiña para entretela; despois pasou a ser obriga.",
+    "themes": [
+      "aprendizaxe do encaixe",
+      "infancia"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 27.98,
+        "end": 51.38,
+        "from_sentence": 5,
+        "to_sentence": 7,
+        "transcript_text": "Tres anos e medio. Na casa, ca miña nai. Pois cando mamá se sentaba a panillar, puñíame ao lado dela e ensiñábame, explicábame e o ía facendo."
+      },
+      {
+        "start": 258.08,
+        "end": 288.3,
+        "from_sentence": 43,
+        "to_sentence": 47,
+        "transcript_text": "A ver, a min empeza-- eu empecei pronto porque miña nai iba panillada. Por eso sei que era aos tres anos e medio. Porque como era panillada no inverno, pois, eh, puxeron unha almoadiña pa entretenerme, pero despois era en serio. Bueno, empezamos por natural, por entretenimento, pa, pa que deixar a panillar as outros. E despois era obrigación."
+      }
+    ],
+    "related_topic_ids": [
+      "Carmen_Vileda_Rey_seg01",
+      "Carmen_Vileda_Rey_seg04"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «panillar/penillar» por «palillar» en varios puntos."
+    ],
+    "video_id": null,
+    "source_json": "Carmen_Vileda_Rey.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Unha almofadiña para entretela\nResumo: Como a súa nai palillaba no inverno, aos tres anos e medio puxéronlle unha almofadiña para entretela; despois pasou a ser obriga."
+  },
+  {
+    "id": "MariaJesusPensadoPerez_hist01",
+    "record_type": "story",
+    "interview_id": "MariaJesusPensadoPerez",
+    "speaker": "María Jesús Pensado Pérez",
+    "language": "gl",
+    "title": "A máquina Alfa de 47.000 pesetas",
+    "summary": "Ao pasar á costura de Esther, o señor Julio vendeulles a última máquina Alfa que había por 47.000 pesetas.",
+    "themes": [
+      "costura",
+      "economía familiar"
+    ],
+    "people": [
+      "Esther",
+      "señor Julio"
+    ],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 154.94,
+        "end": 172.12,
+        "from_sentence": 19,
+        "to_sentence": 21,
+        "transcript_text": "Con Esther, cos doce anos non me deixaron ir máis á Falange, miña nai púxome na costura de Esther. Aí chegou o señor Julio, que foi o que nos vendiu a máquina de coser, unha Alfa, a última que había. Valéronlle aos meus pais corenta e sete mil pesetas."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJesusPensadoPerez_seg02"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «pelillar/perlí/pejar» por «palillar» en varios puntos.",
+      "«cerdiñas» probablemente sexa «sardiñas»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJesusPensadoPerez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: A máquina Alfa de 47.000 pesetas\nResumo: Ao pasar á costura de Esther, o señor Julio vendeulles a última máquina Alfa que había por 47.000 pesetas."
+  },
+  {
+    "id": "MariaJesusPensadoPerez_hist02",
+    "record_type": "story",
+    "interview_id": "MariaJesusPensadoPerez",
+    "speaker": "María Jesús Pensado Pérez",
+    "language": "gl",
+    "title": "Retito, a intermediaria",
+    "summary": "A súa nai madrugaba os sábados cando viña Retito para venderlle panos; Retito levaba o encaixe á Coruña sen que soubesen a onde ía.",
+    "themes": [
+      "venda do encaixe",
+      "intermediarias"
+    ],
+    "people": [
+      "Retito"
+    ],
+    "places": [
+      "Coruña"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 379.33,
+        "end": 408.13,
+        "from_sentence": 59,
+        "to_sentence": 63,
+        "transcript_text": "E á parte, eu sempre lle vía unha queixiña e dicíame: \"Ai, vai vir Retito\". E tiña os seus pañuelos alí e xa se levantaba aos sabedos moi cedo cando sabía que viña Retito, para ir vender ao mellor quince, vinte. No momento que non tiña nada que facer, entre comillas, eh, puñíase a pelillar. Aí va facendo, e oías. E como dicía ela, se gañan cinco pesos dun lado e dez do outro, son quince."
+      },
+      {
+        "start": 478.01,
+        "end": 479.71,
+        "from_sentence": 77,
+        "to_sentence": 77,
+        "transcript_text": "Claro, Retito era intermediaria."
+      },
+      {
+        "start": 1014.36,
+        "end": 1024.72,
+        "from_sentence": 178,
+        "to_sentence": 179,
+        "transcript_text": "Nós o retito levábamo para Coruña, non sabíamos que se facía con el. Supoñiamos que o vendería, pero non sabías nin donde nin nada."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJesusPensadoPerez_seg05",
+      "MariaJesusPensadoPerez_seg10"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «pelillar/perlí/pejar» por «palillar» en varios puntos.",
+      "«cerdiñas» probablemente sexa «sardiñas»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJesusPensadoPerez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Retito, a intermediaria\nResumo: A súa nai madrugaba os sábados cando viña Retito para venderlle panos; Retito levaba o encaixe á Coruña sen que soubesen a onde ía."
+  },
+  {
+    "id": "MariaJesusPensadoPerez_hist03",
+    "record_type": "story",
+    "interview_id": "MariaJesusPensadoPerez",
+    "speaker": "María Jesús Pensado Pérez",
+    "language": "gl",
+    "title": "Á fábrica aos catorce sen que a nai o soubese",
+    "summary": "Aos catorce deixou os estudos e foi para a fábrica sen llo dicir á súa nai, que quería que estudase; gañaba 500 pesetas ao día e iso axudou na casa tras a morte do pai.",
+    "themes": [
+      "traballo",
+      "fábrica",
+      "familia"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 414.65,
+        "end": 442.61,
+        "from_sentence": 64,
+        "to_sentence": 71,
+        "transcript_text": "Home, por exemplo, cando eu aos catorce anos de marchando, que non lle quixen ir pa a escola e fun sen ela saber pa fábrica, daquela pagábanme quinientas pesetas ao día. E poi dicía: \"Mela, ti non...\". Primeiro non quería, que quería que estudiare. E dixen: \"Ño, mamá, vas gastar os cartos no, nos... Eu non quero estudar\". E marchan pa fábrica. E poi dicía: \"Mela, non ves? Xa co que gañamos tía máis eu á semana, xa non entramos no dos dous irmáns\", porque meu pai xa morrera."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJesusPensadoPerez_seg05"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «pelillar/perlí/pejar» por «palillar» en varios puntos.",
+      "«cerdiñas» probablemente sexa «sardiñas»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJesusPensadoPerez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Á fábrica aos catorce sen que a nai o soubese\nResumo: Aos catorce deixou os estudos e foi para a fábrica sen llo dicir á súa nai, que quería que estudase; gañaba 500 pesetas ao día e iso axudou na casa tras a morte do pai."
+  },
+  {
+    "id": "MariaJesusPensadoPerez_hist04",
+    "record_type": "story",
+    "interview_id": "MariaJesusPensadoPerez",
+    "speaker": "María Jesús Pensado Pérez",
+    "language": "gl",
+    "title": "A gravación na costura",
+    "summary": "Un día gravaron as rapazas da costura e sorprendéronse do barullo que facían falando dos seus mozos.",
+    "themes": [
+      "costura",
+      "sociabilidade",
+      "humor"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 711.75,
+        "end": 740.5,
+        "from_sentence": 117,
+        "to_sentence": 123,
+        "transcript_text": "como cando falabamos dos mozos na costura. Poñíamonos todas a un dia estar, gravounos. E cando acabamos, dime: \"Agora sentádevos\", porque tiñamos que limpar, eh? Tamén acabar de antes de marchar da costura. Pois o noso radio case, dixen eu: \"Pero nós facemos todo ese ruído? Foi todo desde que viñeste\". Claro, falábamos do que lle pasaba a aquela co mozo, outro co, co outro mozo."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJesusPensadoPerez_seg08"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «pelillar/perlí/pejar» por «palillar» en varios puntos.",
+      "«cerdiñas» probablemente sexa «sardiñas»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJesusPensadoPerez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: A gravación na costura\nResumo: Un día gravaron as rapazas da costura e sorprendéronse do barullo que facían falando dos seus mozos."
+  },
+  {
+    "id": "MariaJesusPensadoPerez_hist05",
+    "record_type": "story",
+    "interview_id": "MariaJesusPensadoPerez",
+    "speaker": "María Jesús Pensado Pérez",
+    "language": "gl",
+    "title": "Reconciliarse co mozo a porta pechada",
+    "summary": "Os luns, se discutira co seu mozo, que viña en moto, as compañeiras mandábana fóra e pechaban a porta para que se arranxasen.",
+    "themes": [
+      "mocerío",
+      "compañeirismo"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 741.34,
+        "end": 752.02,
+        "from_sentence": 124,
+        "to_sentence": 125,
+        "transcript_text": "Os luns cando eu discutía como o home, viña na moto e elas mandabanme ir para fora e despois fechabanme a porta para que me puxera ben con el. Eramos moi..."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJesusPensadoPerez_seg08"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «pelillar/perlí/pejar» por «palillar» en varios puntos.",
+      "«cerdiñas» probablemente sexa «sardiñas»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJesusPensadoPerez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Reconciliarse co mozo a porta pechada\nResumo: Os luns, se discutira co seu mozo, que viña en moto, as compañeiras mandábana fóra e pechaban a porta para que se arranxasen."
+  },
+  {
+    "id": "MariaJesusPensadoPerez_hist06",
+    "record_type": "story",
+    "interview_id": "MariaJesusPensadoPerez",
+    "speaker": "María Jesús Pensado Pérez",
+    "language": "gl",
+    "title": "O loito, o baile e a fábrica",
+    "summary": "A súa nai quitoulle o loito polo pai e deixouna ir ao baile, pero tiña que madrugar para a fábrica: se non ía, non bailaba.",
+    "themes": [
+      "loito",
+      "mocidade",
+      "fábrica"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 772.52,
+        "end": 806.72,
+        "from_sentence": 128,
+        "to_sentence": 133,
+        "transcript_text": "Home, pois a min o más difícil era cando me empezou a deixar miña nai. Me sacou o luto do meu pai e me deixou ir ao baile. Despois, cando tiña que abrir un ollo e o outro non ás seis e media da mañán para ir para a fábrica de Serdeires. Aí si que era... Pois abrir un ollo e outro non e dicir: \"Susa, vaite para a fábrica, senón, senón para a semana non bailas\". [ri]"
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJesusPensadoPerez_seg08"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «pelillar/perlí/pejar» por «palillar» en varios puntos.",
+      "«cerdiñas» probablemente sexa «sardiñas»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJesusPensadoPerez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: O loito, o baile e a fábrica\nResumo: A súa nai quitoulle o loito polo pai e deixouna ir ao baile, pero tiña que madrugar para a fábrica: se non ía, non bailaba."
+  },
+  {
+    "id": "MariaJesusPensadoPerez_hist07",
+    "record_type": "story",
+    "interview_id": "MariaJesusPensadoPerez",
+    "speaker": "María Jesús Pensado Pérez",
+    "language": "gl",
+    "title": "Intercambio de comida cos veciños",
+    "summary": "A veciña comía caldo na súa casa e ela comía a costeleta na da veciña; eran coma unha familia.",
+    "themes": [
+      "veciñanza",
+      "comida"
+    ],
+    "people": [
+      "Gelines",
+      "Joliña"
+    ],
+    "places": [
+      "Coruña"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 855.12,
+        "end": 889.02,
+        "from_sentence": 144,
+        "to_sentence": 150,
+        "transcript_text": "Xa lle eu, por exemplo, nós tiñamos uns veciños, eh, Gelines, que ía todos os días a Coruña co marisco. O home tiña un barco e eu iba alí. Sempre estivemos como unha familia. A-- dicíalle a Joliña: \"Joder, vos sempre tantas costilletas a tantos bistecs\". E dicíame: \"Ela sí, a nós nunca comemos o caldo nin a fabada como comedes vós\". E ao mellor, pois, eh, Jola traía a costilleta para a casa de miña nai. Ela comía o caldo e eu comía a costilleta."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJesusPensadoPerez_seg09"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «pelillar/perlí/pejar» por «palillar» en varios puntos.",
+      "«cerdiñas» probablemente sexa «sardiñas»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJesusPensadoPerez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Intercambio de comida cos veciños\nResumo: A veciña comía caldo na súa casa e ela comía a costeleta na da veciña; eran coma unha familia."
+  },
+  {
+    "id": "MariaJesusPensadoPerez_hist08",
+    "record_type": "story",
+    "interview_id": "MariaJesusPensadoPerez",
+    "speaker": "María Jesús Pensado Pérez",
+    "language": "gl",
+    "title": "Zaira e a louza",
+    "summary": "Puxo a súa neta a lavar a louza como facía a súa avoa, e a familia escandalizouse.",
+    "themes": [
+      "educación",
+      "cambio xeracional"
+    ],
+    "people": [
+      "Zaira"
+    ],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 910.72,
+        "end": 969.28,
+        "from_sentence": 155,
+        "to_sentence": 169,
+        "transcript_text": "Eh, porque hoxe se lle dis a unha nena, ou por exemplo as miñas netas, agora a pequeniña inda non empezou, pero a outra ten dezaoito anos. \"Zaira, ven, cariño, vamos a lavar a lousa\". E dicíame: \"Pero vaise mollar, no\". \"Fago como a Mundina. Poñolle unha bolsa de plástico por abaixo e o, e o mandil por arriba\", que inda lle fixen os mandiles e teñen os dous, un con Sandro, outro Zaira. E dicíame: \"Alá, ti poñes a nena a lavar a lousa\". \"Pois poñeme eu de lado\". Chegou a aldea, a casa dos avós. Dicen: \"Como vas a ver ti lavar a lousa tal?\" \"Si. Grazas a miña avoa e Susa, que ti non me enseñas nada\". A queda mirando e di: \"A sabes lavar a lousa?\" Os nenos lévalos coma xogando, pero é que agora parece que, que xa os estás explotando. E non poden nin lavar unha lousa, nin poden, eh... Eu para min eso digo que é malo."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJesusPensadoPerez_seg09"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «pelillar/perlí/pejar» por «palillar» en varios puntos.",
+      "«cerdiñas» probablemente sexa «sardiñas»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJesusPensadoPerez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Zaira e a louza\nResumo: Puxo a súa neta a lavar a louza como facía a súa avoa, e a familia escandalizouse."
+  },
+  {
+    "id": "MariaJesusPensadoPerez_hist09",
+    "record_type": "story",
+    "interview_id": "MariaJesusPensadoPerez",
+    "speaker": "María Jesús Pensado Pérez",
+    "language": "gl",
+    "title": "«¿Cuántos metros haces a la hora?»",
+    "summary": "En Vigo un rapaz preguntoulle cantos metros facía por hora; ela explicoulle canto tarda cada debuxo para que calculase o que leva un metro.",
+    "themes": [
+      "prezo",
+      "recoñecemento do traballo",
+      "demostracións"
+    ],
+    "people": [],
+    "places": [
+      "Vigo"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 1052.0,
+        "end": 1116.9,
+        "from_sentence": 187,
+        "to_sentence": 200,
+        "transcript_text": "A xente ven, claro, venche, como me dixo unha vez un chaval en Vigo, póñese de rodillas de lado de min. Estaba facendo a peineta. E dime: \"¿Cuántos metros haces a la hora?\" Mira, me deu unha risa. E colleu. \"Ti ves este dibujo. Tres cuartos de hora. Agora póñolle, leva doce e medio o metro. Poñlle ti contas as horas que me leva facer un metro\". El dicíame cantos metros facía á hora. Bueno, alí vese todo moi bonito, pero non se saben as horas. [inspira] Claro, as horas que hai que pejar lle aí pa-- porque poden ver un vestido, o que che digo do chaval ese, dicir: \"Bueno, ao mellor esta, esto fano en, en un par de horas ou nun día\". E nós sabemos que non."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJesusPensadoPerez_seg10"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «pelillar/perlí/pejar» por «palillar» en varios puntos.",
+      "«cerdiñas» probablemente sexa «sardiñas»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJesusPensadoPerez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: «¿Cuántos metros haces a la hora?»\nResumo: En Vigo un rapaz preguntoulle cantos metros facía por hora; ela explicoulle canto tarda cada debuxo para que calculase o que leva un metro."
+  },
+  {
+    "id": "MariaJesusPensadoPerez_hist10",
+    "record_type": "story",
+    "interview_id": "MariaJesusPensadoPerez",
+    "speaker": "María Jesús Pensado Pérez",
+    "language": "gl",
+    "title": "Os «cuernos» de Muxía",
+    "summary": "O encaixe máis antigo de Muxía, os «cuernos», xa case ninguén o fai; antes unha señora mercábao en Muxía e revendíao en Camariñas.",
+    "themes": [
+      "patrimonio",
+      "puntos antigos",
+      "venda do encaixe"
+    ],
+    "people": [],
+    "places": [
+      "Muxía",
+      "Camariñas"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 1297.36,
+        "end": 1319.34,
+        "from_sentence": 234,
+        "to_sentence": 236,
+        "transcript_text": "Por exemplo, agora aquí xa non temos quen faga os cuernos, que é o an-- o, o encaixe máis antigo de aquí de Muxía, que antes levábano pa Camariñas unha señora que compraba aquí e revendía alá. Ese agora moi pouca xente o fai. E coma iso vaise perder todo."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJesusPensadoPerez_seg11"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "O modelo escribe «pelillar/perlí/pejar» por «palillar» en varios puntos.",
+      "«cerdiñas» probablemente sexa «sardiñas»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJesusPensadoPerez.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Os «cuernos» de Muxía\nResumo: O encaixe máis antigo de Muxía, os «cuernos», xa case ninguén o fai; antes unha señora mercábao en Muxía e revendíao en Camariñas."
+  },
+  {
+    "id": "MariaJoseRoa_hist01",
+    "record_type": "story",
+    "interview_id": "MariaJoseRoa",
+    "speaker": "María José Roa",
+    "language": "gl",
+    "title": "O carné da Sección Feminina aos seis anos",
+    "summary": "Conserva un carné da Sección Feminina de cando empezou a palillar con seis anos nos cursiños da Falange.",
+    "themes": [
+      "Falange",
+      "Sección Feminina",
+      "escola de palillo"
+    ],
+    "people": [],
+    "places": [
+      "Falange"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 19.0,
+        "end": 36.66,
+        "from_sentence": 2,
+        "to_sentence": 4,
+        "transcript_text": "Empecei no palillo por sobre os seis anos. Non sei se antes ou despois, pero en esa fecha teño un carné de, da sección feminina. Naquele entonces era a Falange, a que daba os cursillos de, de eso."
+      },
+      {
+        "start": 126.4,
+        "end": 143.54,
+        "from_sentence": 20,
+        "to_sentence": 22,
+        "transcript_text": "Eu o carné que teño é de cando tiña seis anos . Con seis anos xa palillaba . Na Falange."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseRoa_seg01",
+      "MariaJoseRoa_seg02"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Muxía aparece transcrito ás veces como «Musía»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJoseRoa.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: O carné da Sección Feminina aos seis anos\nResumo: Conserva un carné da Sección Feminina de cando empezou a palillar con seis anos nos cursiños da Falange."
+  },
+  {
+    "id": "MariaJoseRoa_hist02",
+    "record_type": "story",
+    "interview_id": "MariaJoseRoa",
+    "speaker": "María José Roa",
+    "language": "gl",
+    "title": "A profesora que contaba películas",
+    "summary": "A profesora de palillo contaba películas coma a de Alfonso XII de forma tan viva que as nenas as vivían, e xogaban a interpretalas arredor da mesa.",
+    "themes": [
+      "escola de palillo",
+      "cine",
+      "teatro"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 51.04,
+        "end": 97.12,
+        "from_sentence": 8,
+        "to_sentence": 16,
+        "transcript_text": "Tiñamos unha profesora que nos tiña a todas encameladas, porque nos contaba as películas todas. Que si, pois imaxínate, a de Alfonso XII, eh, sí, sí. Eh, e tiñanos a todas as rapazas coa boca aberta, porque, vamos, contábanos as historias dunha maneira que parecía que as estaba vivindo. E nós vivíamola tamén. Ao mismo tempo, tiñamos como unha especie de, [chasquido de lengua] eh, teatro. Sin ser teatro, pero na volta dunha mesa íbamos interpretando os personaxes. E bueno, era unha forma tamén de motivarnos a seguir."
+      },
+      {
+        "start": 981.08,
+        "end": 988.06,
+        "from_sentence": 175,
+        "to_sentence": 175,
+        "transcript_text": "Pois, como a pasar, xa che digo, contar historias, aventuras, películas, facer un pouco de teatro na volta dunhas mesas..."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseRoa_seg01",
+      "MariaJoseRoa_seg10"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Muxía aparece transcrito ás veces como «Musía»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJoseRoa.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: A profesora que contaba películas\nResumo: A profesora de palillo contaba películas coma a de Alfonso XII de forma tan viva que as nenas as vivían, e xogaban a interpretalas arredor da mesa."
+  },
+  {
+    "id": "MariaJoseRoa_hist03",
+    "record_type": "story",
+    "interview_id": "MariaJoseRoa",
+    "speaker": "María José Roa",
+    "language": "gl",
+    "title": "A canastilla para o pasaporte",
+    "summary": "As rapazas que querían emigrar a Suíza ou a Francia ían facer unha canastilla na Falange como servizo social para poder sacar o pasaporte.",
+    "themes": [
+      "emigración",
+      "Sección Feminina",
+      "servizo social"
+    ],
+    "people": [],
+    "places": [
+      "Suíza",
+      "Francia"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 200.8,
+        "end": 241.74,
+        "from_sentence": 34,
+        "to_sentence": 37,
+        "transcript_text": "De vez en cando viñan chavalas maiores que querían marchar para Suíza, para Francia, por aí, e tiñan que facer unha canastilla. Mmm, algunhas sabían palillar, outras non, pero facían labores sociais, eh, dábanlles a canastilla para que poderan facer o pasaporte, que naquele entonces pedíanlle, para poder facer o pasaporte, pedíanlle, sí, como servizos sociais ou algo polo estilo . Eu como non necesitei nada diso, pois non sei de que maneira... Pero s-- acórdome que viña a facer a canastilla ."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseRoa_seg03"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Muxía aparece transcrito ás veces como «Musía»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJoseRoa.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: A canastilla para o pasaporte\nResumo: As rapazas que querían emigrar a Suíza ou a Francia ían facer unha canastilla na Falange como servizo social para poder sacar o pasaporte."
+  },
+  {
+    "id": "MariaJoseRoa_hist04",
+    "record_type": "story",
+    "interview_id": "MariaJoseRoa",
+    "speaker": "María José Roa",
+    "language": "gl",
+    "title": "Premios de xota en Muros",
+    "summary": "Foron a Muros e gañaron premios de xota; as maiores bailaban a danza das espadas coa Sección Feminina.",
+    "themes": [
+      "baile",
+      "Sección Feminina"
+    ],
+    "people": [],
+    "places": [
+      "Muros"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 391.45,
+        "end": 427.89,
+        "from_sentence": 62,
+        "to_sentence": 68,
+        "transcript_text": "Fomos a, a Muros, creo que fora Muros. Ganamos os premios de baile de, de xota, era xota. Como rir, pois pasabámolo bomba. Sempre cando tiñamos ás maiores que bailaban a danza das espadas naquele entonces, que o bai-bailaban a-as mulleres. Antes non había danza das espadas como hai agora, non. Eran, a, era a sección feminina da Falange a que bailaba a danza das espadas. E bueno, iban coa danza das espadas e ganaban"
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseRoa_seg05"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Muxía aparece transcrito ás veces como «Musía»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJoseRoa.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: Premios de xota en Muros\nResumo: Foron a Muros e gañaron premios de xota; as maiores bailaban a danza das espadas coa Sección Feminina."
+  },
+  {
+    "id": "MariaJoseRoa_hist05",
+    "record_type": "story",
+    "interview_id": "MariaJoseRoa",
+    "speaker": "María José Roa",
+    "language": "gl",
+    "title": "O reencontro con Puriña",
+    "summary": "Atopouse anos despois coa súa antiga profesora, xa desorientada, e doeulle vela así; recórdaa con cariño.",
+    "themes": [
+      "escola de palillo",
+      "memoria",
+      "vellez"
+    ],
+    "people": [
+      "Puriña"
+    ],
+    "places": [
+      "Coruña"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 583.17,
+        "end": 619.49,
+        "from_sentence": 100,
+        "to_sentence": 111,
+        "transcript_text": "A ver, eee, non sei se vive ou non. Chamábase Pura, Puriña. Nós chamabámoslle Puriña. Esa despois casouse e marchou para Coruña. Eu encontreina unha vez. Alegreime un montón cando a vin. Pero resulta que cando fun falar con ela estaba perdida de todo. Empezoume a contar cousas e a falarme de cousas e de... Que me arrepentín un montón de pararme a falar con ela. E-e teño recuerdo de esa persona [tos] con moito cariño."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseRoa_seg07"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Muxía aparece transcrito ás veces como «Musía»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJoseRoa.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: O reencontro con Puriña\nResumo: Atopouse anos despois coa súa antiga profesora, xa desorientada, e doeulle vela así; recórdaa con cariño."
+  },
+  {
+    "id": "MariaJoseRoa_hist06",
+    "record_type": "story",
+    "interview_id": "MariaJoseRoa",
+    "speaker": "María José Roa",
+    "language": "gl",
+    "title": "O alfinete na man",
+    "summary": "Nas casas con avoas palilleiras, se te equivocabas picábanche a man cun alfinete.",
+    "themes": [
+      "aprendizaxe do encaixe",
+      "avoas"
+    ],
+    "people": [],
+    "places": [],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 695.67,
+        "end": 702.33,
+        "from_sentence": 127,
+        "to_sentence": 128,
+        "transcript_text": "Pero nas casas donde había aboas que sabían. E cando te equivocabas, collían un alfiler e pinchábanche a man."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseRoa_seg08"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Muxía aparece transcrito ás veces como «Musía»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJoseRoa.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: O alfinete na man\nResumo: Nas casas con avoas palilleiras, se te equivocabas picábanche a man cun alfinete."
+  },
+  {
+    "id": "MariaJoseRoa_hist07",
+    "record_type": "story",
+    "interview_id": "MariaJoseRoa",
+    "speaker": "María José Roa",
+    "language": "gl",
+    "title": "A pensión da avoa e a señora de Leis",
+    "summary": "A súa avoa vivía dunha pequena pensión por un fillo morto na guerra e do encaixe que lle mercaba unha señora de Leis para vendelo en Camariñas.",
+    "themes": [
+      "economía familiar",
+      "venda do encaixe",
+      "guerra"
+    ],
+    "people": [],
+    "places": [
+      "Leis",
+      "Camariñas"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 750.2,
+        "end": 811.42,
+        "from_sentence": 137,
+        "to_sentence": 147,
+        "transcript_text": "Pa miña avoa moito. Miña avoa cobraba naquele entonces, que eu recorde, unhas cinco mil pesetas que lle daban por un fillo que había morto na guerra. Era a pensión que tiña. Entonces, o resto era todo a base do encaixe que vendía. Viña unha señora de leis cada equis tempo a buscar o encaixe da miña avoa. Que eu inda teño por algún almoadón pola casa con, con... Xa moi velliño, pero aínda teño algo por alí dela. A parte dun complemento, era a base. Era a base porque ela non tiña outros ingresos. Era o que tiña. Esa señora, mmm, creo que le, que vendía en Camariñas, porque o encaixe de Muxía ívase vender sempre a Camariñas."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseRoa_seg09"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Muxía aparece transcrito ás veces como «Musía»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJoseRoa.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: A pensión da avoa e a señora de Leis\nResumo: A súa avoa vivía dunha pequena pensión por un fillo morto na guerra e do encaixe que lle mercaba unha señora de Leis para vendelo en Camariñas."
+  },
+  {
+    "id": "MariaJoseRoa_hist08",
+    "record_type": "story",
+    "interview_id": "MariaJoseRoa",
+    "speaker": "María José Roa",
+    "language": "gl",
+    "title": "O encaixe de Muxía vendido como de Camariñas",
+    "summary": "O encaixe de Muxía vendíase en Camariñas e ten fama de Camariñas, pero «non todo é verdade».",
+    "themes": [
+      "identidade",
+      "venda do encaixe",
+      "Muxía-Camariñas"
+    ],
+    "people": [],
+    "places": [
+      "Muxía",
+      "Camariñas"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 804.04,
+        "end": 827.48,
+        "from_sentence": 147,
+        "to_sentence": 153,
+        "transcript_text": "Esa señora, mmm, creo que le, que vendía en Camariñas, porque o encaixe de Muxía ívase vender sempre a Camariñas. Vale? Que era de donde salía o encaixe. Aínda que o encaixe de Muxí-- o encaixe de Muxía, ou sexa, de Camariñas, ten fama de encaixe de Camariñas, non todo é verdade. Vámoste a deixar así. [rindo] Non vamos a meternos en controversias."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseRoa_seg09"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Muxía aparece transcrito ás veces como «Musía»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJoseRoa.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: O encaixe de Muxía vendido como de Camariñas\nResumo: O encaixe de Muxía vendíase en Camariñas e ten fama de Camariñas, pero «non todo é verdade»."
+  },
+  {
+    "id": "MariaJoseRoa_hist09",
+    "record_type": "story",
+    "interview_id": "MariaJoseRoa",
+    "speaker": "María José Roa",
+    "language": "gl",
+    "title": "A volta ao palillo e a sorpresa de Marina Antelo",
+    "summary": "Ao volver a Muxía empezou cun xogo de cama cun cartón de Marina Antelo, que non sabía que ela palillaba de verdade e quedou abraiada.",
+    "themes": [
+      "asociación",
+      "aprendizaxe do encaixe"
+    ],
+    "people": [
+      "Marina Antelo"
+    ],
+    "places": [
+      "Muxía"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 1074.04,
+        "end": 1158.56,
+        "from_sentence": 189,
+        "to_sentence": 204,
+        "transcript_text": "Entonces, eu fui cando empecei a vir de volta pa Muxía, sen vivir en Muxía, pero empecei a vir. Xa estaba a asociación montada, estaba recén montada. Apunteime. As primeiras veces facía má guardia cando eu non estaba miña nai. E bueno, cando viñen pa Muxía, xa de golpe. E a agilidade, porque aprender isto non se olvida, é como, é como andar en bicicleta, vale? Eu cando vin de volta e empecei, empecei cun xogo de cama. O sea, cun, cun encaixe... que hoxe ando facendo merdiñas que é o que se vende. E bueno, xa che digo, eh, cando me viron coller a almoada e empezar, a xente pensaba que eu non sabía. Porque, por exemplo, a min quen me, quen me deixou o cartón pa empezar ese xogo de cama foi Marina Antelo. E Marina Antelo non tiña nin idea de que eu soubera palillar de verdade. Vale, alucinou. Alucinou Marina e moita xente. Claro, a xente que foi comigo a Falange sabían que eu sabía porque sabía coma elas. Pero moita xente asombrouse de que eu empezara a palillar e, segundín, palillo bastante ben."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseRoa_seg11"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Muxía aparece transcrito ás veces como «Musía»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJoseRoa.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: A volta ao palillo e a sorpresa de Marina Antelo\nResumo: Ao volver a Muxía empezou cun xogo de cama cun cartón de Marina Antelo, que non sabía que ela palillaba de verdade e quedou abraiada."
+  },
+  {
+    "id": "MariaJoseRoa_hist10",
+    "record_type": "story",
+    "interview_id": "MariaJoseRoa",
+    "speaker": "María José Roa",
+    "language": "gl",
+    "title": "De destino en destino",
+    "summary": "Despois de casar foi para a Coruña e logo percorreu España polo traballo de montaxe do seu home.",
+    "themes": [
+      "migración interior",
+      "familia"
+    ],
+    "people": [],
+    "places": [
+      "Coruña",
+      "Tarragona",
+      "Bilbao",
+      "Sevilla",
+      "Mar Menor",
+      "Escombreras",
+      "Murcia"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 1276.14,
+        "end": 1311.0,
+        "from_sentence": 230,
+        "to_sentence": 235,
+        "transcript_text": "E bueno, despois xa empecei con este, caseime con dezanove anos, marchei pa Coruña a vivir e despois da Coruña empecei a andar como os xitanos. Bueno, eu dígoo sempre, como a Guardia Civil. O que pasa é que a Guardia Civil pide destino e a nós non nos, non nos, non o pedíamos, mandábannos. Porque o meu home traballaba no montaxe. E igual nos mandaban pa Tarragona, como pa Bilbao, como pa... Pues estivemos en Sevilla, no Mar Menor, por alí por, en Escombreras, en Murcia."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseRoa_seg12"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Muxía aparece transcrito ás veces como «Musía»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJoseRoa.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: De destino en destino\nResumo: Despois de casar foi para a Coruña e logo percorreu España polo traballo de montaxe do seu home."
+  },
+  {
+    "id": "MariaJoseRoa_hist11",
+    "record_type": "story",
+    "interview_id": "MariaJoseRoa",
+    "speaker": "María José Roa",
+    "language": "gl",
+    "title": "A neta e o encaixe como traballo de arte",
+    "summary": "Unha neta que estudou arte en Valencia baseou o seu traballo no encaixe, con material e fotos que lle mandaron desde a Barca.",
+    "themes": [
+      "transmisión",
+      "arte"
+    ],
+    "people": [
+      "Xusa"
+    ],
+    "places": [
+      "Valencia",
+      "Holanda"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 1577.41,
+        "end": 1621.21,
+        "from_sentence": 281,
+        "to_sentence": 286,
+        "transcript_text": "Eh, teño unha neta que fixo por arte en Valencia. Eh, os traballos dela [tos] tamén iban moito sobre o encaixe, sobre o que facía eu, o que non facía. Incluso lle tiven que mandar palillos, encaixe, fío, para o traballo de fin de curso. Eh, basou moito sobre-- e foto, te-- mandámoslle fotos Xusa e eu na barca palillando, para o traballo que fixo de-- ahora mismo está en Holanda dando clases de español e, e arte."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseRoa_seg14"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Muxía aparece transcrito ás veces como «Musía»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJoseRoa.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: A neta e o encaixe como traballo de arte\nResumo: Unha neta que estudou arte en Valencia baseou o seu traballo no encaixe, con material e fotos que lle mandaron desde a Barca."
+  },
+  {
+    "id": "MariaJoseRoa_hist12",
+    "record_type": "story",
+    "interview_id": "MariaJoseRoa",
+    "speaker": "María José Roa",
+    "language": "gl",
+    "title": "A cinta de Amancio Prada e a receita de volver",
+    "summary": "Vivindo fóra choraba cunha cinta de Amancio Prada; ao médico que lle receitou para a depresión díxolle que a única receita era volver para a casa.",
+    "themes": [
+      "morriña",
+      "emigración",
+      "regreso"
+    ],
+    "people": [
+      "Amancio Prada"
+    ],
+    "places": [
+      "Lugo",
+      "Burgo",
+      "Coruña",
+      "Muxía"
+    ],
+    "approx_date": null,
+    "confidence": null,
+    "sources": [
+      {
+        "start": 1719.23,
+        "end": 1795.97,
+        "from_sentence": 301,
+        "to_sentence": 316,
+        "transcript_text": "Pois que eu cando di a alguén di hoxe, por exemplo, hoxe estou en Musía, pero en algún momento [suspiro] eu teño ido conducindo cunha cinta de Amancio Prada. Eu iba conducindo e iba chorando. [risas] Ca cinta de Amancio Prada. Hoxe, pois non me fai falta chorar porque xa estou en Musía. Vale. Fun ao médico unha vez que me encontraba fatal e díxome que tiña depresión. Eh, recetoume pa a depresión e eu contesteille que a única receita que me podía dar era mandarme de volta pa casa. [risas] Naquel entonces a miña residencia estaba na Coruña, pero dábame igual. Dábame igual porque cando subías de Lugo para arriba, xa se pasaban todos os males. E cando entrabas na, na-- pola, polo Burgo pa Coruña, Dios, que alegría máis grande. Claro, que depoi viñas pa Musía, por aí pola carrua, e vías Musía lá ao fondo e... Hasta que me decidín, que viña pa Musía, que compraba en Musía, que vivía en Musía."
+      }
+    ],
+    "related_topic_ids": [
+      "MariaJoseRoa_seg16"
+    ],
+    "quality_flags": [],
+    "transcription_notes": [
+      "Muxía aparece transcrito ás veces como «Musía»."
+    ],
+    "video_id": null,
+    "source_json": "MariaJoseRoa.json",
+    "embedding_strategy": "title+summary",
+    "embedding_text": "Título: A cinta de Amancio Prada e a receita de volver\nResumo: Vivindo fóra choraba cunha cinta de Amancio Prada; ao médico que lle receitou para a depresión díxolle que a única receita era volver para a casa."
+  }
+]

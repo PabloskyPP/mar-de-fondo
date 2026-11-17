@@ -16,7 +16,10 @@ Fuentes, de menor a mayor prioridad para cada dato:
    o, si el nombre no lleva el sufijo numérico del identificador
    (``Pilar_Barrientos_Conde_…`` frente a ``Pilar_Barrientos_Conde_02_2``), por
    coincidencia de prefijo, siempre que sea única.
-5. ``entrevistas.json`` (opcional): título, lugar, temas y, solo si no hay
+5. ``manifest_corpus.json`` (opcional): procedencia por entrevista (modelo,
+   ``processor_version``, ``prompt_version``, fecha, archivo de origen) y la
+   duración exacta del audio, que se usa para avisar si un vídeo no coincide.
+6. ``entrevistas.json`` (opcional): título, lugar, temas y, solo si no hay
    otra fuente, capítulos y transcripción en el formato propio del portal.
 
 Si falta una fuente o no tiene el formato esperado, el portal sigue
@@ -87,11 +90,19 @@ class Procedencia:
     archivo_origen_temas: str | None = None
     idioma_temas: str | None = None
     n_capitulos: int = 0
+    # Del manifiesto del corpus: cómo se generaron los capítulos.
+    modelo: str | None = None
+    version_procesador: str | None = None
+    version_prompt: str | None = None
+    creado: str | None = None
+    archivo_fuente: str | None = None
 
     @property
     def vacia(self) -> bool:
         return not any((self.transcripcion_id, self.idioma_transcripcion, self.duracion_audio,
-                        self.archivo_transcripcion, self.archivo_origen_temas, self.idioma_temas))
+                        self.archivo_transcripcion, self.archivo_origen_temas, self.idioma_temas,
+                        self.modelo, self.version_procesador, self.version_prompt, self.creado,
+                        self.archivo_fuente))
 
 
 @dataclass(frozen=True)
@@ -319,6 +330,17 @@ def _leer_temas(ruta: Path) -> tuple[dict[str, tuple[Capitulo, ...]], dict[str, 
     return {iid: _capitulos(items) for iid, items in brutos.items()}, origen, personas
 
 
+def _leer_manifiesto_corpus(ruta: Path) -> dict[str, dict[str, Any]]:
+    """Procedencia por entrevista (``input_provenance``) del manifiesto del corpus."""
+    datos = _leer_json(ruta)
+    if not isinstance(datos, dict):
+        return {}
+    prov = datos.get("input_provenance")
+    if not isinstance(prov, dict):
+        return {}
+    return {iid: d for iid, d in prov.items() if isinstance(d, dict)}
+
+
 def _normalizar_nombre(nombre: str) -> str:
     return unicodedata.normalize("NFC", nombre).casefold()
 
@@ -443,6 +465,7 @@ def cargar_catalogo(ajustes: Ajustes, cortes: Iterable["Corte"] = ()) -> Catalog
         coleccion = "Carriza"
 
     caps_temas, origen_temas, personas_temas = _leer_temas(datos_dir / ajustes.temas_archivo)
+    manifiesto = _leer_manifiesto_corpus(datos_dir / ajustes.manifest_corpus_archivo)
     extra = _entrevistas_extra(datos_dir / ajustes.entrevistas_archivo)
 
     orden: list[str] = []
@@ -494,11 +517,19 @@ def cargar_catalogo(ajustes: Ajustes, cortes: Iterable["Corte"] = ()) -> Catalog
         turnos = lectura.turnos if lectura else _turnos(e.get("transcripcion"))
 
         origen = origen_temas.get(iid, {})
+        man = manifiesto.get(iid, {})
         procedencia = Procedencia(
             transcripcion_id=lectura.transcripcion_id if lectura else None,
             idioma_transcripcion=lectura.idioma if lectura else None,
             prob_idioma=lectura.prob_idioma if lectura else None,
-            duracion_audio=lectura.duracion_audio if lectura else None,
+            # La transcripción cargada manda; si no hay, la del manifiesto del corpus.
+            duracion_audio=(lectura.duracion_audio if lectura and lectura.duracion_audio
+                            else leer_numero(man, "audio_duration_secs")),
+            modelo=leer_texto(man, "model"),
+            version_procesador=leer_texto(man, "processor_version"),
+            version_prompt=leer_texto(man, "prompt_version"),
+            creado=leer_texto(man, "created_at"),
+            archivo_fuente=leer_texto(man, "source_file"),
             archivo_transcripcion=archivo.name if archivo else None,
             formato_transcripcion=lectura.formato if lectura else None,
             archivo_origen_temas=origen.get("origen"),
