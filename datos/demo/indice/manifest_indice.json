@@ -1,170 +1,50 @@
-[
-  {
-    "faiss_row": 0,
-    "id": "Pilar_Barrientos_Conde_02_2_hist01"
+{
+  "project": "Mar de fondo",
+  "notebook": "07_embeddings_bge_m3_faiss.ipynb",
+  "phase": "02_dense_embeddings_and_faiss",
+  "generated_at_utc": "2026-10-22T11:33:37.630162+00:00",
+  "model_id": "BAAI/bge-m3",
+  "model_revision": null,
+  "dimension": 1024,
+  "model_max_seq_length": 8192,
+  "embedding_method": "SentenceTransformer.encode / dense",
+  "topic_embedding_strategy": "C:title+summary+transcript_text",
+  "story_embedding_strategy": "title+summary",
+  "vector_dtype": "float32",
+  "vector_normalization": "L2",
+  "index_type": "IndexFlatIP",
+  "distance_interpretation": "cosine similarity after L2 normalization",
+  "topic_count": 70,
+  "story_count": 42,
+  "input_dir": "/content/drive/MyDrive/Mar_de_fondo_prototipo/indexacion_recuperacion/06_corpus_preparado",
+  "input_sha256": {
+    "temas_preparados.json": "548dd3a322d91483b42b1ddbd197e319c3804cf8e75d7034051a4009a0fe8513",
+    "historias_preparadas.json": "7b514f676dee09da8ef7b41b3773317e8640014bc6b8871372839a60b8a2d2c7",
+    "manifest_corpus.json": "b79709fb3d9dcfa1acc309ca102e633a140bb8dee2dab45ac8b549491d286a4e",
+    "informe_validacion.json": "84b21fa3b11a6287da75f41da4c5daee790d00eb374358cd1c3e65f13f36c1da"
   },
-  {
-    "faiss_row": 1,
-    "id": "Pilar_Barrientos_Conde_02_2_hist02"
+  "output_sha256": {
+    "temas_embeddings.npy": "644a1c4a32563aaba25bc3c1cb585320677feb502a414889d2c665c4b1a5cbdc",
+    "historias_embeddings.npy": "5b5ebeb3541f03ef3a7df69a3706687a94854643369d98e1b9ac12a99771fe79",
+    "temas.faiss": "f42e6dcd20bbae6706379ce8cb0e13a868311570d9ecc7a472ca3b0e8c8b2f95",
+    "historias.faiss": "b543747d78eb65c4c09557b8785a8481ad3f319b1ea88abc4259fdc63290887d",
+    "temas_mapa.json": "dfec7179f35a89f1fde55c472290ef8312ca5f8ba0fdbfdd0de525ba989a8d38",
+    "historias_mapa.json": "5e02f3a8bfe7c668e5147771128158fd1832bed31b5c374a726821554388b3f6",
+    "informe_tokens.json": "d5e2d146ee8e9f8f573ad268698875244f2b7957c26d52c0c982213a79a01a46",
+    "longitud_tokens.csv": "98adc17a2951787a34410abc0520cfc825144551950b61a0f76070b7e0657d43"
   },
-  {
-    "faiss_row": 2,
-    "id": "Pilar_Barrientos_Conde_02_2_hist03"
+  "hardware": {
+    "device": "cuda",
+    "gpu": "Tesla T4"
   },
-  {
-    "faiss_row": 3,
-    "id": "Pilar_Barrientos_Conde_02_2_hist04"
+  "batch_size": 4,
+  "libraries": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu130",
+    "numpy": "2.1.3",
+    "sentence_transformers": "5.7.0",
+    "faiss": "1.15.1"
   },
-  {
-    "faiss_row": 4,
-    "id": "Maria_Antelo_Lema_hist01"
-  },
-  {
-    "faiss_row": 5,
-    "id": "Maria_Antelo_Lema_hist02"
-  },
-  {
-    "faiss_row": 6,
-    "id": "Maria_Antelo_Lema_hist03"
-  },
-  {
-    "faiss_row": 7,
-    "id": "Maria_Antelo_Lema_hist04"
-  },
-  {
-    "faiss_row": 8,
-    "id": "Maria_Antelo_Lema_hist05"
-  },
-  {
-    "faiss_row": 9,
-    "id": "Maria_Antelo_Lema_hist06"
-  },
-  {
-    "faiss_row": 10,
-    "id": "MariaJoseLiresMartinez_hist01"
-  },
-  {
-    "faiss_row": 11,
-    "id": "MariaJoseLiresMartinez_hist02"
-  },
-  {
-    "faiss_row": 12,
-    "id": "MariaJoseLiresMartinez_hist03"
-  },
-  {
-    "faiss_row": 13,
-    "id": "MariaJoseLiresMartinez_hist04"
-  },
-  {
-    "faiss_row": 14,
-    "id": "MariaJoseLiresMartinez_hist05"
-  },
-  {
-    "faiss_row": 15,
-    "id": "Carmen_Vileda_Rey_hist01"
-  },
-  {
-    "faiss_row": 16,
-    "id": "Carmen_Vileda_Rey_hist02"
-  },
-  {
-    "faiss_row": 17,
-    "id": "Carmen_Vileda_Rey_hist03"
-  },
-  {
-    "faiss_row": 18,
-    "id": "Carmen_Vileda_Rey_hist04"
-  },
-  {
-    "faiss_row": 19,
-    "id": "Carmen_Vileda_Rey_hist05"
-  },
-  {
-    "faiss_row": 20,
-    "id": "MariaJesusPensadoPerez_hist01"
-  },
-  {
-    "faiss_row": 21,
-    "id": "MariaJesusPensadoPerez_hist02"
-  },
-  {
-    "faiss_row": 22,
-    "id": "MariaJesusPensadoPerez_hist03"
-  },
-  {
-    "faiss_row": 23,
-    "id": "MariaJesusPensadoPerez_hist04"
-  },
-  {
-    "faiss_row": 24,
-    "id": "MariaJesusPensadoPerez_hist05"
-  },
-  {
-    "faiss_row": 25,
-    "id": "MariaJesusPensadoPerez_hist06"
-  },
-  {
-    "faiss_row": 26,
-    "id": "MariaJesusPensadoPerez_hist07"
-  },
-  {
-    "faiss_row": 27,
-    "id": "MariaJesusPensadoPerez_hist08"
-  },
-  {
-    "faiss_row": 28,
-    "id": "MariaJesusPensadoPerez_hist09"
-  },
-  {
-    "faiss_row": 29,
-    "id": "MariaJesusPensadoPerez_hist10"
-  },
-  {
-    "faiss_row": 30,
-    "id": "MariaJoseRoa_hist01"
-  },
-  {
-    "faiss_row": 31,
-    "id": "MariaJoseRoa_hist02"
-  },
-  {
-    "faiss_row": 32,
-    "id": "MariaJoseRoa_hist03"
-  },
-  {
-    "faiss_row": 33,
-    "id": "MariaJoseRoa_hist04"
-  },
-  {
-    "faiss_row": 34,
-    "id": "MariaJoseRoa_hist05"
-  },
-  {
-    "faiss_row": 35,
-    "id": "MariaJoseRoa_hist06"
-  },
-  {
-    "faiss_row": 36,
-    "id": "MariaJoseRoa_hist07"
-  },
-  {
-    "faiss_row": 37,
-    "id": "MariaJoseRoa_hist08"
-  },
-  {
-    "faiss_row": 38,
-    "id": "MariaJoseRoa_hist09"
-  },
-  {
-    "faiss_row": 39,
-    "id": "MariaJoseRoa_hist10"
-  },
-  {
-    "faiss_row": 40,
-    "id": "MariaJoseRoa_hist11"
-  },
-  {
-    "faiss_row": 41,
-    "id": "MariaJoseRoa_hist12"
-  }
-]
+  "video_mapping_status": "pending: video_id=null",
+  "formal_retrieval_evaluation": "pending"
+}

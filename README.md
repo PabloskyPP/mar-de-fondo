@@ -11,6 +11,29 @@ Construye las vistas **Inicio, Catálogo, Resultados y Entrevista** de la maquet
 
 Python + FastAPI + plantillas Jinja2, CSS y JavaScript sin dependencias.
 
+
+## Instrucciones resumidas
+```bash
+1) Descargar localmente el repositorio
+2) Añadir en la raíz del repositorio una carpeta /videos/ y dentro los 6 vídeos .mp4 del Drive descargados localmente
+3) Añadir también en la raíz del repositorio un archivo .env con la ruta de acceso a la carpeta /vídeos
+4) Instalar dependencias, incluyendo paquetes pesados de >2GB, como FAISS o PyTorch. Esto mediante la ejecución del siguiente script en la terminal:
+   .\.venv\Scripts\python.exe -m pip install -e ".[dev,busqueda]"
+5) Realizar pruebas y comprobar correcto instalación del programa.
+5.1) Ejecutar en terminal powershell script: .\.venv\Scripts\python.exe -m pytest -q
+5.1.2) Resultado esperado y correcto: 92 passed, 3 skipped. En caso contrario, posible error de instalación. Contactar al desarrollador del programa.
+5.2) Ejecutar en terminal powershell script:
+$env:MDF_PRUEBA_MODELO = "1"
+.\.venv\Scripts\python.exe -m pytest tests/test_busqueda_modelo.py -s
+Remove-Item Env:MDF_PRUEBA_MODELO
+5.2.2) Resultado esperado y correcto: 3 passed, no error. Puede haber algún warning por renombre de archivo. No es problema.
+6) Arranchar servidor. En powershell ejecutar script: .\.venv\Scripts\python.exe -m uvicorn app.main:app
+7) Comprobar funcionamiento. En el navegador abrir: http://127.0.0.1:8000 o http://localhost. Además:
+http://127.0.0.1:8000/api/buscador debe decir "disponible": true.
+http://127.0.0.1:8000/api/videos debe mostrar las seis entrevistas con "disponible": true.
+
+```
+
 ## Instalación
 
 ```bash
